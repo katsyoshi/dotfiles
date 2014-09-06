@@ -1,0 +1,13 @@
+[user]
+	email = github@katsyoshi.org
+	name = MATSUMOTO, Katsuyoshi
+
+[alias]
+	co = checkout
+	st = status -s
+	tr = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
+[push]
+	default = matching
+
+[core]
+	editor = emacs -nw
