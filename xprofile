@@ -1,0 +1,11 @@
+eval $(gnome-keyring-daemon --conponents=pkcs11,scretes,gpg)
+export GNOME_KEYRING_PID
+export GNOME_KEYRING_SCOKET
+export SSH_AUTH_SOCK
+export GPG_AGENT_INFO
+
+setxkbmap -option ctrl:nocaps
+xscreensaver &
+xfce4-taskmanager &
+dbus-launch nm-applet &
+ibus-daemon -d -x
