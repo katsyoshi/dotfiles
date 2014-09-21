@@ -5,7 +5,8 @@ export SSH_AUTH_SOCK
 export GPG_AGENT_INFO
 
 setxkbmap -option ctrl:nocaps
+xfce4-power-manager &
 xscreensaver &
 xfce4-taskmanager &
 dbus-launch nm-applet &
-ibus-daemon -d -x
+ibus-daemon -x -d
