@@ -380,9 +380,9 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 -- Autostart section
 -- Blank autostart:
 -- awful.util.spawn_with_shell("")
-awful.util.spawn_with_shell("nm-applet") -- networkManager applet
+awful.util.spawn_with_shell("dbus-launch nm-applet") -- networkManager applet
 awful.util.spawn_with_shell("xfce4-power-manager") -- Battery monitor, etc.
 awful.util.spawn_with_shell("setxkbmap -option ctrl:nocaps") -- change capslock to ctrl key
 awful.util.spawn_with_shell("volumeicon")
 awful.util.spawn_with_shell("xscreensaver")
-
+awful.util.spawn_with_shell("ibus-daemon -x -d")
