@@ -4,3 +4,4 @@ export GNOME_KEYRING_SCOKET
 export SSH_AUTH_SOCK
 export GPG_AGENT_INFO
 
+dbus-launch nm-applet &
