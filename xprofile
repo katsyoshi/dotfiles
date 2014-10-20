@@ -6,3 +6,4 @@ export GPG_AGENT_INFO
 
 /opt/bin/dropbox &
 dbus-launch nm-applet &
+volumeicon &
