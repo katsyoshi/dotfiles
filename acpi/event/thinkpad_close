@@ -1,0 +1,2 @@
+event=button[ /]lid LID close
+action=/etc/acpi/action/none_display.sh %e
