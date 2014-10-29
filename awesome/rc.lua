@@ -51,6 +51,7 @@ none_display = "sh /home/katsu/.screenlayout/none.sh"
 play_display = "sh /home/katsu/.screenlayout/play.sh"
 work_display = "sh /home/katsu/.screenlayout/work.sh"
 laptop_display = "sh /home/katsu/.screenlayout/laptop.sh"
+screenshot = 'shutter'
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -243,13 +244,14 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "space",function () awful.layout.inc(layouts,  1) end),
     awful.key({ modkey, "Shift"   }, "space",function () awful.layout.inc(layouts, -1) end),
     awful.key({ modkey, "Shift"   }, "b",    function () awful.util.spawn(browser)     end),
-    awful.key({ modkey, "Shift"   }, "t",    function () awful.util.spawn(twitter)     end),
     awful.key({ modkey, "Shift"   }, "e",    function () awful.util.spawn(editor)      end),
     awful.key({ modkey, "Shift"   }, "l",    function () awful.util.spawn(sleep)       end),
+    awful.key({ modkey, "Control" }, "t",    function () awful.util.spawn(twitter)     end),
     awful.key({ modkey, "Control" }, "w",    function () awful.util.spawn(work_display) end),
     awful.key({ modkey, "Control" }, "g",    function () awful.util.spawn(laptop_display) end),
     awful.key({ modkey, "Control" }, "n",    function () awful.util.spawn(none_display) end),
     awful.key({ modkey, "Control" }, "p",    function () awful.util.spawn(play_display) end),
+    awful.key({ modkey, "Control" }, "c",    function () awful.util.spawn(screenshot) end),
     awful.key({ modkey, "Control" }, "n",    awful.client.restore),
 
 
