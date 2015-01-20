@@ -63,18 +63,22 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 layouts =
 {
-    awful.layout.suit.floating,
     awful.layout.suit.tile,
-    awful.layout.suit.max
+    awful.layout.suit.max,
+    awful.layout.suit.floating
 }
 -- }}}
-
+display =
+{
+      name = {1, 2, 3, 4, 5},
+      layouts = {layouts[2], layouts[1], layouts[1], layouts[1], layouts[3]}
+}
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag({ 1, 2, 3, 4, 5}, s, layouts[1])
+    tags[s] = awful.tag(display.name, s, display.layouts)
 end
 -- }}}
 
