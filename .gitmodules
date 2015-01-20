@@ -1,6 +1,0 @@
-[submodule "emacs.d"]
-	path = emacs.d
-	url = ssh://katsyoshi.org:2222/home/katsu/git/emacs.d
-[submodule "zsh.d"]
-	path = zsh.d
-	url = ssh://katsyoshi.org:2222/home/katsu/git/zsh.d
