@@ -1,0 +1,15 @@
+# needless cache files
+/.DS_Store
+/Thumbs.db
+
+# needless ruby bundler files
+/.bundle
+/vendor/gems
+
+# needless editor temp files
+/*.swp
+/\#*\#
+
+# needless npm modules
+/node_modules
+/npm-debug.log
