@@ -1,0 +1,9 @@
+eval $(gnome-keyring-daemon --conponents=pkcs11,scretes,gpg)
+export GNOME_KEYRING_PID
+export GNOME_KEYRING_SCOKET
+export SSH_AUTH_SOCK
+export GPG_AGENT_INFO
+
+/opt/bin/dropbox &
+dbus-launch nm-applet &
+volumeicon &
