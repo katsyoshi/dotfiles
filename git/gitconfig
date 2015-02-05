@@ -6,9 +6,11 @@
 	co = checkout
 	st = status -s
 	tr = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
+	pr = "pull-request"
+
 [push]
 	default = matching
 
 [core]
 	editor = emacsclient -nw
-	excludesfile = /Users/katsyoshi/.gitignore
+	excludesfile = ~/.gitignore
