@@ -42,11 +42,12 @@ editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
 -- browser
-browser = "firefox-bin"
-mikutter = "mikutter"
+browser = "google-chrome-stable"
+mikutter = "/home/katsu/bin/mikutter"
+idobata = "/home/katsu/bin/idobata"
 emacs = "emacs"
 gimp = "gimp"
-sleep = "xscreensaver-command --lock"
+sleep = "slock"
 none_display = "sh /home/katsu/.screenlayout/none.sh"
 play_display = "sh /home/katsu/.screenlayout/play.sh"
 work_display = "sh /home/katsu/.screenlayout/work.sh"
@@ -393,8 +394,5 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 -- }}}
 -- Autostart section
 -- Blank autostart:
--- awful.util.spawn_with_shell("")
-awful.util.spawn_with_shell("xfce4-power-manager") -- Battery monitor, etc.
 awful.util.spawn_with_shell("setxkbmap -option ctrl:nocaps") -- change capslock to ctrl key
-awful.util.spawn_with_shell("xscreensaver")
-awful.util.spawn_with_shell("ibus-daemon -x -d")
+awful.util.spawn_with_shell("fcitx")
