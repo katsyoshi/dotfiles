@@ -72,7 +72,7 @@ layouts =
 display =
 {
       name = {1, 2, 3, 4},
-      layouts = {layouts[2], layouts[1], layouts[1], layouts[3]}
+      layouts = {layouts[2], layouts[2], layouts[1], layouts[3]}
 }
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
@@ -122,8 +122,7 @@ mytaglist.buttons = awful.util.table.join(
                     awful.button({ modkey }, 1, awful.client.movetotag),
                     awful.button({ }, 3, awful.tag.viewtoggle),
                     awful.button({ modkey }, 3, awful.client.toggletag),
-                    awful.button({ }, 4, awful.tag.viewnext),
-                    awful.button({ }, 5, awful.tag.viewprev)
+                    awful.button({ }, 4, awful.tag.viewnext)
                     )
 mytasklist = {}
 mytasklist.buttons = awful.util.table.join(
