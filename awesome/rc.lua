@@ -262,7 +262,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "g",    function () awful.util.spawn(laptop_display) end),
     awful.key({ modkey, "Control" }, "n",    function () awful.util.spawn(none_display)   end),
     awful.key({ modkey, "Control" }, "p",    function () awful.util.spawn(copy_display)   end),
-    awful.key({ modkey, "Control" }, "c",    function () awful.util.spawn(screenshot)     end),
+    awful.key({ modkey, "Shift"   }, "c",    function () awful.util.spawn(screenshot)     end),
 
     awful.key({ modkey, "Control" }, "n",    awful.client.restore),
 
@@ -281,7 +281,7 @@ globalkeys = awful.util.table.join(
 
 clientkeys = awful.util.table.join(
     awful.key({ modkey,           }, "f",      function (c) c.fullscreen = not c.fullscreen  end),
-    awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end),
+    awful.key({ modkey, "Control" }, "c",      function (c) c:kill()                         end),
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end),
     awful.key({ modkey,           }, "o",      awful.client.movetoscreen                        ),
