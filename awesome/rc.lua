@@ -47,6 +47,7 @@ mikutter       = "/home/katsu/bin/mikutter"
 idobata        = "/home/katsu/bin/idobata"
 github         = "/home/katsu/bin/github"
 debugger       = "/home/katsu/bin/debug"
+mail           = "/home/katsu/bin/mail"
 emacs          = "emacs"
 gimp           = "gimp"
 sleep          = "slock"
@@ -256,6 +257,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Shift"   }, "t",    function () awful.util.spawn(mikutter)       end),
     awful.key({ modkey, "Shift"   }, "g",    function () awful.util.spawn(github)         end),
     awful.key({ modkey, "Shift"   }, "s",    function () awful.util.spawn(sleep)          end),
+    awful.key({ modkey, "Shift"   }, "m",    function () awful.util.spawn(mail)           end),
     awful.key({ modkey, "Control" }, "w",    function () awful.util.spawn(work_display)   end),
     awful.key({ modkey, "Control" }, "g",    function () awful.util.spawn(laptop_display) end),
     awful.key({ modkey, "Control" }, "n",    function () awful.util.spawn(none_display)   end),
