@@ -42,18 +42,18 @@ editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
 -- browser
-browser = "google-chrome-stable"
-mikutter = "/home/katsu/bin/mikutter"
-idobata = "/home/katsu/bin/idobata"
-github = "/home/katsu/bin/github"
-emacs = "emacs"
-gimp = "gimp"
-sleep = "slock"
-none_display = "sh /home/katsu/.screenlayout/none.sh"
-work_display = "sh /home/katsu/.screenlayout/work.sh"
-copy_display = "sh /home/katsu/.screenlayout/presen.sh"
+browser        = "google-chrome-stable"
+mikutter       = "/home/katsu/bin/mikutter"
+idobata        = "/home/katsu/bin/idobata"
+github         = "/home/katsu/bin/github"
+emacs          = "emacs"
+gimp           = "gimp"
+sleep          = "slock"
+none_display   = "sh /home/katsu/.screenlayout/none.sh"
+work_display   = "sh /home/katsu/.screenlayout/work.sh"
+copy_display   = "sh /home/katsu/.screenlayout/presen.sh"
 laptop_display = "sh /home/katsu/.screenlayout/laptop.sh"
-screenshot = 'shutter'
+screenshot     = 'shutter'
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
