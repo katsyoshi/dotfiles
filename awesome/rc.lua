@@ -46,6 +46,7 @@ browser        = "google-chrome-stable"
 mikutter       = "/home/katsu/bin/mikutter"
 idobata        = "/home/katsu/bin/idobata"
 github         = "/home/katsu/bin/github"
+debugger       = "/home/katsu/bin/debug"
 emacs          = "emacs"
 gimp           = "gimp"
 sleep          = "slock"
@@ -250,6 +251,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Shift"   }, "space",function () awful.layout.inc(layouts, -1)    end),
     awful.key({ modkey, "Shift"   }, "b",    function () awful.util.spawn(browser)        end),
     awful.key({ modkey, "Shift"   }, "i",    function () awful.util.spawn(idobata)        end),
+    awful.key({ modkey, "Shift"   }, "d",    function () awful.util.spawn(debugger)       end),
     awful.key({ modkey, "Shift"   }, "e",    function () awful.util.spawn(emacs)          end),
     awful.key({ modkey, "Shift"   }, "t",    function () awful.util.spawn(mikutter)       end),
     awful.key({ modkey, "Shift"   }, "g",    function () awful.util.spawn(github)         end),
