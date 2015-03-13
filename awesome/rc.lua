@@ -45,6 +45,7 @@ editor_cmd = terminal .. " -e " .. editor
 browser = "google-chrome-stable"
 mikutter = "/home/katsu/bin/mikutter"
 idobata = "/home/katsu/bin/idobata"
+github = "/home/katsu/bin/github"
 emacs = "emacs"
 gimp = "gimp"
 sleep = "slock"
@@ -250,8 +251,9 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Shift"   }, "b",    function () awful.util.spawn(browser)        end),
     awful.key({ modkey, "Shift"   }, "i",    function () awful.util.spawn(idobata)        end),
     awful.key({ modkey, "Shift"   }, "e",    function () awful.util.spawn(emacs)          end),
+    awful.key({ modkey, "Shift"   }, "t",    function () awful.util.spawn(mikutter)       end),
+    awful.key({ modkey, "Shift"   }, "g",    function () awful.util.spawn(github)         end),
     awful.key({ modkey, "Shift"   }, "s",    function () awful.util.spawn(sleep)          end),
-    awful.key({ modkey, "Control" }, "t",    function () awful.util.spawn(mikutter)       end),
     awful.key({ modkey, "Control" }, "w",    function () awful.util.spawn(work_display)   end),
     awful.key({ modkey, "Control" }, "g",    function () awful.util.spawn(laptop_display) end),
     awful.key({ modkey, "Control" }, "n",    function () awful.util.spawn(none_display)   end),
