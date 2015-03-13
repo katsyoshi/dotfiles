@@ -263,10 +263,10 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Shift"   }, "t",    function () awful.util.spawn(mikutter)       end),
 
     -- Shortcut display arrangement
-    awful.key({ modkey, "Control" }, "w",    function () awful.util.spawn(work_display)   end),
     awful.key({ modkey, "Control" }, "g",    function () awful.util.spawn(laptop_display) end),
     awful.key({ modkey, "Control" }, "n",    function () awful.util.spawn(none_display)   end),
     awful.key({ modkey, "Control" }, "p",    function () awful.util.spawn(copy_display)   end),
+    awful.key({ modkey, "Control" }, "w",    function () awful.util.spawn(work_display)   end),
 
     awful.key({ modkey, "Control" }, "n",    awful.client.restore),
 
