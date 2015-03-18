@@ -259,7 +259,6 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Shift"   }, "g",    function () awful.util.spawn(github)         end),
     awful.key({ modkey, "Shift"   }, "m",    function () awful.util.spawn(mail)           end),
     awful.key({ modkey, "Shift"   }, "i",    function () awful.util.spawn(idobata)        end),
-    awful.key({ modkey, "Shift"   }, "s",    function () awful.util.spawn(sleep)          end),
     awful.key({ modkey, "Shift"   }, "t",    function () awful.util.spawn(mikutter)       end),
 
     -- Shortcut display arrangement
@@ -267,6 +266,9 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "n",    function () awful.util.spawn(none_display)   end),
     awful.key({ modkey, "Control" }, "p",    function () awful.util.spawn(copy_display)   end),
     awful.key({ modkey, "Control" }, "w",    function () awful.util.spawn(work_display)   end),
+
+    -- Shortcut system application
+    awful.key({ modkey, "Control" }, "s",    function () awful.util.spawn(sleep)          end),
 
     awful.key({ modkey, "Control" }, "n",    awful.client.restore),
 
