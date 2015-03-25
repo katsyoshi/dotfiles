@@ -256,24 +256,24 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit),
 
-    awful.key({ modkey,           }, "l",    function () awful.tag.incmwfact( 0.05)       end),
-    awful.key({ modkey,           }, "h",    function () awful.tag.incmwfact(-0.05)       end),
-    awful.key({ modkey, "Shift"   }, "h",    function () awful.tag.incnmaster( 1)         end),
-    awful.key({ modkey, "Shift"   }, "l",    function () awful.tag.incnmaster(-1)         end),
-    awful.key({ modkey, "Control" }, "h",    function () awful.tag.incncol( 1)            end),
-    awful.key({ modkey, "Control" }, "l",    function () awful.tag.incncol(-1)            end),
-    awful.key({ modkey,           }, "space",function () awful.layout.inc(layouts,  1)    end),
-    awful.key({ modkey, "Shift"   }, "space",function () awful.layout.inc(layouts, -1)    end),
+    awful.key({ modkey,           }, "l",    function () awful.tag.incmwfact( 0.05)    end),
+    awful.key({ modkey,           }, "h",    function () awful.tag.incmwfact(-0.05)    end),
+    awful.key({ modkey, "Shift"   }, "h",    function () awful.tag.incnmaster( 1)      end),
+    awful.key({ modkey, "Shift"   }, "l",    function () awful.tag.incnmaster(-1)      end),
+    awful.key({ modkey, "Control" }, "h",    function () awful.tag.incncol( 1)         end),
+    awful.key({ modkey, "Control" }, "l",    function () awful.tag.incncol(-1)         end),
+    awful.key({ modkey,           }, "space",function () awful.layout.inc(layouts,  1) end),
+    awful.key({ modkey, "Shift"   }, "space",function () awful.layout.inc(layouts, -1) end),
 
     -- Shortcut applications
-    awful.key({ modkey, "Shift"   }, "b",    function () awful.util.spawn(browser)        end),
-    awful.key({ modkey, "Shift"   }, "c",    function () awful.util.spawn(screenshot)     end),
-    awful.key({ modkey, "Shift"   }, "d",    function () awful.util.spawn(debugger)       end),
-    awful.key({ modkey, "Shift"   }, "e",    function () awful.util.spawn(emacs)          end),
-    awful.key({ modkey, "Shift"   }, "g",    function () awful.util.spawn(github)         end),
-    awful.key({ modkey, "Shift"   }, "m",    function () awful.util.spawn(mail)           end),
-    awful.key({ modkey, "Shift"   }, "i",    function () awful.util.spawn(idobata)        end),
-    awful.key({ modkey, "Shift"   }, "t",    function () awful.util.spawn(mikutter)       end),
+    awful.key({ modkey, "Shift"   }, "b",    function () awful.util.spawn(browser)    end),
+    awful.key({ modkey, "Shift"   }, "c",    function () awful.util.spawn(screenshot) end),
+    awful.key({ modkey, "Shift"   }, "d",    function () awful.util.spawn(debugger)   end),
+    awful.key({ modkey, "Shift"   }, "e",    function () awful.util.spawn(emacs)      end),
+    awful.key({ modkey, "Shift"   }, "g",    function () awful.util.spawn(github)     end),
+    awful.key({ modkey, "Shift"   }, "m",    function () awful.util.spawn(mail)       end),
+    awful.key({ modkey, "Shift"   }, "i",    function () awful.util.spawn(idobata)    end),
+    awful.key({ modkey, "Shift"   }, "t",    function () awful.util.spawn(mikutter)   end),
 
     -- Shortcut display arrangement
     awful.key({ modkey, "Control" }, "g",    function () awful.util.spawn(laptop_display) end),
@@ -283,7 +283,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "w",    function () awful.util.spawn(work_display)   end),
 
     -- Shortcut system application
-    awful.key({ modkey, "Control" }, "s",    function () awful.util.spawn(sleep)          end),
+    awful.key({ modkey, "Control" }, "s",    function () awful.util.spawn(sleep) end),
 
     awful.key({ modkey, "Control" }, "n",    awful.client.restore),
 
