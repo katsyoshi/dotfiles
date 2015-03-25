@@ -61,6 +61,7 @@ sleep          = "slock"
 none_display   = "sh /home/katsu/.screenlayout/none.sh"
 work_display   = "sh /home/katsu/.screenlayout/work.sh"
 copy_display   = "sh /home/katsu/.screenlayout/presen.sh"
+home_display   = "sh /home/katsu/.screenlayout/home.sh"
 laptop_display = "sh /home/katsu/.screenlayout/laptop.sh"
 screenshot     = 'shutter'
 
@@ -276,6 +277,7 @@ globalkeys = awful.util.table.join(
 
     -- Shortcut display arrangement
     awful.key({ modkey, "Control" }, "g",    function () awful.util.spawn(laptop_display) end),
+    awful.key({ modkey, "Control" }, "h",    function () awful.util.spawn(home_display)   end),
     awful.key({ modkey, "Control" }, "n",    function () awful.util.spawn(none_display)   end),
     awful.key({ modkey, "Control" }, "p",    function () awful.util.spawn(copy_display)   end),
     awful.key({ modkey, "Control" }, "w",    function () awful.util.spawn(work_display)   end),
