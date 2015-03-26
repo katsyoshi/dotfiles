@@ -1,6 +1,4 @@
 bundler
 pry
-gem-open
-git-browse-remote
 rubocop
 ruby-lint
