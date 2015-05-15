@@ -1,0 +1,8 @@
+defaults.pcm.card 0
+defaults.pcm.device 3
+defaults.ctl.card 0
+
+pcm.!default {
+  type plug
+  slave.pcm "dmix"
+}
