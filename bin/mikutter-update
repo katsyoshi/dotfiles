@@ -9,7 +9,9 @@ git fetch honke
 git checkout master
 git pull origin master
 git merge honke/master
+git push origin
 
 git checkout develop
 git pull origin develop
 git merge honke/develop
+git push origin
