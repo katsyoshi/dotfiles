@@ -1,0 +1,15 @@
+#!/bin/bash
+
+MIKUTTER_HOME=$1
+
+cd $MIKUTTER_HOME
+git fetch origin
+git fetch honke
+
+git checkout master
+git pull origin master
+git merge honke/master
+
+git checkout develop
+git pull origin develop
+git merge honke/develop
