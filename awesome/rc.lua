@@ -83,7 +83,7 @@ layouts =
 display =
 {
       name = {1, 2, 3, 4},
-      layouts = {layouts[2], layouts[2], layouts[2], layouts[3]}
+      layouts = {layouts[1], layouts[2], layouts[1], layouts[3]}
 }
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
