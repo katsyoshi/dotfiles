@@ -1,15 +1,26 @@
 XSESSION="awesome"
 
-eval $(gnome-keyring-daemon --conponents=pkcs11,scretes,gpg)
+eval $(gnome-keyring-daemon --components=pkcs11,scretes,ssh,gpg)
+
 export GNOME_KEYRING_PID
 export GNOME_KEYRING_SCOKET
 export SSH_AUTH_SOCK
 export GPG_AGENT_INFO
-export XMODIFIERS=@im="fcitx"
-export GTK_IM_MODULE="fcitx"
-export QT_IM_MODULE="fcitx"
 
-/opt/bin/dropbox &
-dbus-launch nm-applet &
-volumeicon &
+if [ -e /usr/bin/ibus ]; then
+    IM_PROGRAM=ibus
+fi
+
+if [ -e /usr/bin/fcitx ]; then
+    IM_PROGRAM=fcitx
+fi
+
+export XMODIFIERS=@im="${IM_PROGRAM}"
+export GTK_IM_MODULE="${IM_PROGRAM}"
+export QT_IM_MODULE="${IM_PROGRAM}"
+
+#/opt/bin/dropbox &
+#dbus-launch nm-applet &
+#volumeicon &
+ibus-daemon &
 parcellite &
