@@ -59,6 +59,7 @@ vnc            = "gtkvncviewer"
 emacs          = "emacs"
 gimp           = "gimp"
 sleep          = "slock"
+franz          = "/home/katsu/bin/franz"
 none_display   = "sh /home/katsu/.screenlayout/none.sh"
 work_display   = "sh /home/katsu/.screenlayout/work.sh"
 copy_display   = "sh /home/katsu/.screenlayout/presen.sh"
@@ -109,6 +110,7 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
                                     { "open web", browser },
                                     { "open twitter", mikutter },
                                     { "open editor", emacs },
+                                    { "open franz", franz },
                                     { "open gimp", gimp }
                                   }
                         })
@@ -271,7 +273,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Shift"   }, "c",    function () awful.util.spawn(screenshot) end),
     awful.key({ modkey, "Shift"   }, "d",    function () awful.util.spawn(debugger)   end),
     awful.key({ modkey, "Shift"   }, "e",    function () awful.util.spawn(emacs)      end),
-    awful.key({ modkey, "Shift"   }, "g",    function () awful.util.spawn(github)     end),
+    awful.key({ modkey, "Shift"   }, "f",    function () awful.util.spawn(franz)      end),
     awful.key({ modkey, "Shift"   }, "v",    function () awful.util.spawn(vnc)        end),
     awful.key({ modkey, "Shift"   }, "m",    function () awful.util.spawn(mail)       end),
     awful.key({ modkey, "Shift"   }, "i",    function () awful.util.spawn(idobata)    end),
