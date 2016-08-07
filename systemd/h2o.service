@@ -4,7 +4,7 @@ After=syslog.target network.target remote-fs.target nss-lookup.target
 
 [Service]
 Type=forking
-PIDFile=/var/run/h2o/h2o.pid
+PIDFile=/var/run/h2o.pid
 ExecStartPre=/opt/local/bin/h2o -c /etc/h2o/h2o.conf -t
 ExecStart=/opt/local/bin/h2o -c /etc/h2o/h2o.conf -m daemon
 ExecReload=/bin/kill -s HUP $MAINPID
