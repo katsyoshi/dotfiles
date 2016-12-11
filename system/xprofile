@@ -22,5 +22,5 @@ export QT_IM_MODULE="${IM_PROGRAM}"
 #/opt/bin/dropbox &
 #dbus-launch nm-applet &
 #volumeicon &
-ibus-daemon &
+#ibus-daemon &
 parcellite &
