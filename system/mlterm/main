@@ -1,0 +1,12 @@
+fontsize = 14
+line_space = 2
+use_variable_column_width = false
+use_anti_alias = true
+not_use_unicode_font = true
+use_scrollbar = false
+scrollbar_view_name = simple
+scrollbar_mode = right
+sb_bg_color = black
+sb_fg_color = gray
+fg_color = white
+bg_color = black
