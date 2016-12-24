@@ -1,4 +1,4 @@
 bundler
-pry
 rubocop
 ruby-lint
+rails
