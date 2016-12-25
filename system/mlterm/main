@@ -1,5 +1,5 @@
 fontsize = 14
-line_space = 2
+line_space = 3
 use_variable_column_width = false
 use_anti_alias = true
 not_use_unicode_font = true
@@ -10,3 +10,4 @@ sb_bg_color = black
 sb_fg_color = gray
 fg_color = white
 bg_color = black
+use_clipboard = true
