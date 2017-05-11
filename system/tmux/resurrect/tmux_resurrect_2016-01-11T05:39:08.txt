@@ -1,0 +1,11 @@
+pane	0	0	:main	0	:-	0	:/home/katsu	1	zsh	:
+pane	0	1	:sakematsuri	1	:*	0	:/home/katsu/Program/Rails/sakematsuri	0	zsh	:
+pane	0	1	:sakematsuri	1	:*	1	:/home/katsu/Program/Rails/sakematsuri	1	zsh	:
+pane	0	2	:zsh	0	:	0	:/home/katsu/Program/Rails/diary	1	ruby	:/home/katsu/.rbenv/versions/2.4.0-dev/bin/ruby bin/rails c
+pane	0	2	:zsh	0	:	1	:/home/katsu/Program/Rails/diary	0	ruby	:/home/katsu/.rbenv/versions/2.4.0-dev/bin/ruby bin/rails s
+pane	0	3	:zsh	0	:	0	:/home/katsu/Program/Rabbit/lecture/MultimediaPracticeB/13	1	zsh	:
+window	0	0	0	:-	932e,141x104,0,0,1
+window	0	1	1	:*	5319,141x104,0,0{70x104,0,0,2,70x104,71,0,3}
+window	0	2	0	:	b9f8,141x104,0,0[141x64,0,0,8,141x39,0,65,7]
+window	0	3	0	:	9331,141x104,0,0,4
+state	0	

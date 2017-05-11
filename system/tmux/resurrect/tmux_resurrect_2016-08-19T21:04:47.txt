@@ -1,0 +1,19 @@
+pane	main	0	:zsh	1	:*	0	:/home/katsu	1	zsh	:
+pane	main	1	:sakematsuri	0	:-	0	:/home/katsu/Program/Rails/sakematsuri	1	irb	:irb
+pane	main	1	:sakematsuri	0	:-	1	:/home/katsu/Program/Rails/sakematsuri	0	ruby	:ruby bin/rails s
+pane	main	1	:sakematsuri	0	:-	2	:/home/katsu/Program/Rails/kaijukei	0	gulp	:gulp
+pane	main	2	:itamae	0	:	0	:/home/katsu/Program/Itamae	1	zsh	:
+pane	main	3	:rabbit	0	:	0	:/home/katsu/Program/Rabbit/lecture/MultimediaPracticeB/13	1	zsh	:
+pane	main	4	:mikutter	0	:	0	:/home/katsu/mikutter	1	zsh	:
+pane	main	4	:mikutter	0	:	1	:/home/katsu/Program/GitHub	0	zsh	:
+pane	main	5	:github	0	:	0	:/home/katsu/Program/Ruby	1	zsh	:
+pane	main	6	:zsh	0	:	0	:/home/katsu/Program/katsyohi.org/blog	1	ssh	:ssh aoba
+pane	main	6	:zsh	0	:	1	:/home/katsu/.gitsrc/dotfiles	0	zsh	:
+window	main	0	1	:*	498c,310x104,0,0,15
+window	main	1	0	:-	a92d,310x104,0,0{156x104,0,0,2,153x104,157,0[153x90,157,0,3,153x13,157,91,9]}
+window	main	2	0	:	92b1,310x104,0,0,4
+window	main	3	0	:	92b2,310x104,0,0,5
+window	main	4	0	:	e8a3,310x104,0,0{155x104,0,0,6,154x104,156,0,7}
+window	main	5	0	:	92b5,310x104,0,0,8
+window	main	6	0	:	34a7,310x104,0,0{155x104,0,0,1,154x104,156,0,13}
+state	main	

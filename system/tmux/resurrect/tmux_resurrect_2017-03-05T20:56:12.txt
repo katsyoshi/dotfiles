@@ -1,0 +1,19 @@
+pane	main	0	:zsh	0	:	0	:/home/katsu	0	zsh	:
+pane	main	0	:zsh	0	:	1	:/home/katsu	1	zsh	:
+pane	main	0	:zsh	0	:	2	:/home/katsu	0	tailf	:tailf /var/log/docker.log
+pane	main	1	:sakematsuri	0	:-	0	:/home/katsu/Program/Rails/sakematsuri	0	zsh	:
+pane	main	1	:sakematsuri	0	:-	1	:/home/katsu/Program/Rails/kaijukei	1	zsh	:
+pane	main	2	:itamae	1	:*	0	:/home/katsu/Program/Itamae/itamae-plugin-resource-pip	1	zsh	:
+pane	main	3	:rabbit	0	:	0	:/home/katsu/Program/Rabbit/lecture/MultimediaPracticeB/13	1	zsh	:
+pane	main	4	:mikutter	0	:	0	:/home/katsu/mikutter	0	zsh	:
+pane	main	4	:mikutter	0	:	1	:/home/katsu/Program/Mikutter/mikutter	1	zsh	:
+pane	main	5	:github	0	:	0	:/home/katsu/Program/Ruby	1	zsh	:
+pane	main	6	:blog	0	:	0	:/home/katsu/Program/Work/blog	1	zsh	:
+window	main	0	0	:	17ce,546x149,0,0{273x149,0,0[273x74,0,0,6,273x74,0,75,16],272x149,274,0,15}
+window	main	1	0	:-	ec1f,546x149,0,0{274x149,0,0,7,271x149,275,0,8}
+window	main	2	1	:*	b0b6,546x149,0,0,9
+window	main	3	0	:	5887,546x149,0,0,10
+window	main	4	0	:	3712,546x149,0,0{272x149,0,0,11,273x149,273,0,12}
+window	main	5	0	:	588a,546x149,0,0,13
+window	main	6	0	:	588b,546x149,0,0,14
+state	main	
