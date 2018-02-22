@@ -24,3 +24,4 @@ export QT_IM_MODULE="${IM_PROGRAM}"
 #volumeicon &
 #ibus-daemon &
 parcellite &
+pulseaudio --start
