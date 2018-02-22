@@ -5,7 +5,7 @@ function bootup() {
     which $command > /dev/null && pgrep $command || $command &
 }
 
-XSESSION="awesome"
+XSESSION="i3wm"
 
 eval $(gnome-keyring-daemon --components=pkcs11,scretes,ssh,gpg)
 
