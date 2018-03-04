@@ -1,0 +1,3 @@
+#!/bin/bash
+eval $(rbenv init -)
+rbenv install -f $(rbenv install -l | grep -e '\s\+2.*-dev' | tail -n 1)
