@@ -25,9 +25,3 @@ fi
 export XMODIFIERS=@im="${IM_PROGRAM}"
 export GTK_IM_MODULE="${IM_PROGRAM}"
 export QT_IM_MODULE="${IM_PROGRAM}"
-
-#/opt/bin/dropbox &
-bootup nm-applet
-bootup parcellite
-pulseaudio --start
-bootup volumeicon
