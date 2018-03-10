@@ -148,6 +148,17 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+exec --no-startup-id i3-msg 'workspace 2; exec firefox-bin; workspace 1;'
+exec --no-startup-id i3-msg 'workspace 3; exec slack; workspace 1;'
+exec --no-startup-id i3-msg 'workspace 4; exec gtkvncviewer; workspace 1;'
+exec --no-startup-id '/usr/bin/emacs --daemon'
+exec --no-startup-id 'setxkbmap -option ctrl:nocaps'
+exec feh --bg-scale https://d250g2.com/d250g2.jpg
+exec parcellite
+exec mn-applet
+exec fcitx
+exec pulseaudio --start
+exec volumeicon
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
