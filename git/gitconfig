@@ -15,5 +15,7 @@
 [core]
 	editor = emacsclient -nw
 	excludesfile = ~/.gitignore
+	pager = less -R -F -X
+
 [merge]
 	tool = opendiff
