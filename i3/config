@@ -156,7 +156,7 @@ exec --no-startup-id '/usr/bin/emacs --daemon'
 exec --no-startup-id 'setxkbmap -option ctrl:nocaps'
 exec feh --bg-scale https://d250g2.com/d250g2.jpg
 exec parcellite
-exec mn-applet
+exec nm-applet
 exec fcitx
 exec pulseaudio --start
 exec volumeicon
