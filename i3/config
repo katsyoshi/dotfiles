@@ -149,11 +149,12 @@ mode "resize" {
 }
 
 bindsym $mod+Ctrl+r mode "resize"
+exec $terminal
+exec emacs
 exec --no-startup-id i3-msg 'workspace 2; exec firefox-bin; workspace 1;'
-exec --no-startup-id i3-msg 'workspace 3; exec slack; workspace 1;'
-exec --no-startup-id i3-msg 'workspace 4; exec gtkvncviewer; workspace 1;'
-exec --no-startup-id '/usr/bin/emacs --daemon'
-exec --no-startup-id 'setxkbmap -option ctrl:nocaps'
+exec --no-startup-id i3-msg 'workspace 3; exec /home/katsyoshi/bin/mikutter; workspace 1;'
+exec --no-startup-id i3-msg 'workspace 3; exec /home/katsyoshi/.packages/franz/franz; workspace 1;'
+exec --no-startup-id i3-msg 'workspace 4; exec remmina; workspace 1;'e
 exec feh --bg-scale https://d250g2.com/d250g2.jpg
 exec parcellite
 exec nm-applet
