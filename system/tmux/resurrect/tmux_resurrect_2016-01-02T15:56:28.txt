@@ -1,4 +1,0 @@
-pane	0	0	:zsh	1	:*	0	:/home/katsu/Program/Rails	0	zsh	:
-pane	0	0	:zsh	1	:*	1	:/home/katsu/Program/Rails/sakematsuri	1	zsh	:
-window	0	0	1	:*	f0b5,310x104,0,0{156x104,0,0,0,153x104,157,0,1}
-state	0	
