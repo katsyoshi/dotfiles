@@ -123,9 +123,6 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-# bindsym $mod+Shift+p exec "xrandr --output HDMI-0 --auto --output DP-2 --off"
-# bindsym $mod+Shift+d exec "xrandr --output DP-2 --auto --output HDMI-0 --off"
-# exec xautolock -time 5 -locker slock
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -171,3 +168,8 @@ bar {
         position top
         status_command i3status
 }
+
+# # lapttop configurations
+# bindsym $mod+Shift+p exec "xrandr --output HDMI-0 --auto --output DP-2 --off"
+# bindsym $mod+Shift+d exec "xrandr --output DP-2 --auto --output HDMI-0 --off"
+# exec xautolock -time 5 -locker slock
