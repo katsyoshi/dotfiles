@@ -159,8 +159,8 @@ exec --no-startup-id i3-msg 'workspace 3; exec /home/katsyoshi/.packages/franz/f
 exec --no-startup-id i3-msg 'workspace 4; exec remmina; workspace 1;'e
 exec feh --bg-scale https://d250g2.com/d250g2.jpg
 exec parcellite
-exec nm-applet
-exec fcitx
+exec dbus-launch nm-applet
+exec dbus-launch fcitx
 exec pulseaudio --start
 exec volumeicon
 
