@@ -150,11 +150,11 @@ mode "resize" {
 
 bindsym $mod+Ctrl+r mode "resize"
 exec $terminal
-exec emacs
+exec 'workspace 1; exec emacs; workspace 1;'
 exec --no-startup-id i3-msg 'workspace 2; exec firefox-bin; workspace 1;'
-exec --no-startup-id i3-msg 'workspace 3; exec /home/katsyoshi/bin/mikutter; workspace 1;'
-exec --no-startup-id i3-msg 'workspace 3; exec /home/katsyoshi/.packages/franz/franz; workspace 1;'
-exec --no-startup-id i3-msg 'workspace 4; exec remmina; workspace 1;'e
+exec --no-startup-id i3-msg 'workspace 3; exec mikutter; workspace 1;'
+exec --no-startup-id i3-msg 'workspace 3; exec franz; workspace 1;'
+exec --no-startup-id i3-msg 'workspace 4; exec remmina; workspace 1;'
 exec feh --bg-scale https://d250g2.com/d250g2.jpg
 exec parcellite
 exec dbus-launch nm-applet
