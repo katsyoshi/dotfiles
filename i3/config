@@ -176,3 +176,4 @@ bar {
 # bindsym $mod+Shift+p exec "xrandr --output HDMI-0 --auto --output DP-2 --off"
 # bindsym $mod+Shift+d exec "xrandr --output DP-2 --auto --output HDMI-0 --off"
 # exec xautolock -time 5 -locker slock
+# exec google-chrome-stable
