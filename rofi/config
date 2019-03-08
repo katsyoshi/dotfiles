@@ -1,0 +1,3 @@
+rofi.theme: doracula.rasi
+rofi.font: Noto Sans Mono 20
+rofi.terminal: alacritty
