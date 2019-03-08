@@ -108,6 +108,13 @@ set $ws8  "8: ANY"
 set $ws9  "9: ANY"
 set $ws10 "10: Music"
 
+# assign applications at workspace
+assign [class="Emacs"] $ws1
+assign [class="Alacritty"] $ws1
+assign [class="Firefox"] $ws2
+assign [class="Franz"] $ws3
+assign [class="Google-Chrome"] $ws3
+
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -165,11 +172,11 @@ mode "resize" {
 
 bindsym $mod+Ctrl+r mode "resize"
 exec $terminal
-exec 'workspace 1; exec emacs; workspace 1;'
-exec --no-startup-id i3-msg 'workspace 2; exec firefox-bin; workspace 1;'
-exec --no-startup-id i3-msg 'workspace 3; exec mikutter; workspace 1;'
-exec --no-startup-id i3-msg 'workspace 3; exec franz; workspace 1;'
-exec --no-startup-id i3-msg 'workspace 4; exec remmina; workspace 1;'
+exec emacs
+exec firefox-bin
+exec mikutter
+exec franz
+exec remmina
 exec feh --bg-scale https://d250g2.com/d250g2.jpg
 exec parcellite
 exec dbus-launch nm-applet
