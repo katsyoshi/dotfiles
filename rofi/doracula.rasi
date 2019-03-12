@@ -121,3 +121,8 @@
     margin: 0 0.3em 0em 0em;
     str: ":";
 }
+
+configuration {
+    show-icons: true;
+    drun-icon-theme: "MY_ICON_THEME";
+}
