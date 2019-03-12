@@ -112,3 +112,12 @@
     spacing:    0;
     text-color: @normal-foreground;
 }
+#inputbar {
+    children: [ prompt, textbox-prompt-colon, entry, case-indicator ];
+}
+#textbox-prompt-colon {
+    text-color: inherit;
+    expand: false;
+    margin: 0 0.3em 0em 0em;
+    str: ":";
+}
