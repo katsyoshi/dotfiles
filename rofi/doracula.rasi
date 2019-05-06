@@ -122,7 +122,7 @@
     str: ":";
 }
 
-configuration {
+#configuration {
     show-icons: true;
     drun-icon-theme: "MY_ICON_THEME";
 }
