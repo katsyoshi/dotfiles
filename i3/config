@@ -194,7 +194,7 @@ bar {
 }
 
 # # lapttop configurations
-# bindsym $mod+Shift+p exec "xrandr --output HDMI-0 --auto --output DP-2 --off"
-# bindsym $mod+Shift+d exec "xrandr --output DP-2 --auto --output HDMI-0 --off"
+# bindsym $mod+Shift+p exec "xrandr --output HDMI-0 --auto --output DP-2 --off --output DP-0 --auto"
+# bindsym $mod+Shift+d exec "xrandr --output DP-2 --auto --output HDMI-0 --off --output DP-0 --off"
 # exec xautolock -time 5 -locker slock
 # exec google-chrome-stable
