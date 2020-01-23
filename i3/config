@@ -179,7 +179,7 @@ exec firefox-bin
 exec mikutter
 exec franz
 exec remmina
-exec feh --bg-scale https://d250g2.com/d250g2.jpg
+exec feh --bg-scale /home/katsyoshi/.wallpaper
 exec parcellite
 exec dbus-launch nm-applet
 exec dbus-launch fcitx
