@@ -182,6 +182,7 @@ exec remmina
 exec feh --bg-scale /home/katsyoshi/.wallpaper
 exec parcellite
 exec dbus-launch nm-applet
+exec dbus-launch blueman-applet
 exec dbus-launch fcitx
 exec pulseaudio --start
 exec volumeicon
