@@ -175,7 +175,7 @@ mode "resize" {
 
 bindsym $mod+Ctrl+r mode "resize"
 exec $terminal
-exec emacs
+exec emacsclient -a "" -c -s katsyoshi
 exec firefox-bin
 exec mikutter
 exec franz
