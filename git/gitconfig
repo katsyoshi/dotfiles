@@ -20,3 +20,6 @@
 
 [merge]
 	tool = opendiff
+
+[pull]
+	rebase = false
