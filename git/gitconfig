@@ -4,11 +4,12 @@
 
 [alias]
 	br = branch
-	co = chekcout
 	pr = "pull-request"
+	rs = restore
+	st = status -s
+	sw = switch
 	tr = tree
 	tree = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
-	st = status -s
 
 [push]
 	default = matching
