@@ -14,7 +14,7 @@
 	default = matching
 
 [core]
-	editor = emacsclient -nw
+	editor = emacsclient -nw -s katsyoshi
 	excludesfile = ~/.gitignore
 	pager = less -R -F -X
 
