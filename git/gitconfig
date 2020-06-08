@@ -3,12 +3,12 @@
 	name = MATSUMOTO, Katsuyoshi
 
 [alias]
-	co = checkout
-	st = status -s
-	tree = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
-	tr = tree
-	pr = "pull-request"
 	br = branch
+	co = chekcout
+	pr = "pull-request"
+	tr = tree
+	tree = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
+	st = status -s
 
 [push]
 	default = matching
