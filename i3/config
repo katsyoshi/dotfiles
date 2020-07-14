@@ -101,8 +101,8 @@ set $ws1  "1: Work"
 set $ws2  "2: Firefox"
 set $ws3  "3: SNS"
 set $ws4  "4: Play"
-set $ws5  "5: ANY"
-set $ws6  "6: ANY"
+set $ws5  "5: Database"
+set $ws6  "6: discord"
 set $ws7  "7: ANY"
 set $ws8  "8: ANY"
 set $ws9  "9: ANY"
@@ -118,6 +118,7 @@ assign [class="Google-chrome"] $ws3
 assign [class="remmina"] $ws4
 assign [class="Mikutter.rb"] $ws3
 assign [class="DBeaver"] $ws5
+assign [class="discord"] $ws6
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -191,6 +192,7 @@ exec pulseaudio --start
 exec volumeicon
 exec flameshot
 exec dbeaver
+exec discord
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
