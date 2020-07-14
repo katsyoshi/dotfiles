@@ -113,6 +113,7 @@ assign [class="Emacs"] $ws1
 assign [class="Alacritty"] $ws1
 assign [class="Firefox"] $ws2
 assign [class="Franz"] $ws3
+assign [class="Slack"] $ws3
 assign [class="Google-chrome"] $ws3
 assign [class="remmina"] $ws4
 assign [class="Mikutter.rb"] $ws3
@@ -178,6 +179,7 @@ exec $terminal
 exec emacsclient -a "" -c -s katsyoshi
 exec firefox-bin
 exec mikutter
+exec slack
 exec franz
 exec remmina
 exec feh --bg-scale /home/katsyoshi/.wallpaper
