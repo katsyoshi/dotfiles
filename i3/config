@@ -103,7 +103,7 @@ set $ws3  "3: SNS"
 set $ws4  "4: Play"
 set $ws5  "5: Database"
 set $ws6  "6: discord"
-set $ws7  "7: ANY"
+set $ws7  "7: IDE"
 set $ws8  "8: ANY"
 set $ws9  "9: ANY"
 set $ws10 "10: Music"
@@ -119,6 +119,7 @@ assign [class="remmina"] $ws4
 assign [class="Mikutter.rb"] $ws3
 assign [class="DBeaver"] $ws5
 assign [class="discord"] $ws6
+assign [class="jetbrains-studio"] $ws7
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
