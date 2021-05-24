@@ -1,0 +1,18 @@
+#!/bin/bash -xe
+
+function update-kernel() {
+  emerge --depclean gentoo-sources
+  eselect kernel set 1
+  cd /usr/src/linux
+  make oldconfig
+  time make -j$(nproc)
+  make modules_install
+  emerge nvidia-drivers
+  make install
+}
+
+update-kernel
+
+if [[ $1 =~ "-r" ]]; then
+  shutdown -r now
+fi
