@@ -97,15 +97,15 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # workspace name
-set $ws1  "1: Work"
-set $ws2  "2: Firefox"
-set $ws3  "3: SNS"
-set $ws4  "4: Play"
-set $ws5  "5: Database"
-set $ws6  "6: discord"
-set $ws7  "7: IDE"
-set $ws8  "8: ANY"
-set $ws9  "9: ANY"
+set $ws1 "1: Work"
+set $ws2 "2: Firefox"
+set $ws3 "3: SNS"
+set $ws4 "4: IDE"
+set $ws5 "5: Database"
+set $ws6 "6: discord"
+set $ws7 "7: Play"
+set $ws8 "8: Graphics"
+set $ws9 "9: Video"
 set $ws10 "10: Music"
 
 # assign applications at workspace
@@ -115,11 +115,16 @@ assign [class="Firefox"] $ws2
 assign [class="Franz"] $ws3
 assign [class="Slack"] $ws3
 assign [class="Google-chrome"] $ws3
-assign [class="remmina"] $ws4
 assign [class="Mikutter.rb"] $ws3
+assign [class="jetbrains-studio"] $ws4
+assign [class="jetbrains-idea-ce"] $ws4
+assign [class="Code"] $ws4
 assign [class="DBeaver"] $ws5
 assign [class="discord"] $ws6
-assign [class="jetbrains-studio"] $ws7
+assign [class="remmina"] $ws7
+assign [class="Darktable"] $ws8
+assign [class="Inkscape"] $ws8
+assign [class="obs"] $ws9
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -182,7 +187,6 @@ exec emacsclient -a "" -c -s katsyoshi
 exec firefox-bin
 exec mikutter
 exec slack
-exec franz
 exec remmina
 exec feh --bg-scale /home/katsyoshi/.wallpaper
 exec parcellite
@@ -190,16 +194,14 @@ exec dbus-launch nm-applet
 exec dbus-launch blueman-applet
 exec dbus-launch fcitx
 exec pulseaudio --start
-exec volumeicon
 exec flameshot
-exec dbeaver
 exec discord
-exec android-studio
+exec idea.sh
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    font pango:DejaVu Sans Mono, FontAwesome 12
+    font pango:Noto Mono for Powerline, FontAwesome 12
     position top
     status_command /home/katsyoshi/.cargo/bin/i3status-rs /home/katsyoshi/.config/i3/status-bar/config.toml
     colors {
