@@ -12,12 +12,12 @@ scrolling:
   multiplier: 3
 font:
   normal:
-    family: Ricty
+    family: Noto Mono for Powerline
     style: Regular
   bold:
-    family: Ricty
+    family: Noto Mono for Powerline
     style: Bold
-  size: 12.0
+  size: 10.0
   offset:
     x: 0
     y: 0
