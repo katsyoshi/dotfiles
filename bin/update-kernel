@@ -7,7 +7,7 @@ function update-kernel() {
   make oldconfig
   time make -j$(nproc)
   make modules_install
-  emerge nvidia-drivers
+  emerge nvidia-drivers v4l2loopback
   make install
 }
 
