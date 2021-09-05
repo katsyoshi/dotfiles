@@ -185,6 +185,7 @@ bindsym $mod+Ctrl+r mode "resize"
 exec $terminal
 exec emacsclient -a "" -c -s katsyoshi
 exec firefox-bin
+exec google-chrome-stable
 exec mikutter
 exec slack
 exec remmina
@@ -219,4 +220,3 @@ bar {
 # bindsym $mod+Shift+p exec "xrandr --output HDMI-0 --auto --output DP-2 --off --output DP-0 --auto"
 # bindsym $mod+Shift+d exec "xrandr --output DP-2 --auto --output HDMI-0 --off --output DP-0 --off"
 # exec xautolock -time 5 -locker slock
-# exec google-chrome-stable
