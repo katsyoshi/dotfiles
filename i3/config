@@ -183,7 +183,6 @@ mode "resize" {
 
 bindsym $mod+Ctrl+r mode "resize"
 exec $terminal
-exec emacsclient -a "" -c -s katsyoshi
 exec firefox-bin
 exec google-chrome-stable
 exec mikutter
