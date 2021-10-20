@@ -194,6 +194,7 @@ exec parcellite
 exec dbus-launch nm-applet
 exec dbus-launch blueman-applet
 exec dbus-launch fcitx
+exec dbus-launch dunst
 exec pulseaudio --start
 exec flameshot
 exec discord
