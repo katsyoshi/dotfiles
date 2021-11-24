@@ -1,0 +1,105 @@
+*/* PYTHON_TARGETS: -* python3_8 python3_9
+*/* PYTHON_SINGLE_TARGET: -* python3_9
+*/* RUBY_TARGETS: -* ruby27 ruby30
+app-admin/rsyslog jemalloc openssl
+app-crypt/gcr gtk
+app-crypt/pinentry gnome-keyring
+app-editors/emacs cairo dbus gif gpm gui gtk gtk3 gzip-el jpeg libxml2 motif png svg ssl sound tiff xft xwidgets zlib
+app-emacs/emacs-common gui
+app-emulation/docker btrfs
+app-emulation/containerd btrfs
+app-i18n/fcitx gtk2 gtk3
+app-i18n/mozc fcitx4 gui
+app-text/ghostscript-gpl cups
+app-text/poppler cairo tiff
+app-text/texlive cjk context detex dvi2tty epspdf extra games graphics humanities jadetex luatex metapost music pdfannotextractor png pstricks publishers science tex4ht texi2html truetype xetex xindy xml
+app-text/texlive-core cjk xetex
+app-text/xmlto text
+dev-db/postgresql uuid
+dev-java/swt cairo
+dev-lang/python sqlite
+dev-lang/ruby jemalloc jit
+dev-libs/boost python
+dev-libs/efl egl gles2-only
+dev-libs/folks eds
+dev-libs/glib dbus
+dev-libs/libgdata gnome-online-accounts vala
+dev-libs/libdbusmenu gtk3
+dev-libs/libgudev introspection
+dev-libs/libical vala
+dev-libs/libnl utils
+dev-libs/libpcre2 pcre16
+dev-libs/libxml2 python icu
+dev-libs/xmlsec nss
+dev-qt/qtcore icu
+dev-qt/qtgui egl dbus
+dev-qt/qtwebchannel qml
+dev-qt/qtwebengine widgets
+dev-util/nvidia-cuda-toolkit profiler
+games-emulation/snes9x gtk joystick
+gnome-base/gvfs udisks cdda
+gnome-base/gnome-control-center networkmanager
+gnome-extra/evolution-data-server vala
+gnome-extra/nm-applet gtk
+media-fonts/noto cjk
+media-gfx/darktable colord doc flickr geolocation gnome-keyring gphoto2 graphicsmagick jpeg2k kwallet nls opencl openexr openmp pax_kernel webp 
+media-gfx/feh curl
+media-gfx/fontforge cairo png
+media-gfx/gimp aalib alsa aqua bzip2 curl dbus exif jpeg jpeg2k lcms mng openexr pdf png postscript smp svg tiff wm xpm
+media-gfx/graphviz gdk-pixbuf gtk gts guile lasi nsl pdf postscript svg
+media-gfx/imagemagick jpeg jpeg2k perl png postscript raw svg tiff webp xml
+media-libs/clutter egl
+media-libs/cogl gles2
+media-libs/freetype png harfbuzz
+media-libs/gegl cairo
+media-libs/gst-plugins-base theora
+media-libs/musicbrainz examples test
+media-libs/tiff webp
+media-libs/gd jpeg fontconfig truetype png
+media-libs/gegl raw
+media-libs/harfbuzz icu
+media-libs/imlib2 jpeg png
+media-libs/libpng apng
+media-libs/libsdl2 gles2
+media-libs/libsixel curl gd gtk jpeg png
+media-libs/libv4l jpeg
+media-libs/libvpx svc
+media-libs/mesa gles2
+media-plugins/alsa-plugins pulseaudio
+media-plugins/grilo-plugins tracker
+media-sound/pulseaudio gtk dbus
+media-video/ffmpeg openh264 aac alsa cuda faac hardcoded-tables gif v4l libv4l webp jpeg2k x265 theora mp3 x264
+media-video/obs-studio lua nvenc python truetype v4l vlc
+media-video/webcamoid ffmpeg jack v4l v4lutils videoeffects
+net-dns/bind-tools readline ssl
+net-fs/samba client
+net-im/slack gnome-keyring ayatana
+net-misc/curl http2 ssl ipv6 ssh
+net-misc/networkmanager bluetooth teamd
+net-misc/nm-applet teamd gtk
+net-misc/remmina gnome-keyring vnc rdp
+net-print/cups dbus
+net-wireless/wpa_supplicant dbus
+net-wireless/bluez user-session
+sci-libs/fftw float fortran neon openmp threads
+sci-libs/gd jpeg fontconfig truetype png
+sci-libs/gts jpeg fontconfig truetype png
+sci-visualization/gnuplot bitmap cairo compat ggi libcaca libcerf readline svga
+sys-apps/dbus user-session
+sys-apps/systemd pam policykit cgroup-hybrid
+sys-auth/consolekit policykit
+sys-block/fio aio
+sys-devel/binutils gold
+sys-devel/gcc jit graphite
+sys-devel/llvm clang
+sys-libs/libxcrypt static-libs
+sys-libs/zlib minizip abi_x86_32 static-libs
+virtual/imagemagick-tools perl
+virtual/libcrypt static-libs
+x11-drivers/nvidia-drivers acpi gtk3 uvm
+x11-libs/cairo xcb
+x11-libs/gdk-pixbuf jpeg tiff
+x11-libs/libdrm video_cards_nvidia
+x11-libs/libxcb xkb
+x11-misc/rofi windowmode
+www-client/firefox-bin -alsa ffmpeg pulseaudio
