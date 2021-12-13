@@ -44,15 +44,11 @@ dev-db/postgresql
 dev-db/postgresql:10
 dev-db/postgresql:12
 dev-java/bcmail
-dev-java/bcmail:1.45
 dev-java/bcpkix
 dev-java/bcprov
-dev-java/bcprov:1.45
 dev-java/bcprov:1.50
 dev-java/gradle-bin
 dev-java/gradle-bin:7.1.1
-dev-java/icu4j
-dev-java/icu4j:56
 dev-java/jakarta-activation-api
 dev-java/jakarta-activation-api:1
 dev-java/maven-bin
@@ -73,6 +69,7 @@ dev-libs/libevent
 dev-libs/libhid
 dev-libs/libisofs
 dev-libs/openssl-compat
+dev-libs/protobuf
 dev-libs/ptexenc
 dev-libs/totem-pl-parser
 dev-lua/LuaBitOp
@@ -142,6 +139,7 @@ dev-ruby/rdoc
 dev-ruby/test-unit
 dev-ruby/typeprof
 dev-ruby/xmlrpc
+dev-tex/latex-beamer
 dev-util/android-tools
 dev-util/bazel
 dev-util/nvidia-cuda-toolkit
@@ -179,6 +177,8 @@ kde-frameworks/kwidgetsaddons
 kde-frameworks/kwindowsystem
 kde-plasma/polkit-kde-agent
 mail-mta/nullmailer
+media-fonts/fontawesome
+media-fonts/noto
 media-fonts/noto-emoji
 media-gfx/darktable
 media-gfx/gimp
@@ -224,6 +224,7 @@ net-mail/mailutils
 net-misc/dhcp
 net-misc/modemmanager
 net-misc/networkmanager
+net-misc/openssh
 net-misc/remmina
 net-misc/tigervnc
 net-misc/whois
