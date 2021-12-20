@@ -2,12 +2,12 @@
 */* PYTHON_SINGLE_TARGET: -* python3_9
 */* RUBY_TARGETS: -* ruby27 ruby30
 app-admin/rsyslog jemalloc openssl
+app-containers/containerd btrfs
 app-crypt/gcr gtk
 app-crypt/pinentry gnome-keyring
 app-editors/emacs cairo dbus gif gpm gui gtk gtk3 gzip-el jpeg libxml2 motif png svg ssl sound tiff xft xwidgets zlib
 app-emacs/emacs-common gui
 app-emulation/docker btrfs
-app-emulation/containerd btrfs
 app-i18n/fcitx gtk2 gtk3
 app-i18n/mozc fcitx4 gui
 app-text/ghostscript-gpl cups

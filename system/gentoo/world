@@ -1,11 +1,11 @@
 app-admin/apache-tools
 app-admin/sudo
 app-admin/sysstat
+app-containers/containerd
 app-crypt/qca
 app-editors/emacs
 app-editors/nano
 app-emacs/protbuf
-app-emulation/containerd
 app-emulation/docker
 app-emulation/docker-cli
 app-emulation/docker-compose
@@ -268,6 +268,7 @@ sys-devel/gdb
 sys-devel/lld
 sys-devel/llvm
 sys-devel/llvm-common
+sys-devel/mold
 sys-fs/btrfs-progs
 sys-fs/cryptsetup
 sys-fs/fuse
@@ -294,6 +295,7 @@ virtual/perl-Test-Simple
 virtual/perl-if
 www-client/firefox-bin
 www-client/google-chrome
+www-servers/h2o
 x11-apps/mesa-progs
 x11-apps/xrandr
 x11-base/xorg-server
