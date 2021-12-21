@@ -274,6 +274,7 @@ sys-devel/mold
 sys-fs/btrfs-progs
 sys-fs/cryptsetup
 sys-fs/fuse
+sys-fs/fuse-exfat
 sys-fs/fuse:0
 sys-fs/lvm2
 sys-fs/udisks
