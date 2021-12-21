@@ -1,4 +1,6 @@
 app-containers/containerd ~amd64
+app-containers/docker ~amd64
+app-containers/docker-cli ~amd64
 app-containers/docker-proxy ~amd64
 app-editors/emacs ~amd64
 app-editors/vim ~amd64
@@ -6,8 +8,6 @@ app-editors/vim-core ~amd64
 app-eselect/eselect-gradle ~amd64
 app-eselect/eselect-ruby ~amd64
 app-admin/supervisor ~amd64
-app-emulation/docker ~amd64
-app-emulation/docker-cli ~amd64
 app-emulation/runc ~amd64
 app-text/texlive-core ~amd64
 app-text/poppler ~amd64

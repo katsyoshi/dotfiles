@@ -2,14 +2,14 @@ app-admin/apache-tools
 app-admin/sudo
 app-admin/sysstat
 app-containers/containerd
+app-containers/docker
+app-containers/docker-cli
+app-containers/docker-compose
+app-containers/runc
 app-crypt/qca
 app-editors/emacs
 app-editors/nano
 app-emacs/protbuf
-app-emulation/docker
-app-emulation/docker-cli
-app-emulation/docker-compose
-app-emulation/runc
 app-eselect/eselect-ctags
 app-eselect/eselect-emacs
 app-eselect/eselect-java
@@ -111,6 +111,7 @@ dev-perl/Sub-Install
 dev-perl/Sub-Quote
 dev-perl/common-sense
 dev-perl/glib-perl
+dev-perl/libwww-perl
 dev-perl/namespace-autoclean
 dev-perl/namespace-clean
 dev-python/botocore
@@ -162,6 +163,7 @@ gnome-base/gdm
 gnome-base/gnome-control-center
 gnome-base/gnome-desktop
 gnome-base/gvfs
+gnome-base/nautilus
 gnome-extra/gconf-editor
 gnome-extra/gnome-user-docs
 gui-libs/libhandy
