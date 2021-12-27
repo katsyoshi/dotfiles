@@ -1,0 +1,11 @@
+keymap:
+  - name: Emacs binding
+    application:
+      not: [Emacs, Alacritty]
+    remap:
+      C-f: right
+      C-b: left
+      C-n: down
+      C-p: up
+      C-a: home
+      C-e: end
