@@ -239,6 +239,7 @@ net-mail/mailutils
 net-misc/dhcp
 net-misc/modemmanager
 net-misc/networkmanager
+net-misc/ntp
 net-misc/openssh
 net-misc/remmina
 net-misc/tigervnc
