@@ -1,0 +1,8 @@
+[Unit]
+Description=Start xremap
+
+[Service]
+ExecStart=/usr/local/bin/xremap /home/katsyoshi/.config/xremap/config.yml
+
+[Install]
+WantedBy=default.target

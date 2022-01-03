@@ -1,0 +1,9 @@
+[Unit]
+Description=Post co2 ppm to slack
+
+[Service]
+EnvironmentFile=/home/katsyoshi/Program/Rust/bots/rust/.env
+ExecStart=/home/katsyoshi/.local/bin/bots
+
+[Install]
+WantedBy=default.target

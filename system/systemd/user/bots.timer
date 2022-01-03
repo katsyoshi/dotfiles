@@ -1,0 +1,8 @@
+[Unit]
+Description=Post co2 ppm to slack
+
+[Timer]
+OnUnitActiveSec=1m
+
+[Install]
+WantedBy=timers.target

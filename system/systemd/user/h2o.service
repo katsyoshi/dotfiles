@@ -1,0 +1,11 @@
+[Unit]
+Description=H2O web server
+Documentation=info:emacs man:emacs(1) https://gnu.org/software/emacs/
+
+[Service]
+Type=forking
+ExecStart=/home/katsyoshi/.local/bin/h2o -c /home/katsyoshi/Program/GitHub/h2o/examples/h2o/h2o.conf
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
