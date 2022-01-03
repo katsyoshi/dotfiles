@@ -1,11 +1,38 @@
+# keymap from https://github.com/k0kubun/xremap/blob/c49a9b5cdecf853e222cdc2d4f0de0a0d7d78041/example/emacs.yml
 keymap:
   - name: Emacs binding
     application:
       not: [Emacs, Alacritty]
     remap:
-      C-f: right
-      C-b: left
-      C-n: down
-      C-p: up
-      C-a: home
-      C-e: end
+      C-b: { with_mark: left }
+      C-f: { with_mark: right }
+      C-p: { with_mark: up }
+      C-n: { with_mark: down }
+      M-b: { with_mark: C-left }
+      M-f: { with_mark: C-right }
+      C-a: { with_mark: home }
+      C-e: { with_mark: end }
+      M-v: { with_mark: pageup }
+      C-v: { with_mark: pagedown }
+      M-Shift-comma: { with_mark: C-home }
+      M-Shift-dot: { with_mark: C-end }
+      C-w: [C-x, { set_mark: false }]
+      M-w: [C-c, { set_mark: false }]
+      C-y: [C-v, { set_mark: false }]
+      C-d: [delete, { set_mark: false }]
+      M-d: [C-delete, { set_mark: false }]
+      C-k: [Shift-end, C-x, { set_mark: false }]
+      C-slash: [C-z, { set_mark: false }]
+      C-space: { set_mark: true }
+      C-s: F3
+      C-r: Shift-F3
+      M-Shift-5: C-h
+      C-g: [esc, { set_mark: false }]
+      C-x:
+        remap:
+          h: [C-home, C-a, { set_mark: true }]
+          C-f: C-o
+          C-s: C-s
+          k: C-f4
+          C-c: C-q
+          u: [C-z, { set_mark: false }]
