@@ -36,6 +36,7 @@ dev-vcs/git ~amd64
 dev-qt/* ~amd64
 dev-texlive/* ~amd64
 games-fps/nexuiz ~amd64
+gui-libs/egl-gbm ~amd64
 media-fonts/mix-mplus-ipa ~amd64
 media-fonts/ricty ~amd64
 media-gfx/blender ~amd64
