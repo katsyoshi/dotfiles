@@ -228,6 +228,7 @@ media-video/v4l2loopback
 media-video/vlc
 net-analyzer/tcpdump
 net-analyzer/wireshark
+net-dns/bind-tools
 net-fs/samba
 net-im/discord-bin
 net-im/slack
