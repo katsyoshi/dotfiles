@@ -3,7 +3,7 @@ Description=Post co2 ppm to slack
 
 [Service]
 EnvironmentFile=/home/katsyoshi/Program/Rust/bots/rust/.env
-ExecStart=/home/katsyoshi/.local/bin/bots
+ExecStart=/home/katsyoshi/.local/bin/bots -sc
 
 [Install]
 WantedBy=default.target
