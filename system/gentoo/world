@@ -211,6 +211,7 @@ media-libs/libdvdcss
 media-libs/libexif
 media-libs/libheif
 media-libs/libsdl2
+media-libs/libsixel
 media-libs/libuninameslist
 media-libs/opencolorio
 media-libs/openimageio
