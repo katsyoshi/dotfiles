@@ -50,6 +50,9 @@ cross-avr/binutils
 cross-avr/binutils:2.35
 cross-avr/gcc
 dev-cpp/abseil-cpp
+dev-cpp/glibmm
+dev-cpp/gtkmm
+dev-cpp/pangomm
 dev-cpp/yaml-cpp
 dev-db/mariadb-connector-c
 dev-db/mysql-connector-c
@@ -60,6 +63,7 @@ dev-java/bcmail
 dev-java/bcpkix
 dev-java/bcprov
 dev-java/bcprov:1.50
+dev-java/jakarta-activation
 dev-java/jakarta-activation-api
 dev-java/jakarta-activation-api:1
 dev-java/maven-bin
@@ -81,6 +85,7 @@ dev-libs/libburn
 dev-libs/libevent
 dev-libs/libhid
 dev-libs/libisofs
+dev-libs/libsigc++
 dev-libs/openssl-compat
 dev-libs/protobuf
 dev-libs/ptexenc
@@ -159,7 +164,6 @@ dev-util/bazel
 dev-util/nvidia-cuda-toolkit
 dev-util/strace
 dev-vcs/git
-gnome-base/gdm
 gnome-base/gnome-control-center
 gnome-base/gnome-desktop
 gnome-base/gvfs
@@ -294,6 +298,7 @@ sys-libs/libunwind
 sys-libs/ncurses
 sys-process/cronbase
 sys-process/htop
+sys-process/lsof
 virtual/jdk
 virtual/mta
 virtual/perl-Storable
@@ -303,6 +308,7 @@ www-client/firefox-bin
 www-client/google-chrome
 www-servers/h2o
 x11-apps/mesa-progs
+x11-apps/xev
 x11-apps/xrandr
 x11-base/xorg-server
 x11-drivers/nvidia-drivers
