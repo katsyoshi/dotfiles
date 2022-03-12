@@ -2,7 +2,7 @@
 keymap:
   - name: Emacs binding
     application:
-      not: [Emacs, Alacritty]
+      not: [Emacs, Alacritty, org.wezfurlong.wezterm]
     remap:
       C-b: { with_mark: left }
       C-f: { with_mark: right }
