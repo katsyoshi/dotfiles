@@ -111,7 +111,7 @@ set $ws10 "10: Music"
 # assign applications at workspace
 assign [class="Emacs"] $ws1
 assign [class="Alacritty"] $ws1
-assign [class="Firefox"] $ws2
+assign [class="firefox"] $ws2
 assign [class="Franz"] $ws3
 assign [class="Slack"] $ws3
 assign [class="Google-chrome"] $ws3
