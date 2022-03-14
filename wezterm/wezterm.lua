@@ -7,16 +7,23 @@ local assign_keys = {
    { key = "y", mods = "LEADER", action = wezterm.action{ PasteFrom = "Clipboard" }, },
    { key = "n", mods = "LEADER", action = wezterm.action{ ActivateTabRelative = -1 }, },
    { key = "p", mods = "LEADER", action = wezterm.action{ ActivateTabRelative = 1 }, },
-   { key = "1", mods = "LEADER", action = wezterm.action{ ActivateTab = 0 }, },
-   { key = "2", mods = "LEADER", action = wezterm.action{ ActivateTab = 1 }, },
-   { key = "3", mods = "LEADER", action = wezterm.action{ ActivateTab = 2 }, },
-   { key = "4", mods = "LEADER", action = wezterm.action{ ActivateTab = 3 }, },
-   { key = "5", mods = "LEADER", action = wezterm.action{ ActivateTab = 4 }, },
-   { key = "6", mods = "LEADER", action = wezterm.action{ ActivateTab = 5 }, },
    { key = "5", mods = "LEADER|SHIFT", action = wezterm.action{ SplitVertical = { domain = "CurrentPaneDomain", }, }, },
    { key = "'", mods = "LEADER|SHIFT", action = wezterm.action{ SplitHorizontal = { domain = "CurrentPaneDomain", }, }, },
    { key = "o", mods = "LEADER", action = wezterm.action{ ActivatePaneDirection = "Next", }, },
 }
+
+for i = 1, 9 do
+   table.insert(assign_keys,{
+     key = tostring(i),
+     mods = "LEADER",
+     action = wezterm.action{ ActivateTab = i - 1 },
+   })
+   table.insert(assign_keys,{
+     key = tostring(i),
+     mods = "LEADER|CTRL",
+     action = wezterm.action{ MoveTab = i - 1 },
+   })
+end
 
 return {
   font = wezterm.font("Noto Mono for Powerline"),
