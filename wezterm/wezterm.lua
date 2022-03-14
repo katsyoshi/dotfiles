@@ -2,13 +2,15 @@ local wezterm = require 'wezterm';
 
 local assign_keys = {
    { key = "c", mods = "LEADER", action = wezterm.action{ SpawnTab = "CurrentPaneDomain" }, },
+   { key = "d", mods = "LEADER", action = wezterm.action{ CloseCurrentTab = { confirm = true }, }, },
+   { key = "d", mods = "LEADER|SHIFT", action = wezterm.action{ CloseCurrentPane = { confirm = true }, }, },
    { key = "[", mods = "LEADER", action = "ActivateCopyMode" },
    { key = "w", mods = "LEADER", action = wezterm.action{ CopyTo = "Clipboard" }, },
    { key = "y", mods = "LEADER", action = wezterm.action{ PasteFrom = "Clipboard" }, },
-   { key = "n", mods = "LEADER", action = wezterm.action{ ActivateTabRelative = -1 }, },
-   { key = "p", mods = "LEADER", action = wezterm.action{ ActivateTabRelative = 1 }, },
-   { key = "5", mods = "LEADER|SHIFT", action = wezterm.action{ SplitVertical = { domain = "CurrentPaneDomain", }, }, },
-   { key = "'", mods = "LEADER|SHIFT", action = wezterm.action{ SplitHorizontal = { domain = "CurrentPaneDomain", }, }, },
+   { key = "n", mods = "LEADER", action = wezterm.action{ ActivateTabRelative = 1 }, },
+   { key = "p", mods = "LEADER", action = wezterm.action{ ActivateTabRelative = -1 }, },
+   { key = "'", mods = "LEADER|SHIFT", action = wezterm.action{ SplitVertical = { domain = "CurrentPaneDomain", }, }, },
+   { key = "5", mods = "LEADER|SHIFT", action = wezterm.action{ SplitHorizontal = { domain = "CurrentPaneDomain", }, }, },
    { key = "o", mods = "LEADER", action = wezterm.action{ ActivatePaneDirection = "Next", }, },
 }
 
