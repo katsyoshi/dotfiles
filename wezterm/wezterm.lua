@@ -28,7 +28,7 @@ for i = 1, 9 do
 end
 
 return {
-  font = wezterm.font("Noto Mono for Powerline"),
+  font = wezterm.font"Noto Mono for Powerline",
   use_ime = true,
   font_size = 10.0,
   color_scheme = "Dracula",
