@@ -37,4 +37,12 @@ return {
   disable_default_key_bindings = true,
   leader = { key="t", mods="CTRL", timeout_milliseconds=1000 },
   keys = assign_keys,
+  tab_bar_at_bottom = true,
+  unix_domains = {
+    {
+      name = "wezterm",
+      socket_path = "/home/katsyoshi/.local/share/wezterm/wezterm.socket",
+    },
+    default_gui_startup_args = {"connect", "wezterm"},
+  },
 }
