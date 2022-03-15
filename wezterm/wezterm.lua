@@ -1,6 +1,8 @@
-local wezterm = require 'wezterm';
+local wezterm = require 'wezterm'
+local os = require 'os'
 
 local assign_keys = {
+   -- emacs like keybindings
    { key = "c", mods = "LEADER", action = wezterm.action{ SpawnTab = "CurrentPaneDomain" }, },
    { key = "d", mods = "LEADER", action = wezterm.action{ CloseCurrentTab = { confirm = true }, }, },
    { key = "d", mods = "LEADER|SHIFT", action = wezterm.action{ CloseCurrentPane = { confirm = true }, }, },
@@ -27,6 +29,8 @@ for i = 1, 9 do
    })
 end
 
+socket = tostring(os.getenv("HOME")).."/.local/share/wezterm/wezterm.socket"
+
 return {
   font = wezterm.font"Noto Mono for Powerline",
   use_ime = true,
@@ -41,7 +45,7 @@ return {
   unix_domains = {
     {
       name = "wezterm",
-      socket_path = "/home/katsyoshi/.local/share/wezterm/wezterm.socket",
+      socket_path = socket,
     },
     default_gui_startup_args = {"connect", "wezterm"},
   },
