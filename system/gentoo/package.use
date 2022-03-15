@@ -1,6 +1,6 @@
 */* PYTHON_TARGETS: -* python3_8 python3_9
 */* PYTHON_SINGLE_TARGET: -* python3_9
-*/* RUBY_TARGETS: -* ruby27 ruby30
+*/* RUBY_TARGETS: -* ruby27 ruby30 ruby31
 app-admin/rsyslog jemalloc openssl
 app-containers/containerd btrfs
 app-containers/docker btrfs
@@ -42,7 +42,7 @@ gnome-base/gnome-control-center networkmanager
 gnome-extra/evolution-data-server vala
 gnome-extra/nm-applet gtk
 media-fonts/noto cjk
-media-gfx/darktable colord doc flickr geolocation gnome-keyring gphoto2 graphicsmagick jpeg2k kwallet nls opencl openexr openmp pax_kernel webp 
+media-gfx/darktable colord doc flickr geolocation gnome-keyring gphoto2 graphicsmagick jpeg2k kwallet nls opencl openexr openmp pax_kernel webp
 media-gfx/feh curl
 media-gfx/fontforge cairo png
 media-gfx/gimp aalib alsa aqua bzip2 curl dbus exif jpeg jpeg2k lcms mng openexr pdf png postscript smp svg tiff wm xpm
@@ -68,7 +68,7 @@ media-libs/mesa gles2
 media-plugins/alsa-plugins pulseaudio
 media-plugins/grilo-plugins tracker
 media-sound/pulseaudio gtk dbus
-media-video/ffmpeg openh264 aac alsa cuda faac hardcoded-tables gif v4l libv4l webp jpeg2k x265 theora mp3 x264
+media-video/ffmpeg openh264 aac alsa cuda faac hardcoded-tables gif v4l libv4l webp jpeg2k x265 theora mp3 x264 nvenc
 media-video/obs-studio lua nvenc python truetype v4l vlc
 media-video/webcamoid ffmpeg jack v4l v4lutils videoeffects
 net-dns/bind-tools readline ssl

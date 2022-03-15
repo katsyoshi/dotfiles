@@ -77,6 +77,7 @@ sys-libs/libomp ~amd64
 sys-process/bashtop ~amd64
 sys-process/tini ~amd64
 virtual/rubygems ~amd64
+virtual/ruby-ssl ~amd64
 virtual/opencl ~amd64
 virtual/perl-libnet ~amd64
 x11-drivers/nvidia-drivers ~amd64
