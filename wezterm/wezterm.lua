@@ -82,12 +82,13 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
     { Text = SOLID_RIGHT_ARROW, },
   }
 end)
+
 return {
   font = wezterm.font"Noto Mono for Powerline",
+  adjust_window_size_when_changing_font_size = false,
   use_ime = true,
   font_size = 10.0,
   color_scheme = "Dracula",
-  hide_tab_bar_if_only_one_tab = true,
   adjust_window_size_when_changing_font_size = false,
   disable_default_key_bindings = true,
   leader = { key="t", mods="CTRL", timeout_milliseconds=1000 },
