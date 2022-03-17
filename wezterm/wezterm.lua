@@ -1,6 +1,8 @@
 local wezterm = require 'wezterm'
 local os = require 'os'
 
+local nvtop = { domain = "CurrentPaneDomain", args = {"nvtop"}, }
+local htop =  { domain = "CurrentPaneDomain", args = {"htop"}, }
 local assign_keys = {
    -- emacs like keybindings
    { key = "c", mods = "LEADER", action = wezterm.action{ SpawnTab = "CurrentPaneDomain" }, },
@@ -14,6 +16,9 @@ local assign_keys = {
    { key = "'", mods = "LEADER|SHIFT", action = wezterm.action{ SplitVertical = { domain = "CurrentPaneDomain", }, }, },
    { key = "5", mods = "LEADER|SHIFT", action = wezterm.action{ SplitHorizontal = { domain = "CurrentPaneDomain", }, }, },
    { key = "o", mods = "LEADER", action = wezterm.action{ ActivatePaneDirection = "Next", }, },
+   { key = "r", mods = "LEADER", action = "ReloadConfiguration", },
+   { key = "r", mods = "LEADER|CTRL", action = wezterm.action{ SplitHorizontal = nvtop }, },
+   { key = "r", mods = "LEADER|SHIFT", action = wezterm.action{ SplitVertical = htop }, },
 }
 
 for i = 1, 9 do
