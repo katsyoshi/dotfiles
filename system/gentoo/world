@@ -63,6 +63,7 @@ dev-java/bcmail
 dev-java/bcpkix
 dev-java/bcprov
 dev-java/bcprov:1.50
+dev-java/gradle-bin
 dev-java/jakarta-activation
 dev-java/jakarta-activation-api
 dev-java/jakarta-activation-api:1
