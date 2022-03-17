@@ -4,8 +4,8 @@ local os = require 'os'
 local assign_keys = {
    -- emacs like keybindings
    { key = "c", mods = "LEADER", action = wezterm.action{ SpawnTab = "CurrentPaneDomain" }, },
-   { key = "d", mods = "LEADER", action = wezterm.action{ CloseCurrentTab = { confirm = true }, }, },
-   { key = "d", mods = "LEADER|SHIFT", action = wezterm.action{ CloseCurrentPane = { confirm = true }, }, },
+   { key = "d", mods = "LEADER", action = wezterm.action{ CloseCurrentTab = { confirm = false }, }, },
+   { key = "d", mods = "LEADER|CTRL", action = wezterm.action{ CloseCurrentPane = { confirm = false }, }, },
    { key = "[", mods = "LEADER", action = "ActivateCopyMode" },
    { key = "w", mods = "LEADER", action = wezterm.action{ CopyTo = "Clipboard" }, },
    { key = "y", mods = "LEADER", action = wezterm.action{ PasteFrom = "Clipboard" }, },
