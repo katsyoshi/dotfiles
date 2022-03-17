@@ -29,7 +29,8 @@ for i = 1, 9 do
    })
 end
 
-socket = tostring(os.getenv("HOME")).."/.local/share/wezterm/wezterm.socket"
+base_dir = wezterm.home_dir .. "/.local/share/wezterm/"
+socket = base_dir .. "wezterm.socket"
 
 return {
   font = wezterm.font"Noto Mono for Powerline",
@@ -49,4 +50,9 @@ return {
     },
     default_gui_startup_args = {"connect", "wezterm"},
   },
+  daemon_options = {
+    stdout = base_dir .. "stdout",
+    stderr = base_dir .. "stderr",
+    pid_file = base_dir .. "pid",
+  }
 }
