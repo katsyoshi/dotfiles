@@ -69,6 +69,7 @@ sys-devel/gcc ~amd64
 sys-devel/lld ~amd64
 sys-devel/llvm ~amd64
 sys-devel/llvm-common ~amd64
+sys-devel/llvmgold ~amd64
 sys-devel/mold ~amd64
 sys-kernel/gentoo-sources ~amd64
 sys-libs/compiler-rt ~amd64

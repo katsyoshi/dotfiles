@@ -96,7 +96,7 @@ sys-libs/libxcrypt static-libs
 sys-libs/zlib minizip abi_x86_32 static-libs
 virtual/imagemagick-tools perl
 virtual/libcrypt static-libs
-x11-drivers/nvidia-drivers acpi gtk3 uvm
+x11-drivers/nvidia-drivers acpi gtk3 uvm static-libs
 x11-libs/cairo xcb
 x11-libs/gdk-pixbuf jpeg tiff
 x11-libs/libdrm video_cards_nvidia
