@@ -92,6 +92,7 @@ sys-block/fio aio
 sys-devel/binutils gold
 sys-devel/gcc jit graphite
 sys-devel/llvm clang
+sys-libs/glibc -clone3
 sys-libs/libxcrypt static-libs
 sys-libs/zlib minizip abi_x86_32 static-libs
 virtual/imagemagick-tools perl

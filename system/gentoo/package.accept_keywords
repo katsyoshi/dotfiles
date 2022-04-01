@@ -72,6 +72,7 @@ sys-devel/llvm-common ~amd64
 sys-devel/llvmgold ~amd64
 sys-devel/mold ~amd64
 sys-kernel/gentoo-sources ~amd64
+sys-libs/glibc ~amd64
 sys-libs/compiler-rt ~amd64
 sys-libs/compiler-rt-sanitizers ~amd64
 sys-libs/libomp ~amd64
