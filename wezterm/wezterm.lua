@@ -19,6 +19,9 @@ local assign_keys = {
    { key = "r", mods = "LEADER", action = "ReloadConfiguration", },
    { key = "r", mods = "LEADER|CTRL", action = wezterm.action{ SplitHorizontal = nvtop }, },
    { key = "r", mods = "LEADER|SHIFT", action = wezterm.action{ SplitVertical = htop }, },
+   { key = "=", mods = "LEADER|SUPER", action = "IncreaseFontSize", },
+   { key = "-", mods = "LEADER|SUPER", action = "DecreaseFontSize", },
+   { key = "r", mods = "LEADER|SUPER", action = "ResetFontSize", },
 }
 
 for i = 1, 9 do
