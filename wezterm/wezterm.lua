@@ -24,16 +24,16 @@ local assign_keys = {
    { key = "r", mods = "LEADER|SUPER", action = "ResetFontSize", },
 }
 
-for i = 1, 9 do
+for i = 0, 9 do
    table.insert(assign_keys,{
      key = tostring(i),
      mods = "LEADER",
-     action = wezterm.action{ ActivateTab = i - 1 },
+     action = wezterm.action{ ActivateTab = i },
    })
    table.insert(assign_keys,{
      key = tostring(i),
      mods = "LEADER|CTRL",
-     action = wezterm.action{ MoveTab = i - 1 },
+     action = wezterm.action{ MoveTab = i },
    })
 end
 
