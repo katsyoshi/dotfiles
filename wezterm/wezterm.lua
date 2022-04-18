@@ -90,7 +90,7 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
     { Text = SOLID_LEFT_ARROW },
     { Background = { Color = background, }, },
     { Foreground = { Color = foreground, }, },
-    { Text = title},
+    { Text = title },
     { Background = { Color = edge_background, }, },
     { Foreground = { Color = edge_foreground, }, },
     { Text = SOLID_RIGHT_ARROW, },
