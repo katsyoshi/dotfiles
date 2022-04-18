@@ -3,7 +3,7 @@ local os = require 'os'
 
 local nvtop = { domain = "CurrentPaneDomain", args = {"nvtop"}, }
 local htop =  { domain = "CurrentPaneDomain", args = {"htop"}, }
-local assign_keys = {
+local assigned_keys = {
    -- emacs like keybindings
    { key = "c", mods = "LEADER", action = wezterm.action{ SpawnTab = "CurrentPaneDomain" }, },
    { key = "d", mods = "LEADER", action = wezterm.action{ CloseCurrentTab = { confirm = false }, }, },
@@ -26,17 +26,17 @@ local assign_keys = {
 
 for i = 0, 9 do
    key_string = tostring(i)
-   table.insert(assign_keys,{
+   table.insert(assigned_keys,{
      key = key_string,
      mods = "LEADER|ALT",
      action = wezterm.action{ ActivateTab = i },
    })
-   table.insert(assign_keys,{
+   table.insert(assigned_keys,{
      key = key_string,
      mods = "LEADER|CTRL",
      action = wezterm.action{ MoveTab = i },
    })
-   table.insert(assign_keys,{
+   table.insert(assigned_keys,{
      key = key_string,
      mods = "LEADER",
      action = wezterm.action{ ActivatePaneByIndex = i },
@@ -106,7 +106,7 @@ return {
   adjust_window_size_when_changing_font_size = false,
   disable_default_key_bindings = true,
   leader = { key="t", mods="CTRL", timeout_milliseconds=1000 },
-  keys = assign_keys,
+  keys = assigned_keys,
   tab_bar_at_bottom = true,
   unix_domains = {
     {
