@@ -25,15 +25,21 @@ local assign_keys = {
 }
 
 for i = 0, 9 do
+   key_string = tostring(i)
    table.insert(assign_keys,{
-     key = tostring(i),
-     mods = "LEADER",
+     key = key_string,
+     mods = "LEADER|ALT",
      action = wezterm.action{ ActivateTab = i },
    })
    table.insert(assign_keys,{
-     key = tostring(i),
+     key = key_string,
      mods = "LEADER|CTRL",
      action = wezterm.action{ MoveTab = i },
+   })
+   table.insert(assign_keys,{
+     key = key_string,
+     mods = "LEADER",
+     action = wezterm.action{ ActivatePaneByIndex = i },
    })
 end
 
