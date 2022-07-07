@@ -6,7 +6,7 @@ app-containers/containerd btrfs
 app-containers/docker btrfs
 app-crypt/gcr gtk
 app-crypt/pinentry gnome-keyring
-app-editors/emacs cairo dbus gif gpm gui gtk gtk3 gzip-el jpeg libxml2 motif png svg ssl sound tiff xft xwidgets zlib
+app-editors/emacs cairo dbus dynamic-loading gif gpm gui gtk gtk3 gzip-el jit jpeg libxml2 motif png svg ssl sound tiff xft xwidgets zlib
 app-emacs/emacs-common gui
 app-i18n/fcitx gtk2 gtk3
 app-i18n/mozc fcitx4 gui
