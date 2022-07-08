@@ -36,6 +36,7 @@ dev-qt/* ~amd64
 dev-texlive/* ~amd64
 games-fps/nexuiz ~amd64
 gui-libs/egl-gbm ~amd64
+gui-libs/egl-wayland ~amd64
 media-fonts/mix-mplus-ipa ~amd64
 media-fonts/ricty ~amd64
 media-gfx/blender ~amd64
@@ -51,6 +52,7 @@ net-dns/libidn2 ~amd64
 net-im/discord-bin ~amd64
 net-im/slack ~amd64
 net-im/zoom ~amd64
+net-misc/gnome-remote-desktop ~amd64
 net-misc/openssh ~amd64
 net-vpn/networkmanager-wireguard ~amd64
 net-vpn/wireguard-tools ~amd64
