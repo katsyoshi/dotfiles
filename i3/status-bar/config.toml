@@ -29,8 +29,8 @@ block = "load"
 interval = 1
 format = "{1m}"
 
-[[block]]
-block = "sound"
+# [[block]]
+# block = "sound"
 
 [[block]]
 block = "time"
