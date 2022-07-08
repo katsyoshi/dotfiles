@@ -9,10 +9,12 @@ app-containers/runc
 app-crypt/qca
 app-editors/emacs
 app-editors/nano
+app-editors/vim
 app-emacs/protbuf
 app-eselect/eselect-ctags
 app-eselect/eselect-emacs
 app-eselect/eselect-java
+app-eselect/eselect-python
 app-i18n/mozc
 app-i18n/nkf
 app-misc/tmux
@@ -21,6 +23,8 @@ app-office/libreoffice-l10n
 app-portage/cpuid2cpuflags
 app-portage/eix
 app-portage/gentoolkit
+app-shells/bash-completion
+app-shells/dash
 app-shells/zsh-completions
 app-text/cmigemo
 app-text/docbook-sgml-dtd
@@ -62,7 +66,6 @@ dev-db/postgresql:12
 dev-java/bcmail
 dev-java/bcpkix
 dev-java/bcprov
-dev-java/bcprov:1.50
 dev-java/gradle-bin
 dev-java/jakarta-activation
 dev-java/jakarta-activation-api
@@ -162,6 +165,7 @@ dev-ruby/xmlrpc
 dev-tex/latex-beamer
 dev-util/android-tools
 dev-util/bazel
+dev-util/cmake
 dev-util/nvidia-cuda-toolkit
 dev-util/strace
 dev-vcs/git
@@ -230,6 +234,7 @@ media-plugins/gst-plugins-opus
 media-sound/jack2
 media-sound/pavucontrol
 media-video/obs-studio
+media-sound/pulseaudio
 media-video/v4l2loopback
 media-video/vlc
 net-analyzer/tcpdump
@@ -243,6 +248,7 @@ net-libs/liblockfile
 net-libs/libqmi
 net-libs/webkit-gtk
 net-mail/mailutils
+net-misc/curl
 net-misc/dhcp
 net-misc/modemmanager
 net-misc/networkmanager
@@ -261,10 +267,15 @@ sci-libs/lapack
 sci-libs/openblas
 sci-visualization/gnuplot
 sys-apps/bubblewrap
+sys-apps/dbus
+sys-apps/dmidecode
 sys-apps/hwloc
+sys-apps/memtest86+
+sys-apps/memtester
 sys-apps/nvme-cli
 sys-apps/pciutils
 sys-apps/smartmontools
+sys-apps/systemd
 sys-apps/usbutils
 sys-auth/polkit-qt
 sys-block/fio
@@ -287,6 +298,7 @@ sys-fs/fuse-exfat
 sys-fs/fuse:0
 sys-fs/lvm2
 sys-fs/udisks
+sys-kernel/dracut
 sys-kernel/gentoo-sources
 sys-kernel/linux-firmware
 sys-libs/compiler-rt
@@ -302,10 +314,13 @@ sys-process/cronbase
 sys-process/htop
 sys-process/lsof
 virtual/jdk
+virtual/jre
 virtual/mta
+virtual/pager
 virtual/perl-Storable
 virtual/perl-Test-Simple
 virtual/perl-if
+virtual/ssh
 www-client/firefox-bin
 www-client/google-chrome
 www-servers/h2o
@@ -316,6 +331,7 @@ x11-base/xorg-server
 x11-drivers/nvidia-drivers
 x11-drivers/xf86-input-libinput
 x11-libs/vte
+x11-misc/arandr
 x11-misc/dunst
 x11-misc/parcellite
 x11-misc/rofi
