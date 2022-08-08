@@ -1,6 +1,9 @@
-*/* PYTHON_TARGETS: -* python3_8 python3_9
-*/* PYTHON_SINGLE_TARGET: -* python3_9
+*/* LUA_TARGETS: -* lua5-1 lua5-4
+*/* LUA_SINGLE_TARGET: -* lua5-1
+*/* PYTHON_TARGETS: -* python3_10
+*/* PYTHON_SINGLE_TARGET: -* python3_10
 */* RUBY_TARGETS: -* ruby27 ruby30 ruby31
+*/* RUBY_SINGLE_TARGET: -* ruby30
 app-admin/rsyslog jemalloc openssl
 app-containers/containerd btrfs
 app-containers/docker btrfs
@@ -20,7 +23,7 @@ dev-java/swt cairo
 dev-lang/python sqlite
 dev-lang/ruby jemalloc jit
 dev-libs/boost python
-dev-libs/efl egl gles2-only
+dev-libs/efl egl gles2-only -lua_single_target_luajit lua_single_target_lua5-1
 dev-libs/folks eds
 dev-libs/glib dbus
 dev-libs/libgdata gnome-online-accounts vala
@@ -68,13 +71,15 @@ media-libs/mesa gles2
 media-plugins/alsa-plugins pulseaudio
 media-plugins/grilo-plugins tracker
 media-sound/pulseaudio gtk dbus
-media-video/ffmpeg openh264 aac alsa cuda faac hardcoded-tables gif v4l libv4l webp jpeg2k x265 theora mp3 x264 nvenc
-media-video/obs-studio lua nvenc python truetype v4l vlc
+media-video/ffmpeg openh264 aac alsa cuda faac hardcoded-tables gif v4l libv4l webp jpeg2k x265 theora mp3 x264 nvenc vorbis xvid vpx opus
+media-video/obs-studio lua nvenc python truetype v4l vlc lua_single_target_luajit
+media-video/wireplumber -lua_single_target_luajit -lua_single_target_lua5-1 lua_single_target_lua5-4
 media-video/webcamoid ffmpeg jack v4l v4lutils videoeffects
 net-dns/bind-tools readline ssl
 net-fs/samba client
 net-im/slack gnome-keyring ayatana
 net-misc/curl http2 ssl ipv6 ssh
+net-misc/freerdp server
 net-misc/networkmanager bluetooth teamd
 net-misc/nm-applet teamd gtk
 net-misc/remmina gnome-keyring vnc rdp
@@ -86,6 +91,7 @@ sci-libs/gd jpeg fontconfig truetype png
 sci-libs/gts jpeg fontconfig truetype png
 sci-visualization/gnuplot bitmap cairo compat ggi libcaca libcerf readline svga
 sys-apps/dbus user-session
+sys-apps/memtest86+ efi64
 sys-apps/systemd pam policykit cgroup-hybrid
 sys-auth/consolekit policykit
 sys-block/fio aio
@@ -97,10 +103,11 @@ sys-libs/libxcrypt static-libs
 sys-libs/zlib minizip abi_x86_32 static-libs
 virtual/imagemagick-tools perl
 virtual/libcrypt static-libs
-x11-drivers/nvidia-drivers acpi gtk3 uvm static-libs
+x11-drivers/nvidia-drivers acpi driver gtk3 uvm static-libs
 x11-libs/cairo xcb
 x11-libs/gdk-pixbuf jpeg tiff
 x11-libs/libdrm video_cards_nvidia
 x11-libs/libxcb xkb
 x11-misc/rofi windowmode
+x11-wm/mutter screencast
 www-client/firefox-bin -alsa ffmpeg pulseaudio

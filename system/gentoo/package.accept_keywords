@@ -4,6 +4,7 @@ app-containers/docker ~amd64
 app-containers/docker-cli ~amd64
 app-containers/docker-proxy ~amd64
 app-containers/runc ~amd64
+app-crypt/envchain ~amd64
 app-editors/emacs ~amd64
 app-editors/vim ~amd64
 app-editors/vim-core ~amd64
@@ -15,8 +16,7 @@ cross-avr/gcc ~amd64
 dev-cpp/tbb ~amd64
 dev-java/javatoolkit ~amd64
 dev-java/oracle-javamail ~amd64
-dev-java/gradle-bin ~amd64
-dev-lang/python ~amd64
+dev-java/gradle-bin ~amd64d
 dev-lang/ruby ~amd64
 dev-libs/kpathsea ~amd64
 dev-libs/mimalloc ~amd64
@@ -82,5 +82,4 @@ sys-process/tini ~amd64
 virtual/rubygems ~amd64
 virtual/ruby-ssl ~amd64
 virtual/opencl ~amd64
-virtual/perl-libnet ~amd64
 x11-drivers/nvidia-drivers ~amd64
