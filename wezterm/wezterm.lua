@@ -1,8 +1,26 @@
 local wezterm = require 'wezterm'
 local os = require 'os'
+local act = wezterm.action
 
 local nvtop = { domain = "CurrentPaneDomain", args = {"nvtop"}, }
 local htop =  { domain = "CurrentPaneDomain", args = {"htop"}, }
+local cursols = {
+   { key = "Enter", mods = "CTRL", action = act.CopyMode { SetSelectionMode = "Block" }, },
+   { key = "Escape", mods = "NONE", action = act.CopyMode "Close", },
+   { key = "a", mods = "CTRL", action = act.CopyMode "MoveToStartOfLineContent" },
+   { key = "b", mods = "ALT", action = act.CopyMode "MoveBackwardWord", },
+   { key = "b", mods = "CTRL", action = act.CopyMode "MoveLeft", },
+   { key = "e", mods = "CTRL", action = act.CopyMode "MoveToEndOfLineContent" },
+   { key = "f", mods = "ALT", action = act.CopyMode "MoveForwardWord", },
+   { key = "f", mods = "CTRL", action = act.CopyMode "MoveRight", },
+   { key = "g", mods = "CTRL", action = act.CopyMode "Close", },
+   { key = "p", mods = "CTRL", action = act.CopyMode "MoveUp", },
+   { key = "p", mods = "ALT", action = act.CopyMode "PageUp", },
+   { key = "n", mods = "CTRL", action = act.CopyMode "MoveDown", },
+   { key = "n", mods = "ALT", action = act.CopyMode "PageDown", },
+   { key = "q", mods = "NONE", action = act.CopyMode "Close", },
+   { key = "Space", mods = "NONE", action = act.CopyMode { SetSelectionMode = "Cell" }, },
+}
 local assigned_keys = {
    -- emacs like keybindings
    { key = "c", mods = "LEADER", action = wezterm.action{ SpawnTab = "CurrentPaneDomain" }, },
@@ -105,6 +123,9 @@ return {
   font = wezterm.font"Noto Mono for Powerline",
   font_size = 10.0,
   keys = assigned_keys,
+  key_tables = {
+     copy_mode = cursols,
+  },
   leader = { key="t", mods="CTRL", timeout_milliseconds=1000 },
   tab_bar_at_bottom = true,
   use_ime = true,
