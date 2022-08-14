@@ -98,16 +98,17 @@ wezterm.on("format-tab-title", function(tab, _, _, _, hover, max_width)
 end)
 
 return {
-  font = wezterm.font"Noto Mono for Powerline",
   adjust_window_size_when_changing_font_size = false,
-  use_ime = true,
-  font_size = 10.0,
   color_scheme = "Dracula",
   default_gui_startup_args = { "connect", "wezterm" },
   disable_default_key_bindings = true,
-  leader = { key="t", mods="CTRL", timeout_milliseconds=1000 },
+  font = wezterm.font"Noto Mono for Powerline",
+  font_size = 10.0,
   keys = assigned_keys,
+  leader = { key="t", mods="CTRL", timeout_milliseconds=1000 },
   tab_bar_at_bottom = true,
+  use_ime = true,
+
   unix_domains = {
     {
       name = "wezterm",
