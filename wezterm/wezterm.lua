@@ -103,6 +103,7 @@ return {
   use_ime = true,
   font_size = 10.0,
   color_scheme = "Dracula",
+  default_gui_startup_args = { "connect", "wezterm" },
   disable_default_key_bindings = true,
   leader = { key="t", mods="CTRL", timeout_milliseconds=1000 },
   keys = assigned_keys,
@@ -112,7 +113,6 @@ return {
       name = "wezterm",
       socket_path = socket,
     },
-    default_gui_startup_args = {"connect", "wezterm"},
   },
   daemon_options = {
     stdout = base_dir .. "stdout",
