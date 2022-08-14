@@ -103,7 +103,6 @@ return {
   use_ime = true,
   font_size = 10.0,
   color_scheme = "Dracula",
-  adjust_window_size_when_changing_font_size = false,
   disable_default_key_bindings = true,
   leader = { key="t", mods="CTRL", timeout_milliseconds=1000 },
   keys = assigned_keys,
