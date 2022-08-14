@@ -4,6 +4,7 @@ local act = wezterm.action
 
 local nvtop = { domain = "CurrentPaneDomain", args = {"nvtop"}, }
 local htop =  { domain = "CurrentPaneDomain", args = {"htop"}, }
+local ytop =  { domain = "CurrentPaneDomain", args = {"ytop", "-ps",}, }
 local cursols = {
    { key = "Enter", mods = "CTRL", action = act.CopyMode { SetSelectionMode = "Block" }, },
    { key = "Escape", mods = "NONE", action = act.CopyMode "Close", },
@@ -23,20 +24,20 @@ local cursols = {
 }
 local assigned_keys = {
    -- emacs like keybindings
-   { key = "c", mods = "LEADER", action = wezterm.action{ SpawnTab = "CurrentPaneDomain" }, },
-   { key = "d", mods = "LEADER", action = wezterm.action{ CloseCurrentTab = { confirm = false }, }, },
-   { key = "d", mods = "LEADER|CTRL", action = wezterm.action{ CloseCurrentPane = { confirm = false }, }, },
+   { key = "c", mods = "LEADER", action = act{ SpawnTab = "CurrentPaneDomain" }, },
+   { key = "d", mods = "LEADER", action = act{ CloseCurrentTab = { confirm = false }, }, },
+   { key = "d", mods = "LEADER|CTRL", action = act{ CloseCurrentPane = { confirm = false }, }, },
    { key = "[", mods = "LEADER", action = "ActivateCopyMode" },
-   { key = "w", mods = "LEADER", action = wezterm.action{ CopyTo = "Clipboard" }, },
-   { key = "y", mods = "LEADER", action = wezterm.action{ PasteFrom = "Clipboard" }, },
-   { key = "n", mods = "LEADER", action = wezterm.action{ ActivateTabRelative = 1 }, },
-   { key = "p", mods = "LEADER", action = wezterm.action{ ActivateTabRelative = -1 }, },
-   { key = "'", mods = "LEADER|SHIFT", action = wezterm.action{ SplitVertical = { domain = "CurrentPaneDomain", }, }, },
-   { key = "5", mods = "LEADER|SHIFT", action = wezterm.action{ SplitHorizontal = { domain = "CurrentPaneDomain", }, }, },
-   { key = "o", mods = "LEADER", action = wezterm.action{ ActivatePaneDirection = "Next", }, },
-   { key = "r", mods = "LEADER", action = "ReloadConfiguration", },
-   { key = "r", mods = "LEADER|CTRL", action = wezterm.action{ SplitHorizontal = nvtop }, },
-   { key = "r", mods = "LEADER|SHIFT", action = wezterm.action{ SplitVertical = htop }, },
+   { key = "w", mods = "LEADER", action = act{ CopyTo = "Clipboard" }, },
+   { key = "y", mods = "LEADER", action = act{ PasteFrom = "Clipboard" }, },
+   { key = "n", mods = "LEADER", action = act{ ActivateTabRelative = 1 }, },
+   { key = "p", mods = "LEADER", action = act{ ActivateTabRelative = -1 }, },
+   { key = "v", mods = "LEADER", action = act{ SplitVertical = { domain = "CurrentPaneDomain", }, }, },
+   { key = "h", mods = "LEADER", action = act{ SplitHorizontal = { domain = "CurrentPaneDomain", }, }, },
+   { key = "o", mods = "LEADER", action = act{ ActivatePaneDirection = "Next", }, },
+   { key = "l", mods = "LEADER", action = "ReloadConfiguration", },
+   { key = "r", mods = "LEADER|CTRL", action = act{ SplitHorizontal = nvtop }, },
+   { key = "R", mods = "LEADER|CTRL", action = act{ SplitVertical = ytop }, },
    { key = "=", mods = "LEADER|SUPER", action = "IncreaseFontSize", },
    { key = "-", mods = "LEADER|SUPER", action = "DecreaseFontSize", },
    { key = "r", mods = "LEADER|SUPER", action = "ResetFontSize", },
@@ -47,17 +48,17 @@ for i = 0, 9 do
    table.insert(assigned_keys,{
      key = key_string,
      mods = "LEADER|ALT",
-     action = wezterm.action{ ActivateTab = i },
+     action = act{ ActivateTab = i },
    })
    table.insert(assigned_keys,{
      key = key_string,
      mods = "LEADER|CTRL",
-     action = wezterm.action{ MoveTab = i },
+     action = act{ MoveTab = i },
    })
    table.insert(assigned_keys,{
      key = key_string,
      mods = "LEADER",
-     action = wezterm.action{ ActivatePaneByIndex = i },
+     action = act{ ActivatePaneByIndex = i },
    })
 end
 
