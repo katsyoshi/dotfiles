@@ -49,7 +49,7 @@ local socket = base_dir .. "wezterm.socket"
 local SOLID_LEFT_ARROW = utf8.char(0xe0b2)
 local SOLID_RIGHT_ARROW = utf8.char(0xe0b0)
 
-wezterm.on("update-right-status", function(window, pane)
+wezterm.on("update-right-status", function(window, _)
   local date = wezterm.strftime("%Y/%m/%d(%a) %H:%M ");
 
   local bat = ""
@@ -65,7 +65,7 @@ wezterm.on("update-right-status", function(window, pane)
   }));
 end)
 
-wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
+wezterm.on("format-tab-title", function(tab, _, _, _, hover, max_width)
   local edge_background = "#0b0022"
   local background = "#1b1032"
   local foreground = "#808080"
