@@ -25,7 +25,7 @@ local assigned_keys = {
 }
 
 for i = 0, 9 do
-   key_string = tostring(i)
+   local key_string = tostring(i)
    table.insert(assigned_keys,{
      key = key_string,
      mods = "LEADER|ALT",
@@ -43,8 +43,8 @@ for i = 0, 9 do
    })
 end
 
-base_dir = wezterm.home_dir .. "/.local/share/wezterm/"
-socket = base_dir .. "wezterm.socket"
+local base_dir = wezterm.home_dir .. "/.local/share/wezterm/"
+local socket = base_dir .. "wezterm.socket"
 
 local SOLID_LEFT_ARROW = utf8.char(0xe0b2)
 local SOLID_RIGHT_ARROW = utf8.char(0xe0b0)
