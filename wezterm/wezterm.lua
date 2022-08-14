@@ -121,7 +121,7 @@ return {
   color_scheme = "Dracula",
   default_gui_startup_args = { "connect", "wezterm" },
   disable_default_key_bindings = true,
-  font = wezterm.font"Noto Mono for Powerline",
+  font = wezterm.font "Noto Mono for Powerline",
   font_size = 10.0,
   keys = assigned_keys,
   key_tables = {
