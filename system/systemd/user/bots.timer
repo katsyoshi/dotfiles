@@ -2,7 +2,7 @@
 Description=Post co2 ppm to slack
 
 [Timer]
-OnUnitActiveSec=60s
+OnUnitActiveSec=300s
 
 [Install]
 WantedBy=timers.target
