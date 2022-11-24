@@ -1,6 +1,6 @@
 */* LUA_TARGETS: -* lua5-1 lua5-4
 */* LUA_SINGLE_TARGET: -* lua5-1
-*/* PYTHON_TARGETS: -* python3_10
+*/* PYTHON_TARGETS: -* python3_10 python3_11
 */* PYTHON_SINGLE_TARGET: -* python3_10
 */* RUBY_TARGETS: -* ruby27 ruby30 ruby31
 */* RUBY_SINGLE_TARGET: -* ruby30
@@ -62,6 +62,7 @@ media-libs/gd jpeg fontconfig truetype png
 media-libs/gegl raw
 media-libs/harfbuzz icu
 media-libs/imlib2 jpeg png
+media-libs/libcanberra pulseaudio
 media-libs/libpng apng
 media-libs/libsdl2 gles2
 media-libs/libsixel curl gd gtk jpeg png
@@ -73,7 +74,7 @@ media-plugins/grilo-plugins tracker
 media-sound/pulseaudio gtk dbus
 media-video/ffmpeg openh264 aac alsa cuda faac hardcoded-tables gif v4l libv4l webp jpeg2k x265 theora mp3 x264 nvenc vorbis xvid vpx opus
 media-video/obs-studio lua nvenc python truetype v4l vlc lua_single_target_luajit
-media-video/pipewire sound-server
+media-video/pipewire bluetooth extra sound-server
 media-video/wireplumber -lua_single_target_luajit -lua_single_target_lua5-1 lua_single_target_lua5-4
 media-video/webcamoid ffmpeg jack v4l v4lutils videoeffects
 net-dns/bind-tools readline ssl

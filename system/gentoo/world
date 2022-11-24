@@ -1,6 +1,7 @@
 app-admin/apache-tools
 app-admin/sudo
 app-admin/sysstat
+app-admin/terraform
 app-containers/containerd
 app-containers/docker
 app-containers/docker-cli
@@ -24,6 +25,7 @@ app-office/libreoffice-l10n
 app-portage/cpuid2cpuflags
 app-portage/eix
 app-portage/gentoolkit
+app-portage/layman
 app-shells/bash-completion
 app-shells/dash
 app-shells/zsh-completions
@@ -227,13 +229,17 @@ media-plugins/gst-plugins-opus
 media-sound/jack2
 media-sound/pavucontrol
 media-sound/pulseaudio
+media-sound/volumeicon
 media-video/v4l2loopback
 media-video/vlc
 net-analyzer/netcat
+net-analyzer/speedtest-cli
 net-analyzer/tcpdump
+net-analyzer/traceroute
 net-analyzer/wireshark
 net-dns/bind-tools
 net-fs/samba
+net-ftp/atftp
 net-im/discord-bin
 net-im/slack
 net-im/zoom
@@ -254,6 +260,7 @@ net-misc/tigervnc
 net-misc/whois
 net-nds/openldap
 net-vpn/wireguard-tools
+net-wireless/blueman
 net-wireless/bluez
 net-wireless/gnome-bluetooth
 sci-libs/fftw
@@ -274,6 +281,7 @@ sys-apps/smartmontools
 sys-apps/systemd
 sys-apps/usbutils
 sys-auth/polkit-qt
+sys-auth/rtkit
 sys-block/fio
 sys-boot/grub
 sys-cluster/openmpi
@@ -298,6 +306,7 @@ sys-kernel/gentoo-sources
 sys-kernel/linux-firmware
 sys-libs/compiler-rt
 sys-libs/compiler-rt-sanitizers
+sys-libs/efivar
 sys-libs/glibc
 sys-libs/gpm
 sys-libs/ldb
@@ -336,6 +345,7 @@ x11-misc/slim
 x11-misc/xdotool
 x11-misc/xkeyboard-config
 x11-misc/xorg-cf-files
+x11-misc/xsel
 x11-terms/alacritty
 x11-wm/i3
 xfce-base/libxfce4ui

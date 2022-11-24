@@ -52,6 +52,7 @@ net-dns/libidn2 ~amd64
 net-im/discord-bin ~amd64
 net-im/slack ~amd64
 net-im/zoom ~amd64
+net-misc/freerdp ~amd64
 net-misc/gnome-remote-desktop ~amd64
 net-misc/openssh ~amd64
 net-vpn/networkmanager-wireguard ~amd64
@@ -65,11 +66,14 @@ sys-cluster/openmpi ~amd64
 sys-devel/clang ~amd64
 sys-devel/clang-common ~amd64
 sys-devel/clang-runtime ~amd64
+sys-devel/clang-toolchain-symlinks ~amd64
 sys-devel/crossdev ~amd64
 sys-devel/gcc ~amd64
+sys-devel/gcc-config ~amd64
 sys-devel/lld ~amd64
 sys-devel/llvm ~amd64
 sys-devel/llvm-common ~amd64
+sys-devel/llvm-toolchain-symlinks ~amd64
 sys-devel/llvmgold ~amd64
 sys-devel/mold ~amd64
 sys-kernel/gentoo-sources ~amd64
