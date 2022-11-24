@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ ! -d /boot/efi ]; then
+  exit 0
+fi
+
+if ! mountpoint /boot/efi > /dev/null; then
+  mount /boot/efi
+fi
+
+if [ ! -d /boot/efi/efi/boot ]; then
+  mkdir -p /boot/efi/efi/boot
+fi
+
+dracut --hostonly --kver $1
+grub-mkconfig -o /boot/grub/grub.cfg
