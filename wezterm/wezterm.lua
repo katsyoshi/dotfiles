@@ -71,6 +71,19 @@ for i = 0, 9 do
    )
 end
 
+local ssh_domains = {
+   {
+      name = "home",
+      remote_address = "rin.katsyoshi.org",
+      username = "katsyoshi",
+   },
+   {
+      name = "sakra",
+      remote_address = "eagle-jump.katsyoshi.org",
+      username = "katsu",
+   },
+}
+
 local base_dir = wezterm.home_dir .. "/.local/share/wezterm/"
 local socket = base_dir .. "wezterm.socket"
 
@@ -157,5 +170,6 @@ return {
       stdout = base_dir .. "stdout",
       stderr = base_dir .. "stderr",
       pid_file = base_dir .. "pid",
-   }
+   },
+   ssh_domains = ssh_domains,
 }
