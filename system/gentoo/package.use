@@ -59,11 +59,12 @@ media-libs/gst-plugins-base theora
 media-libs/musicbrainz examples test
 media-libs/tiff webp
 media-libs/gd jpeg fontconfig truetype png
-media-libs/gegl raw
+media-libs/gegl raw svg tiff webp
 media-libs/harfbuzz icu
 media-libs/imlib2 jpeg png
 media-libs/libcanberra pulseaudio
 media-libs/libpng apng
+media-libs/libraw jpeg
 media-libs/libsdl2 gles2
 media-libs/libsixel curl gd gtk jpeg png
 media-libs/libv4l jpeg

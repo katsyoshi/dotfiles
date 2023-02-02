@@ -2,6 +2,7 @@ app-admin/supervisor ~amd64
 app-containers/containerd ~amd64
 app-containers/docker ~amd64
 app-containers/docker-cli ~amd64
+app-containers/docker-compose:2 ~amd64
 app-containers/docker-proxy ~amd64
 app-containers/runc ~amd64
 app-crypt/envchain ~amd64
@@ -40,6 +41,8 @@ gui-libs/egl-wayland ~amd64
 media-fonts/mix-mplus-ipa ~amd64
 media-fonts/ricty ~amd64
 media-gfx/blender ~amd64
+media-libs/babl ~amd64
+media-libs/gegl ~amd64
 media-libs/libraw ~amd64
 media-libs/libuvc ~amd64
 media-video/obs-studio ~amd64
@@ -49,7 +52,7 @@ media-video/ffmpeg ~amd64
 media-video/v4l2loopback ~amd64
 media-video/nvidia-video-codec ~amd64
 net-dns/libidn2 ~amd64
-net-im/discord-bin ~amd64
+net-im/discord ~amd64
 net-im/slack ~amd64
 net-im/zoom ~amd64
 net-misc/freerdp ~amd64
@@ -87,3 +90,4 @@ virtual/rubygems ~amd64
 virtual/ruby-ssl ~amd64
 virtual/opencl ~amd64
 x11-drivers/nvidia-drivers ~amd64
+x11-terms/wezterm ~amd64
