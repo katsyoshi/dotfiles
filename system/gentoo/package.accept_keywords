@@ -59,6 +59,7 @@ net-misc/freerdp ~amd64
 net-misc/gnome-remote-desktop ~amd64
 net-misc/openssh ~amd64
 net-vpn/networkmanager-wireguard ~amd64
+net-vpn/tailscale ~amd64
 net-vpn/wireguard-tools ~amd64
 sci-libs/fftw ~amd64
 sci-libs/openblas ~amd64

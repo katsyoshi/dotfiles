@@ -270,6 +270,7 @@ net-misc/telnet-bsd
 net-misc/tigervnc
 net-misc/whois
 net-nds/openldap
+net-vpn/tailscale
 net-vpn/wireguard-tools
 net-wireless/blueman
 net-wireless/bluez
