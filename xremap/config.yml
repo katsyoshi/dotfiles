@@ -2,7 +2,7 @@
 keymap:
   - name: Emacs binding
     application:
-      not: [Emacs, Alacritty, org.wezfurlong.wezterm]
+      only: ["firefox", "Google-chrome"]
     remap:
       C-b: { with_mark: left }
       C-f: { with_mark: right }
@@ -32,6 +32,7 @@ keymap:
         remap:
           h: [C-home, C-a, { set_mark: true }]
           C-f: C-o
+          C-r: F5
           C-s: C-s
           k: C-f4
           C-c: C-q

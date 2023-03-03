@@ -3,7 +3,7 @@ Description=Start xremap
 
 [Service]
 EnvironmentFile=/home/katsyoshi/.config/xremap/env
-ExecStart=/usr/local/bin/xremap --device ${KEYBOARD_TYPE} /home/katsyoshi/.config/xremap/config.yml --watch=config
+ExecStart=/usr/local/bin/xremap --device ${KEYBOARD_TYPE} --watch=config,device /home/katsyoshi/.config/xremap/config.yml
 
 [Install]
 WantedBy=default.target
