@@ -17,9 +17,12 @@ app-eselect/eselect-ctags
 app-eselect/eselect-emacs
 app-eselect/eselect-java
 app-eselect/eselect-python
+app-eselect/eselect-wxwidgets
 app-i18n/mozc
 app-i18n/nkf
+app-misc/evtest
 app-misc/jq
+app-misc/screen
 app-mobilephone/dfu-util
 app-office/libreoffice-l10n
 app-portage/cpuid2cpuflags
@@ -213,6 +216,7 @@ media-libs/gst-plugins-base
 media-libs/gst-plugins-good
 media-libs/gstreamer
 media-libs/imlib2
+media-libs/libavif
 media-libs/libdvdcss
 media-libs/libexif
 media-libs/libheif
@@ -222,6 +226,7 @@ media-libs/libsdl2
 media-libs/libsixel
 media-libs/libuninameslist
 media-libs/opencolorio
+media-libs/opencv
 media-libs/openimageio
 media-libs/portaudio
 media-libs/raptor
@@ -286,6 +291,8 @@ sys-apps/portage
 sys-apps/smartmontools
 sys-apps/systemd
 sys-apps/usbutils
+sys-apps/uutils-coreutils
+sys-apps/uutils-findutils
 sys-auth/polkit-qt
 sys-auth/rtkit
 sys-block/fio

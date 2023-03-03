@@ -65,6 +65,8 @@ sci-libs/openblas ~amd64
 sys-apps/bubblewrap ~amd64
 sys-apps/hwloc ~amd64
 sys-apps/kmscon ~amd64
+sys-apps/uutils-coreutils ~amd64
+sys-apps/uutils-findutils ~amd64
 sys-cluster/openmpi ~amd64
 sys-devel/clang ~amd64
 sys-devel/clang-common ~amd64
