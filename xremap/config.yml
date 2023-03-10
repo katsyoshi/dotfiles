@@ -2,7 +2,7 @@
 keymap:
   - name: Emacs binding
     application:
-      only: ["firefox", "Google-chrome"]
+      only: ["firefox"]
     remap:
       C-b: { with_mark: left }
       C-f: { with_mark: right }
@@ -37,6 +37,40 @@ keymap:
           k: C-f4
           C-c: C-q
           u: [C-z, { set_mark: false }]
+  - name: chrome
+    application:
+      only: ["Google-chrome"]
+    remap:
+      C-b: { with_mark: left }
+      C-f: { with_mark: right }
+      C-p: { with_mark: up }
+      C-n: { with_mark: down }
+      M-b: { with_mark: C-left }
+      M-f: { with_mark: C-right }
+      C-a: { with_mark: home }
+      C-e: { with_mark: end }
+      M-v: { with_mark: pageup }
+      C-v: { with_mark: pagedown }
+      M-Shift-comma: { with_mark: C-home }
+      M-Shift-dot: { with_mark: C-end }
+      C-w: [C-x, { set_mark: false }]
+      M-w: [C-c, { set_mark: false }]
+      C-y: [C-v, { set_mark: false }]
+      C-k: [Shift-end, C-x, { set_mark: false }]
+      C-space: { set_mark: true }
+      C-s: F3
+      C-r: Shift-F3
+      C-g: [esc, { set_mark: false }]
+      C-x:
+        remap:
+          h: [C-home, C-a, { set_mark: true }]
+          C-f: C-o
+          C-r: F5
+          C-s: C-s
+          k: C-f4
+          C-c: C-q
+          u: [C-z, { set_mark: false }]
+
   - name: slack only
     application:
       only: ["Slack"]
