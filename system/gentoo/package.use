@@ -1,6 +1,6 @@
 */* LUA_TARGETS: -* lua5-1 lua5-4
 */* LUA_SINGLE_TARGET: -* lua5-1
-*/* PYTHON_TARGETS: -* python3_10 python3_11
+*/* PYTHON_TARGETS: -* python3_10 python3_11 python3_12
 */* PYTHON_SINGLE_TARGET: -* python3_10
 */* RUBY_TARGETS: -* ruby27 ruby30 ruby31 ruby32
 */* RUBY_SINGLE_TARGET: -* ruby31
