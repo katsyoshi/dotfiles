@@ -180,8 +180,9 @@ dev-util/strace
 dev-vcs/git
 gnome-base/gnome-control-center
 gnome-base/gnome-desktop
-gnome-extra/gconf-editor
 gnome-extra/gnome-user-docs
+gui-apps/swaybg
+gui-apps/swaylock
 gui-libs/libhandy
 gui-libs/libwpe
 gui-libs/wpebackend-fdo
@@ -209,6 +210,7 @@ media-gfx/darktable
 media-gfx/gimp
 media-gfx/graphviz
 media-gfx/imagemagick
+media-gfx/openscad
 media-libs/freeglut
 media-libs/glu
 media-libs/gst-plugins-bad
@@ -322,6 +324,7 @@ sys-kernel/gentoo-sources
 sys-kernel/linux-firmware
 sys-libs/compiler-rt
 sys-libs/compiler-rt-sanitizers
+sys-libs/db
 sys-libs/efivar
 sys-libs/glibc
 sys-libs/gpm
