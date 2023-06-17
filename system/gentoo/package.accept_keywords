@@ -67,6 +67,7 @@ sys-apps/bubblewrap ~amd64
 sys-apps/config-site ~amd64
 sys-apps/hwloc ~amd64
 sys-apps/kmscon ~amd64
+sys-apps/locale-gen ~amd64
 sys-apps/uutils-coreutils ~amd64
 sys-apps/uutils-findutils ~amd64
 sys-cluster/openmpi ~amd64
