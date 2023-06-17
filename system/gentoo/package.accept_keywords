@@ -25,7 +25,7 @@ dev-libs/libuv ~amd64
 dev-libs/nspr ~amd64
 dev-libs/nss ~amd64
 dev-libs/ptexenc ~amd64
-dev-python/* ~amd64
+# dev-python/* ~amd64
 dev-ruby/* ~amd64
 dev-util/android-studio ~amd64
 dev-util/bazel ~amd64
