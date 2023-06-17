@@ -10,6 +10,7 @@ app-containers/runc
 app-crypt/envchain
 app-crypt/qca
 app-editors/emacs
+app-editors/emacs:28
 app-editors/nano
 app-editors/vim
 app-emacs/protbuf
@@ -28,7 +29,6 @@ app-office/libreoffice-l10n
 app-portage/cpuid2cpuflags
 app-portage/eix
 app-portage/gentoolkit
-app-portage/layman
 app-shells/bash-completion
 app-shells/dash
 app-shells/zsh-completions
@@ -57,6 +57,7 @@ app-xemacs/emerge
 cross-armv7a-hardfloat-linux-gnueabi/binutils
 cross-armv7a-hardfloat-linux-gnueabi/binutils:2.35
 cross-armv7a-hardfloat-linux-gnueabi/gcc
+cross-armv7a-hardfloat-linux-gnueabi/gcc:12
 cross-armv7a-hardfloat-linux-gnueabi/glibc
 cross-avr/binutils
 cross-avr/binutils:2.35
@@ -87,8 +88,8 @@ dev-lang/python
 dev-lang/python-exec
 dev-lang/python-exec-conf
 dev-lang/python:3.10
+dev-lang/python:3.9
 dev-lang/ruby
-dev-lang/ruby:2.7
 dev-lang/ruby:3.0
 dev-lang/rust-bin
 dev-libs/apr
@@ -161,6 +162,7 @@ dev-python/zipp
 dev-ruby/bundler
 dev-ruby/minitest
 dev-ruby/power_assert
+dev-ruby/psych
 dev-ruby/racc
 dev-ruby/rake
 dev-ruby/rbs
@@ -208,8 +210,10 @@ media-fonts/noto
 media-fonts/noto-emoji
 media-gfx/darktable
 media-gfx/gimp
+media-gfx/gpicview
 media-gfx/graphviz
 media-gfx/imagemagick
+media-gfx/inkscape
 media-gfx/openscad
 media-libs/freeglut
 media-libs/glu
@@ -258,10 +262,11 @@ net-libs/liblockfile
 net-libs/libqmi
 net-libs/webkit-gtk
 net-libs/webkit-gtk:4
-net-libs/webkit-gtk:5
+net-libs/webkit-gtk:4.1
 net-mail/mailutils
 net-misc/curl
 net-misc/dhcp
+net-misc/freerdp
 net-misc/gnome-remote-desktop
 net-misc/modemmanager
 net-misc/networkmanager
@@ -302,7 +307,9 @@ sys-block/fio
 sys-boot/grub
 sys-cluster/openmpi
 sys-devel/binutils
+sys-devel/clang
 sys-devel/clang-runtime
+sys-devel/clang:15
 sys-devel/crossdev
 sys-devel/gcc
 sys-devel/gcc:10
@@ -359,6 +366,8 @@ x11-drivers/xf86-input-libinput
 x11-libs/vte
 x11-misc/arandr
 x11-misc/dunst
+x11-misc/i3lock
+x11-misc/i3status
 x11-misc/parcellite
 x11-misc/rofi
 x11-misc/slim
@@ -367,6 +376,5 @@ x11-misc/xkeyboard-config
 x11-misc/xorg-cf-files
 x11-misc/xsel
 x11-terms/alacritty
-x11-terms/wezterm
 x11-wm/i3
 xfce-base/libxfce4ui
