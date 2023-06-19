@@ -11,6 +11,7 @@ app-editors/vim ~amd64
 app-editors/vim-core ~amd64
 app-eselect/eselect-gradle ~amd64
 app-eselect/eselect-ruby ~amd64
+app-misc/zellij ~amd64
 app-text/texlive-core ~amd64
 cross-armv7a-hardfloat-linux-gnueabi/gcc ~amd64
 cross-avr/gcc ~amd64

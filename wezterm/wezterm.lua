@@ -73,13 +73,13 @@ end
 
 local ssh_domains = {
    {
-      name = "home",
-      remote_address = "rin.katsyoshi.org",
+      name = "rin",
+      remote_address = "home",
       username = "katsyoshi",
    },
    {
       name = "sakra",
-      remote_address = "eagle-jump.katsyoshi.org",
+      remote_address = "sakra",
       username = "katsu",
    },
 }
@@ -152,12 +152,13 @@ return {
    disable_default_key_bindings = true,
    font = wezterm.font "Noto Mono for Powerline",
    font_size = 10.0,
-   keys = assigned_keys,
-   key_tables = {
-      copy_mode = cursols,
-   },
-   leader = { key="t", mods="CTRL", timeout_milliseconds=1000 },
-   tab_bar_at_bottom = true,
+   keys = { { key = "y", mods = "CTRL", action = act{ PasteFrom = "Clipboard" }, },},
+   -- key_tables = {
+   --   copy_mode = cursols,
+   -- },
+   -- leader = { key="t", mods="CTRL", timeout_milliseconds=1000 },
+   -- tab_bar_at_bottom = true,
+   enable_tab_bar = false,
    use_ime = true,
 
    unix_domains = {

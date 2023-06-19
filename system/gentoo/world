@@ -24,6 +24,7 @@ app-i18n/nkf
 app-misc/evtest
 app-misc/jq
 app-misc/screen
+app-misc/zellij
 app-mobilephone/dfu-util
 app-office/libreoffice-l10n
 app-portage/cpuid2cpuflags
@@ -313,6 +314,7 @@ sys-devel/clang:15
 sys-devel/crossdev
 sys-devel/gcc
 sys-devel/gcc:10
+sys-devel/gcc:11
 sys-devel/gdb
 sys-devel/llvm
 sys-devel/llvm-common
@@ -376,5 +378,6 @@ x11-misc/xkeyboard-config
 x11-misc/xorg-cf-files
 x11-misc/xsel
 x11-terms/alacritty
+x11-terms/wezterm
 x11-wm/i3
 xfce-base/libxfce4ui
