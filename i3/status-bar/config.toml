@@ -13,6 +13,8 @@ interval = 20
 warning = 20.0
 alert = 10.0
 format = " $icon $available / $total "
+[block.theme_overrides]
+idle_bg = "#073642"
 
 [[block]]
 block = "cpu"
@@ -24,6 +26,8 @@ format_alt = " $icon $barchart $utilization $frequency{ $boost|} "
 block = "load"
 interval = 1
 format = " $icon $1m.eng(w:4) 5m: $5m.eng(w:4) 15m: $5m.eng(w:4) "
+[block.theme_overrides]
+idle_bg = "#073642"
 
 [[block]]
 block = "memory"
@@ -33,3 +37,5 @@ format = " $icon $mem_total_used_percents.eng(w:3) $icon_swap $swap_used_percent
 block = "time"
 interval = 1
 format = " $timestamp.datetime(f:'%Y/%m/%d %a %T') "
+[block.theme_overrides]
+idle_bg = "#073642"
