@@ -70,7 +70,6 @@ dev-cpp/pangomm
 dev-cpp/yaml-cpp
 dev-db/mariadb-connector-c
 dev-db/postgresql
-dev-db/postgresql:10
 dev-db/postgresql:12
 dev-java/bcmail
 dev-java/bcpkix
@@ -91,7 +90,8 @@ dev-lang/python-exec-conf
 dev-lang/python:3.10
 dev-lang/python:3.9
 dev-lang/ruby
-dev-lang/ruby:3.0
+dev-lang/ruby:3.1
+dev-lang/ruby:3.2
 dev-lang/rust-bin
 dev-libs/apr
 dev-libs/cdk
@@ -104,7 +104,6 @@ dev-libs/libhid
 dev-libs/libisofs
 dev-libs/libsigc++
 dev-libs/libxml2
-dev-libs/openssl-compat
 dev-libs/protobuf
 dev-libs/ptexenc
 dev-libs/totem-pl-parser
@@ -163,10 +162,7 @@ dev-python/zipp
 dev-ruby/bundler
 dev-ruby/minitest
 dev-ruby/power_assert
-dev-ruby/psych
-dev-ruby/racc
 dev-ruby/rake
-dev-ruby/rbs
 dev-ruby/rdoc
 dev-ruby/test-unit
 dev-ruby/typeprof
@@ -175,6 +171,7 @@ dev-tex/latex-beamer
 dev-util/android-studio
 dev-util/android-tools
 dev-util/bazel
+dev-util/bindgen
 dev-util/cmake
 dev-util/glib-utils
 dev-util/itstool
@@ -188,6 +185,7 @@ gui-apps/swaybg
 gui-apps/swaylock
 gui-libs/libhandy
 gui-libs/libwpe
+gui-libs/vte-common
 gui-libs/wpebackend-fdo
 gui-wm/sway
 kde-frameworks/breeze-icons
@@ -269,6 +267,7 @@ net-misc/curl
 net-misc/dhcp
 net-misc/freerdp
 net-misc/gnome-remote-desktop
+net-misc/minidlna
 net-misc/modemmanager
 net-misc/networkmanager
 net-misc/ntp
@@ -292,6 +291,7 @@ sys-apps/bubblewrap
 sys-apps/dbus
 sys-apps/dmidecode
 sys-apps/hwloc
+sys-apps/lm-sensors
 sys-apps/memtest86+
 sys-apps/memtester
 sys-apps/nvme-cli
@@ -373,6 +373,7 @@ x11-misc/i3status
 x11-misc/parcellite
 x11-misc/rofi
 x11-misc/slim
+x11-misc/xclip
 x11-misc/xdotool
 x11-misc/xkeyboard-config
 x11-misc/xorg-cf-files

@@ -4,12 +4,12 @@
 */* PYTHON_SINGLE_TARGET: -* python3_10
 */* RUBY_TARGETS: -* ruby30 ruby31 ruby32
 */* RUBY_SINGLE_TARGET: -* ruby31
-app-admin/rsyslog jemalloc openssl
+app-admin/rsyslog openssl
 app-containers/containerd btrfs
 app-containers/docker btrfs
 app-crypt/gcr gtk
 app-crypt/pinentry gnome-keyring
-app-editors/emacs cairo dbus dynamic-loading gif gpm gui gtk gtk3 gzip-el jit jpeg libxml2 motif png svg ssl sound tiff xft xwidgets zlib
+app-editors/emacs cairo dbus dynamic-loading gif gpm gui gtk gtk3 gzip-el jit jpeg libxml2 png svg ssl sound sqlite tiff webp xft xwidgets zlib
 app-emacs/emacs-common gui
 app-i18n/fcitx gtk2 gtk3
 app-i18n/mozc fcitx4 gui
@@ -21,7 +21,9 @@ app-text/xmlto text
 dev-db/postgresql uuid
 dev-java/swt cairo
 dev-lang/python sqlite
-dev-lang/ruby jemalloc jit
+dev-lang/ruby jit
+dev-lang/rust rustfmt
+dev-lang/rust-bin rust-src
 dev-libs/boost python
 dev-libs/efl egl gles2-only -lua_single_target_luajit lua_single_target_lua5-1
 dev-libs/folks eds
@@ -81,6 +83,7 @@ media-video/webcamoid ffmpeg jack v4l v4lutils videoeffects
 net-dns/bind-tools readline ssl
 net-fs/samba client
 net-im/slack gnome-keyring ayatana
+net-libs/webkit-gtk avif pdf keyring spell
 net-misc/curl http2 ssl ipv6 ssh
 net-misc/freerdp server
 net-misc/networkmanager bluetooth teamd
@@ -106,6 +109,7 @@ sys-libs/libxcrypt static-libs
 sys-libs/zlib minizip abi_x86_32 static-libs
 virtual/imagemagick-tools perl
 virtual/libcrypt static-libs
+virtual/rust rustfmt
 x11-drivers/nvidia-drivers acpi driver gtk3 uvm static-libs
 x11-libs/cairo xcb
 x11-libs/gdk-pixbuf jpeg tiff
