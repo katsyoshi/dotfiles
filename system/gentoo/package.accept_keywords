@@ -1,6 +1,7 @@
 app-admin/supervisor ~amd64
 app-containers/containerd ~amd64
 app-containers/docker ~amd64
+app-containers/docker-buildx ~amd64
 app-containers/docker-cli ~amd64
 app-containers/docker-compose:2 ~amd64
 app-containers/docker-proxy ~amd64
@@ -11,6 +12,7 @@ app-editors/vim ~amd64
 app-editors/vim-core ~amd64
 app-eselect/eselect-gradle ~amd64
 app-eselect/eselect-ruby ~amd64
+app-i18n/mozc ~amd64
 app-misc/zellij ~amd64
 app-text/texlive-core ~amd64
 cross-armv7a-hardfloat-linux-gnueabi/gcc ~amd64
@@ -20,6 +22,7 @@ dev-java/javatoolkit ~amd64
 dev-java/oracle-javamail ~amd64
 dev-java/gradle-bin ~amd64d
 dev-lang/ruby ~amd64
+dev-libs/blake3 ~amd64
 dev-libs/kpathsea ~amd64
 dev-libs/mimalloc ~amd64
 dev-libs/libuv ~amd64
@@ -39,6 +42,7 @@ dev-texlive/* ~amd64
 games-fps/nexuiz ~amd64
 gui-libs/egl-gbm ~amd64
 gui-libs/egl-wayland ~amd64
+media-fonts/fontawesome ~amd64
 media-fonts/mix-mplus-ipa ~amd64
 media-fonts/ricty ~amd64
 media-gfx/blender ~amd64
@@ -85,6 +89,7 @@ sys-devel/llvm-common ~amd64
 sys-devel/llvm-toolchain-symlinks ~amd64
 sys-devel/llvmgold ~amd64
 sys-devel/mold ~amd64
+sys-fs/jmtpfs ~amd64
 sys-kernel/gentoo-sources ~amd64
 sys-libs/glibc ~amd64
 sys-libs/compiler-rt ~amd64

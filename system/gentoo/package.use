@@ -9,10 +9,10 @@ app-containers/containerd btrfs
 app-containers/docker btrfs
 app-crypt/gcr gtk
 app-crypt/pinentry gnome-keyring
-app-editors/emacs cairo dbus dynamic-loading gif gpm gui gtk gtk3 gzip-el jit jpeg libxml2 png svg ssl sound sqlite tiff webp xft xwidgets zlib
+app-editors/emacs cairo dbus dynamic-loading gif gpm gui gtk gtk3 gzip-el jit jpeg libxml2 png svg ssl sound sqlite tiff tree-sitter webp xft xwidgets zlib
 app-emacs/emacs-common gui
 app-i18n/fcitx gtk2 gtk3
-app-i18n/mozc fcitx4 gui
+app-i18n/mozc fcitx4 gui ibus
 app-text/ghostscript-gpl cups
 app-text/poppler cairo tiff
 app-text/texlive cjk context detex dvi2tty epspdf extra games graphics humanities jadetex luatex metapost music pdfannotextractor png pstricks publishers science tex4ht texi2html truetype xetex xindy xml
@@ -36,8 +36,10 @@ dev-libs/libnl utils
 dev-libs/libpcre2 pcre16
 dev-libs/libxml2 python icu
 dev-libs/xmlsec nss
+dev-qt/qtbase opengl
 dev-qt/qtcore icu
 dev-qt/qtgui egl dbus
+dev-qt/qttools opengl
 dev-qt/qtwebchannel qml
 dev-qt/qtwebengine widgets
 dev-util/nvidia-cuda-toolkit profiler

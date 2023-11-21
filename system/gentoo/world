@@ -2,15 +2,16 @@ app-admin/apache-tools
 app-admin/sudo
 app-admin/sysstat
 app-admin/terraform
+app-arch/p7zip
 app-containers/containerd
 app-containers/docker
+app-containers/docker-buildx
 app-containers/docker-cli
 app-containers/docker-compose:2
 app-containers/runc
 app-crypt/envchain
 app-crypt/qca
 app-editors/emacs
-app-editors/emacs:28
 app-editors/nano
 app-editors/vim
 app-emacs/protbuf
@@ -24,7 +25,6 @@ app-i18n/nkf
 app-misc/evtest
 app-misc/jq
 app-misc/screen
-app-misc/zellij
 app-mobilephone/dfu-util
 app-office/libreoffice-l10n
 app-portage/cpuid2cpuflags
@@ -142,6 +142,7 @@ dev-python/cryptography
 dev-python/cycler
 dev-python/dbus-python
 dev-python/distro
+dev-python/inflect
 dev-python/more-itertools
 dev-python/numpy
 dev-python/pillow
@@ -149,6 +150,8 @@ dev-python/pip
 dev-python/pycups
 dev-python/python-dateutil
 dev-python/python-dotenv
+dev-python/python-mimeparse
+dev-python/pytz
 dev-python/regex
 dev-python/rsa
 dev-python/s3transfer
@@ -156,9 +159,12 @@ dev-python/setuptools
 dev-python/subunit
 dev-python/testtools
 dev-python/texttable
+dev-python/tomlkit
 dev-python/websocket-client
 dev-python/wheel
 dev-python/zipp
+dev-qt/qtbase
+dev-qt/qtsvg
 dev-ruby/bundler
 dev-ruby/minitest
 dev-ruby/power_assert
@@ -205,9 +211,15 @@ kde-frameworks/kwindowsystem
 kde-plasma/polkit-kde-agent
 mail-mta/nullmailer
 media-fonts/fontawesome
+media-fonts/ipamonafont
+media-fonts/ja-ipafonts
+media-fonts/monafont
 media-fonts/noto
 media-fonts/noto-emoji
+media-fonts/powerline-symbols
 media-gfx/darktable
+media-gfx/feh
+media-gfx/geeqie
 media-gfx/gimp
 media-gfx/gpicview
 media-gfx/graphviz
@@ -305,6 +317,7 @@ sys-apps/uutils-findutils
 sys-auth/polkit-qt
 sys-auth/rtkit
 sys-block/fio
+sys-block/thin-provisioning-tools
 sys-boot/grub
 sys-cluster/openmpi
 sys-devel/binutils
@@ -326,6 +339,7 @@ sys-fs/cryptsetup
 sys-fs/fuse
 sys-fs/fuse-exfat
 sys-fs/fuse:0
+sys-fs/jmtpfs
 sys-fs/lvm2
 sys-fs/udisks
 sys-kernel/dracut
@@ -371,6 +385,7 @@ x11-misc/dunst
 x11-misc/i3lock
 x11-misc/i3status
 x11-misc/parcellite
+x11-misc/picom
 x11-misc/rofi
 x11-misc/slim
 x11-misc/xclip
@@ -378,7 +393,7 @@ x11-misc/xdotool
 x11-misc/xkeyboard-config
 x11-misc/xorg-cf-files
 x11-misc/xsel
-x11-terms/alacritty
 x11-terms/wezterm
+x11-terms/xterm
 x11-wm/i3
 xfce-base/libxfce4ui
