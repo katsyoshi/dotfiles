@@ -209,6 +209,7 @@ kde-frameworks/kservice
 kde-frameworks/kwidgetsaddons
 kde-frameworks/kwindowsystem
 kde-plasma/polkit-kde-agent
+mail-client/thunderbird-bin
 mail-mta/nullmailer
 media-fonts/fontawesome
 media-fonts/ipamonafont
@@ -217,6 +218,11 @@ media-fonts/monafont
 media-fonts/noto
 media-fonts/noto-emoji
 media-fonts/powerline-symbols
+media-fonts/sazanami
+media-fonts/source-code-pro
+media-fonts/source-han-sans
+media-fonts/source-sans
+media-fonts/source-serif
 media-gfx/darktable
 media-gfx/feh
 media-gfx/geeqie
@@ -326,7 +332,6 @@ sys-devel/clang-runtime
 sys-devel/clang:15
 sys-devel/crossdev
 sys-devel/gcc
-sys-devel/gcc:10
 sys-devel/gcc:11
 sys-devel/gdb
 sys-devel/llvm
