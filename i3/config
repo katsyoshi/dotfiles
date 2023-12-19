@@ -113,17 +113,20 @@ assign [class="Emacs"] $ws1
 assign [class="Alacritty"] $ws1
 assign [class="org.wezfurlong.wezterm"] $ws1
 assign [class="firefox"] $ws2
+assign [class="Google-chrome"] $ws2
 assign [class="Franz"] $ws3
 assign [class="Slack"] $ws3
-assign [class="Google-chrome"] $ws3
+assign [class="discord"] $ws3
 assign [class="Mikutter.rb"] $ws3
 assign [class="jetbrains-studio"] $ws4
 assign [class="jetbrains-idea-ce"] $ws4
 assign [class="Code"] $ws4
 assign [class="DBeaver"] $ws5
-assign [class="discord"] $ws6
+assign [class="voicevox"] $ws6
+assign [class="zoom"] $ws7
 assign [class="remmina"] $ws7
 assign [class="Darktable"] $ws8
+assign [class="Gpicview"] $ws8
 assign [class="Inkscape"] $ws8
 assign [class="obs"] $ws9
 
@@ -186,18 +189,20 @@ mode "resize" {
 }
 
 bindsym $mod+Ctrl+r mode "resize"
-exec $terminal
-exec firefox-bin
-exec google-chrome-stable
-exec mikutter
-exec slack
-exec remmina
-exec parcellite
-exec dbus-launch nm-applet
-exec dbus-launch fcitx
-exec dbus-launch dunst
-exec flameshot
-exec discord
+exec --no-startup-id $terminal
+exec --no-startup-id firefox-bin
+exec --no-startup-id google-chrome-stable
+# exec --no-startup-id mikutter
+exec --no-startup-id slack
+# exec --no-startup-id remmina
+exec --no-startup-id parcellite
+exec --no-startup-id dbus-launch nm-applet
+exec --no-startup-id dbus-launch fcitx
+exec --no-startup-id dbus-launch dunst
+exec --no-startup-id flameshot
+exec --no-startup-id discord
+exec --no-startup-id /home/katsyoshi/.fehbg
+
 client.focused             #268bd2 #268bd2 #fdf6e3
 client.focused_inactive    #000000 #073642 #839496
 client.unfocused           #000000 #073642 #839496
@@ -206,7 +211,7 @@ client.urgent              #dc322f #dc322f #dc322f
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-  font pango:Noto Mono for Powerline, FontAwesome 12
+  font pango:Noto Sans Mono 12
   position top
   status_command i3status-rs /home/katsyoshi/.config/i3/status-bar/config.toml
   colors {

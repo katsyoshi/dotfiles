@@ -19,8 +19,8 @@ idle_bg = "#073642"
 [[block]]
 block = "cpu"
 interval = 1
-format = " $icon $utilization $frequency{ $boost|} "
-format_alt = " $icon $barchart $utilization $frequency{ $boost|} "
+format = " $icon $utilization.eng(w:4) $frequency{ $boost|} "
+format_alt = " $icon $barchart $utilization.eng(w:4) $frequency{ $boost|} "
 
 [[block]]
 block = "load"
