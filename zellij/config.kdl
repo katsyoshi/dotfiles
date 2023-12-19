@@ -7,13 +7,15 @@ keybinds clear-defaults=true {
     bind "Ctrl t" { SwitchToMode "Tmux"; }
   }
   scroll {
-    bind "Ctrl s" { SwitchToMode "Normal"; }
-    // uncomment this and adjust key if using copy_on_select=false
-    // bind "Alt c" { Copy; }
+    bind "Ctrl v" { PageScrollDown; }
+    bind "Alt v" { PageScrollUp; }
+    bind "Ctrl p" { ScrollUp; }
+    bind "Ctrl n" { ScrollDown; }
   }
   tmux {
+    bind "e" { EditScrollback; SwitchToMode "Normal"; }
     bind "[" { SwitchToMode "Scroll"; }
-    bind "Ctrl b" { Write 2; SwitchToMode "Normal"; }
+    bind "Ctrl b" { Write 8; }
     bind "v" { NewPane "Down"; SwitchToMode "Normal"; }
     bind "h" { NewPane "Right"; SwitchToMode "Normal"; }
     bind "f" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
@@ -44,5 +46,6 @@ plugins {
   compact-bar { path "compact-bar"; }
 }
 
+scrollback_editor "/usr/bin/emacsclient -nw -s katsyoshi"
 pane_frames false
 theme "catppuccin-mocha"
