@@ -81,8 +81,8 @@ return {
    color_scheme = "Dracula (Official)",
    default_gui_startup_args = { "connect", "wezterm" },
    disable_default_key_bindings = true,
-   font = wezterm.font "Noto Sans Mono",
-   font_size = 10.5,
+   font = wezterm.font "Noto Sans Mono CJK JP",
+   font_size = 12,
    keys = {
       -- paste
       { key = "y", mods = "CTRL", action = act{ PasteFrom = "Clipboard" }, },
