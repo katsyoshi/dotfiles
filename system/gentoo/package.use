@@ -48,7 +48,10 @@ gnome-base/gvfs udisks cdda
 gnome-base/gnome-control-center networkmanager
 gnome-extra/evolution-data-server vala
 gnome-extra/nm-applet gtk
+gui-apps/swaybg gdk-pixbuf
+gui-wm/sway wallpapers tray
 media-fonts/noto cjk
+media-fonts/noto-emoji icons
 media-gfx/darktable colord doc flickr geolocation gnome-keyring gphoto2 graphicsmagick jpeg2k kwallet nls opencl openexr openmp pax_kernel webp
 media-gfx/feh curl
 media-gfx/fontforge cairo png
@@ -72,7 +75,7 @@ media-libs/libraw jpeg
 media-libs/libsdl2 gles2
 media-libs/libsixel curl gd gtk jpeg png
 media-libs/libv4l jpeg
-media-libs/libvpx svc
+media-libs/libvpx postproc svc
 media-libs/mesa gles2
 media-plugins/alsa-plugins pulseaudio
 media-plugins/grilo-plugins tracker
@@ -112,6 +115,7 @@ sys-libs/zlib minizip abi_x86_32 static-libs
 virtual/imagemagick-tools perl
 virtual/libcrypt static-libs
 virtual/rust rustfmt
+x11-base/xwayland libei
 x11-drivers/nvidia-drivers acpi driver gtk3 uvm static-libs
 x11-libs/cairo xcb
 x11-libs/gdk-pixbuf jpeg tiff
@@ -119,4 +123,5 @@ x11-libs/libdrm video_cards_nvidia
 x11-libs/libxcb xkb
 x11-misc/rofi windowmode
 x11-wm/mutter screencast
+www-client/firefox -alsa ffmpeg hardened hwaccel openh264 pulseaudio screencast
 www-client/firefox-bin -alsa ffmpeg pulseaudio

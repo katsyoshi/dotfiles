@@ -72,6 +72,7 @@ dev-cpp/yaml-cpp
 dev-db/mariadb-connector-c
 dev-db/postgresql
 dev-db/postgresql:12
+dev-debug/gdb
 dev-java/bcmail
 dev-java/bcpkix
 dev-java/bcprov
@@ -184,6 +185,7 @@ dev-util/itstool
 dev-util/nvidia-cuda-toolkit
 dev-util/strace
 dev-vcs/git
+gnome-base/gdm
 gnome-base/gnome-control-center
 gnome-base/gnome-desktop
 gnome-extra/gnome-user-docs
@@ -333,10 +335,8 @@ sys-devel/clang:15
 sys-devel/crossdev
 sys-devel/gcc
 sys-devel/gcc:11
-sys-devel/gdb
 sys-devel/llvm
 sys-devel/llvm-common
-sys-devel/llvm:14
 sys-devel/llvm:15
 sys-devel/mold
 sys-fs/btrfs-progs
@@ -389,6 +389,8 @@ x11-misc/arandr
 x11-misc/dunst
 x11-misc/i3lock
 x11-misc/i3status
+x11-misc/lightdm
+x11-misc/lightdm-gtk-greeter
 x11-misc/parcellite
 x11-misc/picom
 x11-misc/rofi
