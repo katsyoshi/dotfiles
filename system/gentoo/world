@@ -63,6 +63,7 @@ cross-armv7a-hardfloat-linux-gnueabi/glibc
 cross-avr/binutils
 cross-avr/binutils:2.35
 cross-avr/gcc
+dev-build/cmake
 dev-cpp/abseil-cpp
 dev-cpp/glibmm
 dev-cpp/gtkmm
@@ -178,7 +179,6 @@ dev-util/android-studio
 dev-util/android-tools
 dev-util/bazel
 dev-util/bindgen
-dev-util/cmake
 dev-util/glib-utils
 dev-util/itstool
 dev-util/nvidia-cuda-toolkit
