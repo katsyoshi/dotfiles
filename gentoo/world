@@ -1,4 +1,5 @@
 app-admin/apache-tools
+app-admin/doas
 app-admin/sudo
 app-admin/sysstat
 app-admin/terraform
@@ -73,11 +74,11 @@ dev-db/mariadb-connector-c
 dev-db/postgresql
 dev-db/postgresql:12
 dev-debug/gdb
+dev-debug/strace
 dev-java/bcmail
 dev-java/bcpkix
 dev-java/bcprov
 dev-java/gradle-bin
-dev-java/gradle-bin:7.5.1
 dev-java/jakarta-activation
 dev-java/jakarta-activation-api
 dev-java/jakarta-activation-api:1
@@ -178,12 +179,10 @@ dev-ruby/xmlrpc
 dev-tex/latex-beamer
 dev-util/android-studio
 dev-util/android-tools
-dev-util/bazel
 dev-util/bindgen
 dev-util/glib-utils
 dev-util/itstool
 dev-util/nvidia-cuda-toolkit
-dev-util/strace
 dev-vcs/git
 gnome-base/gdm
 gnome-base/gnome-control-center
@@ -314,6 +313,7 @@ sys-apps/hwloc
 sys-apps/lm-sensors
 sys-apps/memtest86+
 sys-apps/memtester
+sys-apps/merge-usr
 sys-apps/nvme-cli
 sys-apps/pciutils
 sys-apps/portage

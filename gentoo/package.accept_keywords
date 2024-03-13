@@ -17,6 +17,7 @@ app-misc/zellij ~amd64
 app-text/texlive-core ~amd64
 cross-armv7a-hardfloat-linux-gnueabi/gcc ~amd64
 cross-avr/gcc ~amd64
+dev-build/bazel ~amd64
 dev-build/cmake ~amd64
 dev-cpp/tbb ~amd64
 dev-java/javatoolkit ~amd64
@@ -34,7 +35,6 @@ dev-libs/ptexenc ~amd64
 # dev-python/* ~amd64
 dev-ruby/* ~amd64
 dev-util/android-studio ~amd64
-dev-util/bazel ~amd64
 dev-util/ccls ~amd64
 dev-util/nvidia-cuda-toolkit ~amd64
 dev-vcs/git ~amd64

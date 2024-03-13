@@ -1,9 +1,10 @@
 */* LUA_TARGETS: -* lua5-1 lua5-4
 */* LUA_SINGLE_TARGET: -* lua5-1
 */* PYTHON_TARGETS: -* python3_10 python3_11 python3_12
-*/* PYTHON_SINGLE_TARGET: -* python3_10
+*/* PYTHON_SINGLE_TARGET: -* python3_11
 */* RUBY_TARGETS: -* ruby31 ruby32 ruby33
 */* RUBY_SINGLE_TARGET: -* ruby32
+app-admin/doas persist
 app-admin/rsyslog openssl
 app-containers/containerd btrfs
 app-containers/docker btrfs
@@ -36,6 +37,7 @@ dev-libs/libnl utils
 dev-libs/libpcre2 pcre16
 dev-libs/libxml2 python icu
 dev-libs/xmlsec nss
+dev-python/pillow webp tiff
 dev-qt/qtbase opengl
 dev-qt/qtcore icu
 dev-qt/qtgui egl dbus
@@ -64,7 +66,7 @@ media-libs/freetype png harfbuzz
 media-libs/gegl cairo
 media-libs/gst-plugins-base theora
 media-libs/musicbrainz examples test
-media-libs/tiff webp
+media-libs/tiff webp jpeg
 media-libs/gd jpeg fontconfig truetype png
 media-libs/gegl raw svg tiff webp
 media-libs/harfbuzz icu
@@ -109,6 +111,7 @@ sys-block/fio aio
 sys-devel/binutils gold
 sys-devel/gcc jit graphite
 sys-devel/llvm clang
+sys-kernel/installkernel dracut grub
 sys-libs/glibc -clone3
 sys-libs/libxcrypt static-libs
 sys-libs/zlib minizip abi_x86_32 static-libs
