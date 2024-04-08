@@ -103,12 +103,13 @@ sci-libs/gts jpeg fontconfig truetype png
 sci-visualization/gnuplot bitmap cairo compat ggi libcaca libcerf readline svga
 sys-apps/dbus user-session
 sys-apps/memtest86+ efi64
-sys-apps/systemd pam policykit cgroup-hybrid
+sys-apps/systemd pam policykit cgroup-hybrid boot
 sys-auth/consolekit policykit
 sys-block/fio aio
 sys-devel/binutils gold
 sys-devel/gcc jit graphite
 sys-devel/llvm clang
+sys-kernel/installkernel systemd systemd-boot
 sys-libs/glibc -clone3
 sys-libs/libxcrypt static-libs
 sys-libs/zlib minizip abi_x86_32 static-libs

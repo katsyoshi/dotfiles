@@ -98,6 +98,7 @@ sys-libs/compiler-rt ~amd64
 sys-libs/compiler-rt-sanitizers ~amd64
 sys-libs/libomp ~amd64
 sys-process/bashtop ~amd64
+sys-process/procs ~amd64
 sys-process/tini ~amd64
 virtual/rubygems ~amd64
 virtual/ruby-ssl ~amd64
