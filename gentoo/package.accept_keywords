@@ -12,6 +12,10 @@ app-editors/vim ~amd64
 app-editors/vim-core ~amd64
 app-eselect/eselect-gradle ~amd64
 app-eselect/eselect-ruby ~amd64
+app-i18n/fcitx ~amd64
+app-i18n/fcitx-configtool ~amd64
+app-i18n/fcitx-qt ~amd64
+app-i18n/libime ~amd64
 app-i18n/mozc ~amd64
 app-misc/zellij ~amd64
 app-text/texlive-core ~amd64
@@ -19,6 +23,7 @@ cross-armv7a-hardfloat-linux-gnueabi/gcc ~amd64
 cross-avr/gcc ~amd64
 dev-build/bazel ~amd64
 dev-build/cmake ~amd64
+dev-cpp/abseil-cpp ~amd64
 dev-cpp/tbb ~amd64
 dev-java/javatoolkit ~amd64
 dev-java/oracle-javamail ~amd64
@@ -41,8 +46,10 @@ dev-vcs/git ~amd64
 dev-qt/* ~amd64
 dev-texlive/* ~amd64
 games-fps/nexuiz ~amd64
+gui-apps/waybar ~amd64
 gui-libs/egl-gbm ~amd64
 gui-libs/egl-wayland ~amd64
+gui-wm/hyprland ~amd64
 media-fonts/fontawesome ~amd64
 media-fonts/mix-mplus-ipa ~amd64
 media-fonts/ricty ~amd64
@@ -52,12 +59,12 @@ media-libs/gegl ~amd64
 media-libs/libraw ~amd64
 media-libs/libuvc ~amd64
 media-libs/nv-codec-headers ~amd64
+media-video/ffmpeg ~amd64
 media-video/obs-studio ~amd64
 media-video/obs-v4l2sink ~amd64
-media-video/webcamoid ~amd64
-media-video/ffmpeg ~amd64
-media-video/v4l2loopback ~amd64
 media-video/nvidia-video-codec ~amd64
+media-video/pipewire ~amd64
+media-video/v4l2loopback ~amd64
 net-dns/libidn2 ~amd64
 net-im/discord ~amd64
 net-im/slack ~amd64
@@ -104,4 +111,5 @@ virtual/rubygems ~amd64
 virtual/ruby-ssl ~amd64
 virtual/opencl ~amd64
 x11-drivers/nvidia-drivers ~amd64
+x11-libs/xcb-imdkit ~amd64
 x11-terms/wezterm ~amd64

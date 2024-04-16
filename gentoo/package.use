@@ -10,10 +10,10 @@ app-containers/containerd btrfs
 app-containers/docker btrfs
 app-crypt/gcr gtk
 app-crypt/pinentry gnome-keyring
-app-editors/emacs cairo dbus dynamic-loading gif gpm gui gtk gtk3 gzip-el jit jpeg libxml2 png svg ssl sound sqlite tiff tree-sitter webp xft xwidgets zlib
+app-editors/emacs cairo dbus dynamic-loading gif gpm gui gtk gtk3 gzip-el jit jpeg libxml2 png svg ssl sound sqlite tiff tree-sitter webp xft xwidgets zlib -X
 app-emacs/emacs-common gui
 app-i18n/fcitx gtk2 gtk3
-app-i18n/mozc fcitx4 gui ibus
+app-i18n/mozc fcitx5 gui
 app-text/ghostscript-gpl cups
 app-text/poppler cairo tiff
 app-text/texlive cjk context detex dvi2tty epspdf extra games graphics humanities jadetex luatex metapost music pdfannotextractor png pstricks publishers science tex4ht texi2html truetype xetex xindy xml
@@ -51,6 +51,7 @@ gnome-base/gnome-control-center networkmanager
 gnome-extra/evolution-data-server vala
 gnome-extra/nm-applet gtk
 gui-apps/swaybg gdk-pixbuf
+gui-apps/waybar evdev network pipewire
 gui-wm/sway wallpapers tray
 media-fonts/noto cjk
 media-fonts/noto-emoji icons
