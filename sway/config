@@ -10,7 +10,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-set $terminal wezterm
+set $terminal foot
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -29,6 +29,10 @@ set $terminal wezterm
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 # floating_modifier $mod
+
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
 # start a terminal
 bindsym $mod+Return exec $terminal
@@ -98,7 +102,7 @@ bindsym $mod+a focus parent
 
 # workspace name
 set $ws1 "1: Work"
-set $ws2 "2: Firefox"
+set $ws2 "2: Web"
 set $ws3 "3: SNS"
 set $ws4 "4: IDE"
 set $ws5 "5: Database"
@@ -190,6 +194,8 @@ exec --no-startup-id $terminal
 exec --no-startup-id discord
 exec --no-startup-id firefox-bin
 exec --no-startup-id slack
+exec fcitx5
+exec mako
 
 client.focused             #268bd2 #268bd2 #fdf6e3
 client.focused_inactive    #000000 #073642 #839496
