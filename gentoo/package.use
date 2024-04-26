@@ -51,7 +51,7 @@ gnome-base/gnome-control-center networkmanager
 gnome-extra/evolution-data-server vala
 gnome-extra/nm-applet gtk
 gui-apps/swaybg gdk-pixbuf
-gui-apps/waybar evdev network pipewire
+gui-apps/waybar evdev network pipewire tray
 gui-wm/sway wallpapers tray
 media-fonts/noto cjk
 media-fonts/noto-emoji icons
@@ -65,7 +65,7 @@ media-libs/clutter egl
 media-libs/cogl gles2
 media-libs/freetype png harfbuzz
 media-libs/gegl cairo
-media-libs/gst-plugins-base theora
+media-libs/gst-plugins-base opengl theora
 media-libs/musicbrainz examples test
 media-libs/tiff webp jpeg
 media-libs/gd jpeg fontconfig truetype png
@@ -85,7 +85,7 @@ media-plugins/grilo-plugins tracker
 media-sound/pulseaudio gtk dbus
 media-video/ffmpeg openh264 aac alsa cuda faac hardcoded-tables gif v4l libv4l webp jpeg2k x265 theora mp3 x264 nvenc vorbis xvid vpx opus
 media-video/obs-studio lua nvenc python truetype v4l vlc lua_single_target_luajit
-media-video/pipewire bluetooth extra sound-server
+media-video/pipewire bluetooth extra v4l sound-server
 media-video/wireplumber -lua_single_target_luajit -lua_single_target_lua5-1 lua_single_target_lua5-4
 media-video/webcamoid ffmpeg jack v4l v4lutils videoeffects
 net-dns/bind-tools readline ssl
