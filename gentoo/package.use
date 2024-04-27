@@ -12,7 +12,7 @@ app-crypt/gcr gtk
 app-crypt/pinentry gnome-keyring
 app-editors/emacs cairo dbus dynamic-loading gif gpm gui gtk gtk3 gzip-el jit jpeg libxml2 png svg ssl sound sqlite tiff tree-sitter webp xft xwidgets zlib -X
 app-emacs/emacs-common gui
-app-i18n/fcitx gtk2 gtk3
+app-i18n/fcitx gtk3 gtk4
 app-i18n/mozc fcitx5 gui
 app-text/ghostscript-gpl cups
 app-text/poppler cairo tiff

@@ -14,6 +14,7 @@ app-eselect/eselect-gradle ~amd64
 app-eselect/eselect-ruby ~amd64
 app-i18n/fcitx ~amd64
 app-i18n/fcitx-configtool ~amd64
+app-i18n/fcitx-gtk ~amd64
 app-i18n/fcitx-qt ~amd64
 app-i18n/libime ~amd64
 app-i18n/mozc ~amd64
