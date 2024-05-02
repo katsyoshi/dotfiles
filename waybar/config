@@ -8,7 +8,7 @@
   "modules-right": ["tray", "disk", "cpu", "memory", "clock"],
   "clock": {
     "interval": 1,
-    "format":  "{:%Y/%M/%d %a %H:%M:%S}",
+    "format":  "{:%Y/%m/%d %a %H:%M:%S}",
   },
   "cpu": {
     "interval": 1,
