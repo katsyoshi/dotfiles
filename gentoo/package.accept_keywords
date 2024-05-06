@@ -66,6 +66,7 @@ media-video/obs-v4l2sink ~amd64
 media-video/nvidia-video-codec ~amd64
 media-video/pipewire ~amd64
 media-video/v4l2loopback ~amd64
+media-video/wireplumber ~amd64
 net-dns/libidn2 ~amd64
 net-im/discord ~amd64
 net-im/slack ~amd64

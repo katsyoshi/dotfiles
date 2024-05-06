@@ -12,8 +12,11 @@ app-crypt/gcr gtk
 app-crypt/pinentry gnome-keyring
 app-editors/emacs cairo dbus dynamic-loading gif gpm gui gtk gtk3 gzip-el jit jpeg libxml2 png svg ssl sound sqlite tiff tree-sitter webp xft xwidgets zlib -X
 app-emacs/emacs-common gui
-app-i18n/fcitx gtk3 gtk4
-app-i18n/mozc fcitx5 gui
+app-i18n/fcitx gtk4 -X
+app-i18n/fcitx-configtool -config-qt
+app-i18n/fcitx-gtk -X
+app-i18n/ibus gtk4 libnotify -X
+app-i18n/mozc fcitx5 ibus gui -X
 app-text/ghostscript-gpl cups
 app-text/poppler cairo tiff
 app-text/texlive cjk context detex dvi2tty epspdf extra games graphics humanities jadetex luatex metapost music pdfannotextractor png pstricks publishers science tex4ht texi2html truetype xetex xindy xml
@@ -51,28 +54,30 @@ gnome-base/gnome-control-center networkmanager
 gnome-extra/evolution-data-server vala
 gnome-extra/nm-applet gtk
 gui-apps/swaybg gdk-pixbuf
-gui-apps/waybar evdev network pipewire tray
+gui-apps/waybar evdev network tray
 gui-wm/sway wallpapers tray
 media-fonts/noto cjk
 media-fonts/noto-emoji icons
 media-gfx/darktable colord doc flickr geolocation gnome-keyring gphoto2 graphicsmagick jpeg2k kwallet nls opencl openexr openmp pax_kernel webp
 media-gfx/feh curl
 media-gfx/fontforge cairo png
+media-gfx/geeqie exif jpeg pdf raw tiff webp xmp zip
 media-gfx/gimp aalib alsa aqua bzip2 curl dbus exif jpeg jpeg2k lcms mng openexr pdf png postscript smp svg tiff wm xpm
+media-gfx/gthumb exif jpegexl raw slideshow svg tiff webp
 media-gfx/graphviz gdk-pixbuf gtk gts guile lasi nsl pdf postscript svg
 media-gfx/imagemagick jpeg jpeg2k perl png postscript raw svg tiff webp xml
+media-gfx/imv gif heif icu jpeg jpegxl png svg tiff -X
+media-gfx/photoqt exif freeimage graphicsmagick imagemagick mpv pdf raw
 media-libs/clutter egl
 media-libs/cogl gles2
 media-libs/freetype png harfbuzz
-media-libs/gegl cairo
-media-libs/gst-plugins-base opengl theora
-media-libs/musicbrainz examples test
-media-libs/tiff webp jpeg
 media-libs/gd jpeg fontconfig truetype png
-media-libs/gegl raw svg tiff webp
+media-libs/gegl cairo raw svg tiff webp
+media-libs/gst-plugins-base opengl theora
 media-libs/harfbuzz icu
 media-libs/imlib2 jpeg png
 media-libs/libcanberra pulseaudio
+media-libs/libgphoto2 exif
 media-libs/libpng apng
 media-libs/libraw jpeg
 media-libs/libsdl2 gles2
@@ -80,12 +85,14 @@ media-libs/libsixel curl gd gtk jpeg png
 media-libs/libv4l jpeg
 media-libs/libvpx postproc svc
 media-libs/mesa gles2
+media-libs/musicbrainz examples test
+media-libs/tiff webp jpeg
 media-plugins/alsa-plugins pulseaudio
 media-plugins/grilo-plugins tracker
 media-sound/pulseaudio gtk dbus
 media-video/ffmpeg openh264 aac alsa cuda faac hardcoded-tables gif v4l libv4l webp jpeg2k x265 theora mp3 x264 nvenc vorbis xvid vpx opus
 media-video/obs-studio lua nvenc python truetype v4l vlc lua_single_target_luajit
-media-video/pipewire bluetooth extra v4l sound-server
+media-video/pipewire bluetooth extra ffmpeg v4l sound-server -X
 media-video/wireplumber -lua_single_target_luajit -lua_single_target_lua5-1 lua_single_target_lua5-4
 media-video/webcamoid ffmpeg jack v4l v4lutils videoeffects
 net-dns/bind-tools readline ssl
@@ -119,13 +126,14 @@ sys-libs/zlib minizip abi_x86_32 static-libs
 virtual/imagemagick-tools perl
 virtual/libcrypt static-libs
 virtual/rust rustfmt
+www-client/firefox-bin -alsa ffmpeg pulseaudio
 x11-base/xwayland libei
 x11-drivers/nvidia-drivers acpi driver gtk3 uvm static-libs
 x11-libs/cairo xcb
 x11-libs/gdk-pixbuf jpeg tiff
 x11-libs/libdrm video_cards_nvidia
 x11-libs/libxcb xkb
+x11-libs/motif xft
 x11-misc/rofi windowmode
 x11-wm/mutter screencast
-www-client/firefox -alsa ffmpeg hardened hwaccel openh264 pulseaudio screencast
-www-client/firefox-bin -alsa ffmpeg pulseaudio
+
