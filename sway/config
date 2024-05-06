@@ -2,8 +2,9 @@ set $mod Mod4
 set $terminal foot
 
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK
-exec hash dbus-update-activation-environment 2>/dev/null && \
-     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
+output "*" background /home/katsyoshi/Pictures/Wallpaper/bridge32k.jpg fill
 
 # start a terminal
 bindsym $mod+Return exec $terminal
@@ -79,7 +80,7 @@ set $ws9 "9: FREESPACE"
 set $ws10 "10: freespace"
 
 # assign applications at workspace
-assign [app_id="emacs-29"] $ws1
+assign [app_id="emacs"] $ws1
 assign [app_id="foot"] $ws1
 assign [app_id="firefox"] $ws2
 assign [class="Google-chrome"] $ws2
@@ -151,10 +152,7 @@ bindsym $mod+Ctrl+r mode "resize"
 exec --no-startup-id $terminal
 exec --no-startup-id discord
 exec --no-startup-id firefox-bin
-exec --no-startup-id slack
-exec fcitx5
 exec mako -c /home/katsyoshi/.config/mako/config.toml
-exec /home/katsyoshi/.bin/emacs
 exec /home/katsyoshi/.bin/flameshot
 exec /home/katsyoshi/.bin/xremap
 
@@ -167,3 +165,6 @@ bar {
   status_command waybar
   mode invisible
 }
+
+exec fcitx5
+exec /home/katsyoshi/.bin/emacs
