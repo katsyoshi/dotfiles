@@ -5,7 +5,7 @@
   "spacing": 5,
   "modules-left": ["sway/workspaces","sway/mode"],
   "modules-center": ["sway/window"],
-  "modules-right": ["tray", "disk", "cpu", "memory", "temperature", "clock"],
+  "modules-right": ["tray", "disk", "cpu", "memory", "clock"],
   "clock": {
     "interval": 1,
     "format":  "{:%Y/%m/%d %a %H:%M:%S}",
@@ -14,40 +14,36 @@
     "interval": 1,
     "format": "{icon} {usage:>3}% ",
     "format-alt": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}{icon8}{icon9}{icon10}{icon11}{icon12}{icon13}{icon14}{icon15}{icon16}{icon17}{icon18}{icon19}{icon20}{icon21}{icon22}{icon23}{icon24}{icon25}{icon26}{icon27}{icon28}{icon29}{icon30}{icon31} {usage:>2}% ",
-    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-    "states": {
-      "idle": 0,
-      "normal": 10,
-      "warning": 75,
-      "critical": 90,
-    },
+    "format-icons": [
+      "<span color='#93a1a1'>▁</span>",
+      "<span color='#93a1a1'>▂</span>",
+      "<span color='#93a1a1'>▃</span>",
+      "<span color='#66cc99'>▄</span>",
+      "<span color='#66cc99'>▅</span>",
+      "<span color='#b58900'>▆</span>",
+      "<span color='#dc322f'>▇</span>",
+      "<span color='#dc322f'>█</span>",
+    ],
   },
   "disk": {
     "interval": 10,
     "format": "{percentage_used:3}% 󱩵",
     "format-alt": "{used} / {total}",
-    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
     "unit": "GB"
   },
   "memory": {
     "inteval": 10,
     "format": "{icon} {:3}% ",
     "format-alt": "{used:0.1f}G/{total:0.1f}G ",
-    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-    "states": {
-      "idle": 0,
-      "normal": 50,
-      "warning": 75,
-      "critical": 90,
-    },
-  },
-  "temperature": {
-    "critical-threshold": 80,
-    "format": "{icon} {temperatureC}°C",
     "format-icons": [
-      "<span color='#507f00'></span>",
-      "<span color='#c05000'></span>",
-      "<span color='#ff4000'></span>"
-    ]
+      "<span color='#93a1a1'>▁</span>",
+      "<span color='#93a1a1'>▂</span>",
+      "<span color='#93a1a1'>▃</span>",
+      "<span color='#66cc99'>▄</span>",
+      "<span color='#66cc99'>▅</span>",
+      "<span color='#b58900'>▆</span>",
+      "<span color='#dc322f'>▇</span>",
+      "<span color='#dc322f'>█</span>",
+    ],
   },
 }
