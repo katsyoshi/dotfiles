@@ -1,0 +1,33 @@
+scan_timeout = 10
+format = "$all"
+right_format = "$directory"
+
+[aws]
+symbol = "[  ](fg:#FF9900)"
+
+[azure]
+symbol = "[  ](fg:#008AD7]"
+
+[character]
+error_symbol = "[ ](bold red)"
+success_symbol = "[ ](bold green)"
+
+[directory]
+truncation_length = 100
+truncate_to_repo = false
+truncation_symbol = "-"
+
+[gcloud]
+symbol = "[  ](fg:#4285F4)"
+
+[hostname]
+ssh_only = false
+format = "[@](bold)[$hostname ]($style)"
+
+[username]
+format = "[$user]($style)"
+disabled = false
+show_always = true
+
+[ruby]
+symbol = "[ ](fg:#FF0000)"
