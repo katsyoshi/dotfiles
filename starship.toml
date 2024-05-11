@@ -22,7 +22,7 @@ symbol = "[  ](fg:#4285F4)"
 
 [hostname]
 ssh_only = false
-format = "[@](bold)[$hostname ]($style)"
+format = "[ ](bold)[$hostname ]($style)"
 
 [username]
 format = "[$user]($style)"

@@ -14,8 +14,8 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec wofi --show run
-bindsym $mod+g exec wofi --show window
-bindsym $mod+m exec wofi --modi combi -show
+# bindsym $mod+g exec wofi --show window
+# bindsym $mod+m exec wofi --modi combi -show
 
 # change focus
 bindsym $mod+j focus left
@@ -92,6 +92,8 @@ assign [class="Inkscape"] $ws4
 assign [class="Gimp"] $ws4
 assign [app_id="gthumb"] $ws4
 assign [app_id="deadbeef"] $ws5
+assign [app_id="org.remmina.Remmina"] $ws5
+assign [instance="jetbrains-studio"] $ws8
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -152,9 +154,6 @@ bindsym $mod+Ctrl+r mode "resize"
 exec --no-startup-id $terminal
 exec --no-startup-id discord
 exec --no-startup-id firefox-bin
-exec mako -c /home/katsyoshi/.config/mako/config.toml
-exec /home/katsyoshi/.bin/flameshot
-exec /home/katsyoshi/.bin/xremap
 
 client.focused             #268bd2 #268bd2 #fdf6e3
 client.focused_inactive    #000000 #073642 #839496
@@ -167,4 +166,10 @@ bar {
 }
 
 exec fcitx5
-exec /home/katsyoshi/.bin/emacs
+exec mako -c ~/.config/mako/config.toml
+exec remmina
+exec flameshot
+exec xremap /home/katsyoshi/.config/xremap/config.yml --device "PRK Firmware developers Default VID/PID Keyboard" >> /home/katsyoshi/.config/xremap/stdout.log 2>> /home/katsyoshi/.config/xremap/error.log
+exec wl-paste --watch cliphist store
+bindsym $mod+Ctrl+h exec cliphist list | wofi --dmenu --pre-display-cmd "echo '%s' | cut -f 2" | cliphist decode | wl-copy
+bindsym $mod+Ctrl+k exec wofi-window-switcher
