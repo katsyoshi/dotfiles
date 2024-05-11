@@ -48,8 +48,10 @@ dev-qt/* ~amd64
 dev-texlive/* ~amd64
 games-fps/nexuiz ~amd64
 gui-apps/waybar ~amd64
+gui-apps/wofi ~amd64
 gui-libs/egl-gbm ~amd64
 gui-libs/egl-wayland ~amd64
+gui-libs/hyprcursor ~amd64
 gui-wm/hyprland ~amd64
 media-fonts/fontawesome ~amd64
 media-fonts/mix-mplus-ipa ~amd64

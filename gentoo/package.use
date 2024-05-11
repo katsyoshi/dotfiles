@@ -17,11 +17,15 @@ app-i18n/fcitx-configtool -config-qt
 app-i18n/fcitx-gtk -X
 app-i18n/ibus gtk4 libnotify -X
 app-i18n/mozc fcitx5 ibus gui -X
+app-i18n/fcitx-qt onlyplugin
+app-i18n/ibus gtk4 libnotify
+app-i18n/mozc fcitx5 ibus gui
 app-text/ghostscript-gpl cups
 app-text/poppler cairo tiff
 app-text/texlive cjk context detex dvi2tty epspdf extra games graphics humanities jadetex luatex metapost music pdfannotextractor png pstricks publishers science tex4ht texi2html truetype xetex xindy xml
 app-text/texlive-core cjk xetex
 app-text/xmlto text
+dev-cpp/gtkmm X
 dev-db/postgresql uuid
 dev-java/swt cairo
 dev-lang/python sqlite
@@ -55,7 +59,9 @@ gnome-extra/evolution-data-server vala
 gnome-extra/nm-applet gtk
 gui-apps/swaybg gdk-pixbuf
 gui-apps/waybar evdev network tray
+gui-wm/hyprland -X
 gui-wm/sway wallpapers tray
+gui-wm/wayfire -X
 media-fonts/noto cjk
 media-fonts/noto-emoji icons
 media-gfx/darktable colord doc flickr geolocation gnome-keyring gphoto2 graphicsmagick jpeg2k kwallet nls opencl openexr openmp pax_kernel webp
@@ -68,7 +74,7 @@ media-gfx/graphviz gdk-pixbuf gtk gts guile lasi nsl pdf postscript svg
 media-gfx/imagemagick jpeg jpeg2k perl png postscript raw svg tiff webp xml
 media-gfx/imv gif heif icu jpeg jpegxl png svg tiff -X
 media-gfx/photoqt exif freeimage graphicsmagick imagemagick mpv pdf raw
-media-libs/clutter egl
+media-libs/clutter egl X
 media-libs/cogl gles2
 media-libs/freetype png harfbuzz
 media-libs/gd jpeg fontconfig truetype png
@@ -87,6 +93,7 @@ media-libs/libvpx postproc svc
 media-libs/mesa gles2
 media-libs/musicbrainz examples test
 media-libs/tiff webp jpeg
+media-libs/vulkan-loader -X
 media-plugins/alsa-plugins pulseaudio
 media-plugins/grilo-plugins tracker
 media-sound/pulseaudio gtk dbus
@@ -98,9 +105,9 @@ media-video/webcamoid ffmpeg jack v4l v4lutils videoeffects
 net-dns/bind-tools readline ssl
 net-fs/samba client
 net-im/slack gnome-keyring ayatana
-net-libs/webkit-gtk avif pdf keyring spell
+net-libs/webkit-gtk avif pdf keyring spell -X
 net-misc/curl http2 ssl ipv6 ssh
-net-misc/freerdp server
+net-misc/freerdp server -X
 net-misc/networkmanager bluetooth teamd
 net-misc/nm-applet teamd gtk
 net-misc/remmina gnome-keyring vnc rdp
@@ -114,6 +121,7 @@ sci-visualization/gnuplot bitmap cairo compat ggi libcaca libcerf readline svga
 sys-apps/dbus user-session
 sys-apps/memtest86+ efi64
 sys-apps/systemd pam policykit cgroup-hybrid boot
+sys-apps/xdg-desktop-portal-gtk -X
 sys-auth/consolekit policykit
 sys-block/fio aio
 sys-devel/binutils gold
@@ -129,11 +137,14 @@ virtual/rust rustfmt
 www-client/firefox-bin -alsa ffmpeg pulseaudio
 x11-base/xwayland libei
 x11-drivers/nvidia-drivers acpi driver gtk3 uvm static-libs
-x11-libs/cairo xcb
+x11-libs/cairo X
+x11-libs/cairomm X
+x11-libs/gtk+ X
 x11-libs/gdk-pixbuf jpeg tiff
 x11-libs/libdrm video_cards_nvidia
 x11-libs/libxcb xkb
 x11-libs/motif xft
+x11-misc/gpaste -gnome -introspection
 x11-misc/rofi windowmode
 x11-wm/mutter screencast
 

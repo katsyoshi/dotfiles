@@ -28,14 +28,17 @@ app-text/cmigemo
 app-text/evince
 app-text/poppler
 dev-debug/gdb
+dev-java/gradle-bin
 dev-java/openjdk-bin:11
 dev-java/openjdk-bin:17
+dev-lang/ghc
 dev-libs/bemenu
 dev-libs/libgudev
 dev-libs/libyaml
 dev-python/pip
 dev-util/android-studio
 dev-vcs/git
+gnome-base/gdm
 gui-apps/foot
 gui-apps/grim
 gui-apps/mako
@@ -44,6 +47,7 @@ gui-apps/waybar
 gui-apps/wl-clipboard
 gui-apps/wofi
 gui-libs/xdg-desktop-portal-wlr
+gui-wm/hyprland
 gui-wm/sway
 media-fonts/fontawesome
 media-fonts/hack
@@ -72,6 +76,7 @@ media-video/v4l2loopback
 net-analyzer/nmbscan
 net-im/discord
 net-im/slack
+net-misc/remmina
 net-vpn/tailscale
 sys-apps/eza
 sys-apps/memtest86+
