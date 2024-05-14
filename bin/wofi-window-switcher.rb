@@ -18,23 +18,49 @@ class SwayWindowSwithcer
     @windows = Set.new
     set_windows
   end
-  def switch = @conn.command("[con_id=#{@windows.to_a[open].to_h[:id]}] focus")
+
+  def switch
+    return if (index = target).nil?
+
+    con_id = @windows.to_a[index].to_h[:id]
+    @conn.command("[con_id=#{con_id}] focus")
+  end
 
   private
+
   def list_window = @windows.map(&:name)
   def displays = @conn.tree.nodes.reject { |display| display.name == "__i3" }
-  def open
-    Open3.popen3(['wofi', '-i', '-k', '/dev/null', '-d'].join " ") do |i, o, _e, _w|
+
+  def target
+    content = nil
+    Open3.popen3(['wofi', '-i', '-k', '/dev/null', '-d'].join " ") do |i, o, e, _w|
       i.puts list_window.join("\n")
       i.close
-      list_window.index(o.read.strip)
+      content = o.read.strip
+      list_window.index(content)
     end
+  rescue => e
+    @conn.command("exec notify-send '#{e.message}'")
+    raise e
   end
 
   def set_windows
     displays.map do |display|
-      display.nodes.map { |workspace| @windows += workspace.nodes }
+      @windows += listup_windows(display.nodes)
     end
+  end
+
+  def listup_windows(ary)
+    res = []
+
+    ary.each do |node|
+      if node.nodes.empty?
+        res << node if node.type == "con"
+      else
+        res += listup_windows(node.nodes)
+      end
+    end
+    res
   end
 end
 
