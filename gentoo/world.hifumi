@@ -76,6 +76,7 @@ media-video/v4l2loopback
 net-analyzer/nmbscan
 net-im/discord
 net-im/slack
+net-im/zoom
 net-misc/remmina
 net-vpn/tailscale
 sys-apps/eza

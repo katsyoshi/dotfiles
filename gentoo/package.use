@@ -1,9 +1,9 @@
-*/* LUA_TARGETS: -* lua5-1 lua5-4
-*/* LUA_SINGLE_TARGET: -* lua5-1
-*/* PYTHON_TARGETS: -* python3_10 python3_11 python3_12
+*/* LUA_TARGETS: -* lua5-4
+*/* LUA_SINGLE_TARGET: -* lua5-4
+*/* PYTHON_TARGETS: -* python3_11 python3_12 python3_13
 */* PYTHON_SINGLE_TARGET: -* python3_11
 */* RUBY_TARGETS: -* ruby31 ruby32 ruby33
-*/* RUBY_SINGLE_TARGET: -* ruby32
+*/* RUBY_SINGLE_TARGET: -* ruby33
 app-admin/doas persist
 app-admin/rsyslog openssl
 app-containers/containerd btrfs
