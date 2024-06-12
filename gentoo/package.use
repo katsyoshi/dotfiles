@@ -17,9 +17,6 @@ app-i18n/fcitx-configtool -config-qt
 app-i18n/fcitx-gtk -X
 app-i18n/ibus gtk4 libnotify -X
 app-i18n/mozc fcitx5 ibus gui -X
-app-i18n/fcitx-qt onlyplugin
-app-i18n/ibus gtk4 libnotify
-app-i18n/mozc fcitx5 ibus gui
 app-text/ghostscript-gpl cups
 app-text/poppler cairo tiff
 app-text/texlive cjk context detex dvi2tty epspdf extra games graphics humanities jadetex luatex metapost music pdfannotextractor png pstricks publishers science tex4ht texi2html truetype xetex xindy xml
@@ -47,7 +44,7 @@ dev-libs/xmlsec nss
 dev-python/pillow webp tiff
 dev-qt/qtbase opengl
 dev-qt/qtcore icu
-dev-qt/qtgui egl dbus
+dev-qt/qtgui dbus egl jpeg
 dev-qt/qttools opengl
 dev-qt/qtwebchannel qml
 dev-qt/qtwebengine widgets
@@ -59,11 +56,11 @@ gnome-extra/evolution-data-server vala
 gnome-extra/nm-applet gtk
 gui-apps/swaybg gdk-pixbuf
 gui-apps/waybar evdev network tray
-gui-wm/hyprland -X
 gui-wm/sway wallpapers tray
 gui-wm/wayfire -X
-media-fonts/noto cjk
-media-fonts/noto-emoji icons
+media-fonts/* -X
+media-fonts/noto cjk -X
+media-fonts/noto-emoji icons -X
 media-gfx/darktable colord doc flickr geolocation gnome-keyring gphoto2 graphicsmagick jpeg2k kwallet nls opencl openexr openmp pax_kernel webp
 media-gfx/feh curl
 media-gfx/fontforge cairo png
@@ -71,11 +68,13 @@ media-gfx/geeqie exif jpeg pdf raw tiff webp xmp zip
 media-gfx/gimp aalib alsa aqua bzip2 curl dbus exif jpeg jpeg2k lcms mng openexr pdf png postscript smp svg tiff wm xpm
 media-gfx/gthumb exif jpegexl raw slideshow svg tiff webp
 media-gfx/graphviz gdk-pixbuf gtk gts guile lasi nsl pdf postscript svg
-media-gfx/imagemagick jpeg jpeg2k perl png postscript raw svg tiff webp xml
+media-gfx/imagemagick fftw fontconfig jpeg jpeg2k perl png postscript raw svg tiff webp xml zip
 media-gfx/imv gif heif icu jpeg jpegxl png svg tiff -X
+media-gfx/nomacs exif freeimage graphicsmagick imagemagick mpv pdf raw
 media-gfx/photoqt exif freeimage graphicsmagick imagemagick mpv pdf raw
 media-libs/clutter egl X
 media-libs/cogl gles2
+media-libs/freeimage jpeg jpeg2k openexr png raw tiff webp
 media-libs/freetype png harfbuzz
 media-libs/gd jpeg fontconfig truetype png
 media-libs/gegl cairo raw svg tiff webp
@@ -92,6 +91,7 @@ media-libs/libv4l jpeg
 media-libs/libvpx postproc svc
 media-libs/mesa gles2
 media-libs/musicbrainz examples test
+media-libs/opencv gtk3 jpeg jpeg2k png tiff webp
 media-libs/tiff webp jpeg
 media-libs/vulkan-loader -X
 media-plugins/alsa-plugins pulseaudio
@@ -107,7 +107,7 @@ net-fs/samba client
 net-im/slack gnome-keyring ayatana
 net-libs/webkit-gtk avif pdf keyring spell -X
 net-misc/curl http2 ssl ipv6 ssh
-net-misc/freerdp server -X
+net-misc/freerdp server
 net-misc/networkmanager bluetooth teamd
 net-misc/nm-applet teamd gtk
 net-misc/remmina gnome-keyring vnc rdp
