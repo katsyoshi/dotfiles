@@ -7,6 +7,9 @@ app-admin/rasdaemon
 app-containers/docker
 app-containers/docker-buildx
 app-containers/docker-compose:2
+app-dicts/dictd-vera
+app-dicts/dictd-wn
+app-dicts/gnome-dictionary
 app-editors/emacs
 app-editors/nano
 app-editors/vim
@@ -25,12 +28,14 @@ app-portage/gentoolkit
 app-shells/starship
 app-shells/zsh
 app-text/cmigemo
+app-text/dictd
 app-text/evince
 app-text/poppler
 dev-debug/gdb
 dev-java/gradle-bin
 dev-java/openjdk-bin:11
 dev-java/openjdk-bin:17
+dev-lang/crystal
 dev-lang/ghc
 dev-libs/bemenu
 dev-libs/libgudev
@@ -64,10 +69,10 @@ media-gfx/flameshot
 media-gfx/geeqie
 media-gfx/gimp
 media-gfx/gphoto2
-media-gfx/gthumb
 media-gfx/imagemagick
 media-gfx/imv
 media-gfx/inkscape
+media-gfx/nomacs
 media-libs/exiftool
 media-libs/libsixel
 media-sound/deadbeef
@@ -86,6 +91,8 @@ sys-apps/ripgrep
 sys-apps/usbutils
 sys-apps/xdg-desktop-portal-gtk
 sys-auth/rtkit
+sys-devel/clang-runtime:17
+sys-devel/clang:17
 sys-devel/mold
 sys-fs/fuse-exfat
 sys-kernel/gentoo-sources
