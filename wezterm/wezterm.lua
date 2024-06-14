@@ -78,7 +78,7 @@ end)
 
 return {
    adjust_window_size_when_changing_font_size = false,
-   color_scheme = "Dracula (Official)",
+   color_scheme = "Kanagawa (Gogh)",
    default_gui_startup_args = { "connect", "wezterm" },
    disable_default_key_bindings = true,
    font = wezterm.font "Noto Sans Mono CJK JP",
