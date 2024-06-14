@@ -31,6 +31,7 @@ app-text/cmigemo
 app-text/dictd
 app-text/evince
 app-text/poppler
+dev-cpp/gtest
 dev-debug/gdb
 dev-java/gradle-bin
 dev-java/openjdk-bin:11
@@ -105,4 +106,5 @@ www-client/firefox-bin
 www-client/google-chrome
 x11-misc/sddm
 x11-misc/slim
+x11-terms/alacritty
 x11-terms/wezterm

@@ -1,0 +1,47 @@
+import = [
+  "~/.config/alacritty/themes/themes/kanagawa_wave.toml",
+  "~/.config/alacritty/key_bindings.toml",
+]
+live_config_reload = true
+[bell]
+animation = "EaseOutExpo"
+color = "0xffffff"
+duration = 0
+[cursor]
+style = "Block"
+unfocused_hollow = true
+[debug]
+persistent_logging = false
+render_timer = false
+[font]
+size = 12.0
+# use_thin_strokes = true
+[font.bold]
+family = "Noto Sans Mono CJK JP"
+style = "Bold"
+[font.glyph_offset]
+x = 0
+y = 0
+[font.normal]
+family = "Noto Sans Mono CJK JP"
+style = "Regular"
+[font.offset]
+x = 0
+y = 0
+[mouse]
+hide_when_typing = false
+[scrolling]
+history = 10000
+multiplier = 3
+[selection]
+save_to_clipboard = false
+semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+[window]
+decorations = "full"
+dynamic_padding = false
+[window.dimensions]
+columns = 0
+lines = 0
+[window.padding]
+x = 2
+y = 2

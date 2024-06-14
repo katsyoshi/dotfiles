@@ -117,4 +117,5 @@ virtual/ruby-ssl ~amd64
 virtual/opencl ~amd64
 x11-drivers/nvidia-drivers ~amd64
 x11-libs/xcb-imdkit ~amd64
+x11-terms/alacritty ~amd64
 x11-terms/wezterm ~amd64
