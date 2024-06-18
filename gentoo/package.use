@@ -119,9 +119,11 @@ sci-libs/gd jpeg fontconfig truetype png
 sci-libs/gts jpeg fontconfig truetype png
 sci-visualization/gnuplot bitmap cairo compat ggi libcaca libcerf readline svga
 sys-apps/dbus user-session
+sys-apps/flatpak -X
 sys-apps/memtest86+ efi64
 sys-apps/systemd pam policykit cgroup-hybrid boot
 sys-apps/xdg-desktop-portal-gtk -X
+sys-apps/xdg-desktop-portal flatpak
 sys-auth/consolekit policykit
 sys-block/fio aio
 sys-devel/binutils gold
@@ -147,4 +149,3 @@ x11-libs/motif xft
 x11-misc/gpaste -gnome -introspection
 x11-misc/rofi windowmode
 x11-wm/mutter screencast
-
