@@ -4,6 +4,7 @@ app-admin/awscli
 app-admin/doas
 app-admin/mcelog
 app-admin/rasdaemon
+app-arch/rpm2targz
 app-containers/docker
 app-containers/docker-buildx
 app-containers/docker-compose:2
