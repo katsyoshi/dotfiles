@@ -98,7 +98,7 @@ media-plugins/alsa-plugins pulseaudio
 media-plugins/grilo-plugins tracker
 media-sound/pulseaudio gtk dbus
 media-video/ffmpeg openh264 aac alsa cuda faac hardcoded-tables gif v4l libv4l webp jpeg2k x265 theora mp3 x264 nvenc vorbis xvid vpx opus
-media-video/obs-studio lua nvenc python truetype v4l vlc lua_single_target_luajit
+media-video/obs-studio lua nvenc pipewire python truetype v4l vlc lua_single_target_luajit
 media-video/pipewire bluetooth extra ffmpeg v4l sound-server -X
 media-video/wireplumber -lua_single_target_luajit -lua_single_target_lua5-1 lua_single_target_lua5-4
 media-video/webcamoid ffmpeg jack v4l v4lutils videoeffects
@@ -143,7 +143,7 @@ x11-libs/cairo X
 x11-libs/cairomm X
 x11-libs/gtk+ X
 x11-libs/gdk-pixbuf jpeg tiff
-x11-libs/libdrm video_cards_nvidia
+x11-libs/libdrm video_cards_radeon
 x11-libs/libxcb xkb
 x11-libs/motif xft
 x11-misc/gpaste -gnome -introspection

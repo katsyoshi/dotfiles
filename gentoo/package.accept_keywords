@@ -48,6 +48,7 @@ dev-qt/* ~amd64
 dev-texlive/* ~amd64
 games-fps/nexuiz ~amd64
 gui-apps/waybar ~amd64
+gui-apps/wf-recorder ~amd64
 gui-apps/wofi ~amd64
 gui-libs/egl-gbm ~amd64
 gui-libs/egl-wayland ~amd64

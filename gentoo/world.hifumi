@@ -51,6 +51,7 @@ gui-apps/grim
 gui-apps/mako
 gui-apps/slurp
 gui-apps/waybar
+gui-apps/wf-recorder
 gui-apps/wl-clipboard
 gui-apps/wofi
 gui-libs/xdg-desktop-portal-wlr
@@ -78,12 +79,15 @@ media-gfx/nomacs
 media-libs/exiftool
 media-libs/libsixel
 media-sound/deadbeef
+media-video/obs-studio
 media-video/pipewire
 media-video/v4l2loopback
+net-analyzer/netcat
 net-analyzer/nmbscan
 net-im/discord
 net-im/slack
 net-im/zoom
+net-misc/ntp
 net-misc/remmina
 net-vpn/tailscale
 sys-apps/eza
