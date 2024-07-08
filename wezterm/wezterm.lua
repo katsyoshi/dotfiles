@@ -1,7 +1,8 @@
 local wezterm = require 'wezterm'
 local os = require 'os'
 local act = wezterm.action
-
+local mux = wezterm.mux
+local dracula = require 'user.theme.dracula'
 local ssh_domains = {
    {
       name = "rin",
@@ -17,9 +18,34 @@ local ssh_domains = {
 
 local base_dir = wezterm.home_dir .. "/.local/share/wezterm/"
 local socket = base_dir .. "wezterm.socket"
-
 local SOLID_LEFT_ARROW = utf8.char(0xe0b2)
 local SOLID_RIGHT_ARROW = utf8.char(0xe0b0)
+local tmux_keybindings = require 'user.keybinds.tmux'
+
+for i = 0, 9 do
+   local key_string = tostring(i)
+   table.insert(
+      tmux_keybindings,
+      {
+         key = key_string,
+         action = act.ActivateTab(i),
+      }
+   )
+   table.insert(
+      tmux_keybindings,
+      {
+         key = key_string,
+         action = act.MoveTab(i),
+      }
+   )
+   table.insert(
+      tmux_keybindings,
+      {
+         key = key_string,
+         action = act.ActivatePaneByIndex(i),
+      }
+   )
+end
 
 wezterm.on(
    "update-right-status",
@@ -42,38 +68,10 @@ wezterm.on(
       );
 end)
 
-wezterm.on(
-   "format-tab-title",
-   function(tab, _, _, _, hover, max_width)
-      local edge_background = "#0b0022"
-      local background = "#1b1032"
-      local foreground = "#808080"
-
-      if tab.is_active then
-         background = "#2b2042"
-         foreground = "#c0c0c0"
-      elseif hover then
-         background = "#3b3052"
-         foreground = "#909090"
-      end
-
-      local edge_foreground = background
-
-      -- ensure that the titles fit in the available space,
-      -- and that we have room for the edges.
-      local title = wezterm.truncate_right(tab.active_pane.title, max_width-2)
-
-      return {
-         { Background = { Color = edge_background }, },
-         { Foreground = { Color = edge_foreground }, },
-         { Text = SOLID_LEFT_ARROW },
-         { Background = { Color = background, }, },
-         { Foreground = { Color = foreground, }, },
-         { Text = title },
-         { Background = { Color = edge_background, }, },
-         { Foreground = { Color = edge_foreground, }, },
-         { Text = SOLID_RIGHT_ARROW, },
-      }
+wezterm.on('mux-startup', function(cmd)
+   local tab, pane, window = mux.spawn_window(cmd or {})
+   pane:split { args = { "btm", } }
+   pane:activate()
 end)
 
 return {
@@ -83,12 +81,15 @@ return {
    disable_default_key_bindings = true,
    font = wezterm.font "Noto Sans Mono CJK JP",
    font_size = 12,
-   keys = {
-      -- paste
-      { key = "y", mods = "CTRL", action = act{ PasteFrom = "Clipboard" }, },
+   keys = require "user.keybinds.emacs",
+   key_tables = {
+      tmux_mode = tmux_keybindings,
    },
-   enable_tab_bar = false,
+   enable_scroll_bar = true,
+   enable_tab_bar = true,
    use_ime = true,
+   tab_bar_at_bottom = true,
+   term = "wezterm",
 
    unix_domains = {
       {
