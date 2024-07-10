@@ -1,6 +1,6 @@
 scan_timeout = 10
 format = "$all"
-right_format = "$directory"
+right_format = "$directory $time"
 
 [aws]
 symbol = "[  ](fg:#FF9900)"
@@ -28,6 +28,12 @@ format = "[ ](bold)[$hostname ]($style)"
 format = "[$user]($style)"
 disabled = false
 show_always = true
+
+[time]
+disabled = false
+format = '[$time]($style)'
+time_format = '%Y-%m-%d %H:%M'
+utc_time_offset = '+9'
 
 [ruby]
 symbol = "[ ](fg:#FF0000)"
