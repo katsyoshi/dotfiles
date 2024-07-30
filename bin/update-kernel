@@ -1,15 +1,29 @@
 #!/bin/bash -xe
 
 function update-kernel() {
-  emerge --depclean gentoo-sources
-  eselect kernel set 1
+  eselect kernel set 2
+  old_version=$(eselect kernel list|rg -e '\[\d+\]'|awk '{print $2}'|head -1|sed -e 's/linux-//'|sed -e 's/-gentoo$//')
+  emerge -C =gentoo-sources-${old_version}
   cd /usr/src/linux
-  make oldconfig
+  oldconfig
   time make -j$(nproc)
   make modules_install
-  emerge nvidia-drivers v4l2loopback
+  emerge v4l2loopback
   make install
 }
+
+function oldconfig () {
+  if [ -e "/proc/config.gz" ]; then
+    echo 'copy from proc'
+    zcat /proc/config.gz > /usr/src/linux/.config
+  else
+    echo 'copy from old kernel dir'
+    oldver_config=/usr/src/$(ls /usr/src/ | tail -2 | head -1)/.config
+    echo 'cp ${oldver_config} /usr/src/linux/.config'
+    cp ${oldver_config} /usr/src/linux/.config
+  fi
+}
+
 
 update-kernel
 
