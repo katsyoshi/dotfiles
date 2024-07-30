@@ -45,6 +45,7 @@ dev-libs/libyaml
 dev-python/pip
 dev-util/android-studio
 dev-vcs/git
+dev-vcs/git-lfs
 gnome-base/gdm
 gui-apps/foot
 gui-apps/grim
@@ -54,6 +55,7 @@ gui-apps/waybar
 gui-apps/wf-recorder
 gui-apps/wl-clipboard
 gui-apps/wofi
+gui-libs/xdg-desktop-portal-lxqt
 gui-libs/xdg-desktop-portal-wlr
 gui-wm/hyprland
 gui-wm/sway
@@ -96,6 +98,7 @@ sys-apps/nvme-cli
 sys-apps/ripgrep
 sys-apps/usbutils
 sys-apps/xdg-desktop-portal-gtk
+sys-apps/xdg-desktop-portal-xapp
 sys-auth/rtkit
 sys-devel/clang-runtime:17
 sys-devel/clang:17

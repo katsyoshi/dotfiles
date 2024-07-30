@@ -10,7 +10,7 @@ app-containers/containerd btrfs
 app-containers/docker btrfs
 app-crypt/gcr gtk
 app-crypt/pinentry gnome-keyring
-app-editors/emacs cairo dbus dynamic-loading gif gpm gui gtk gtk3 gzip-el jit jpeg libxml2 png svg ssl sound sqlite tiff tree-sitter webp xft xwidgets zlib -X
+app-editors/emacs cairo dbus dynamic-loading gif gpm gui gtk gtk3 gzip-el jit jpeg json libxml2 png svg ssl sound sqlite tiff tree-sitter webp xft xwidgets zlib -X
 app-emacs/emacs-common gui
 app-i18n/fcitx gtk4 -X
 app-i18n/fcitx-configtool -config-qt
@@ -28,7 +28,7 @@ dev-java/swt cairo
 dev-lang/python sqlite
 dev-lang/ruby jit
 dev-lang/rust rustfmt
-dev-lang/rust-bin rust-src
+dev-lang/rust-bin rust-src rustfmt
 dev-libs/boost python
 dev-libs/efl egl gles2-only -lua_single_target_luajit lua_single_target_lua5-1
 dev-libs/folks eds
@@ -45,6 +45,7 @@ dev-python/pillow webp tiff
 dev-qt/qtbase opengl
 dev-qt/qtcore icu
 dev-qt/qtgui dbus egl jpeg
+dev-qt/qtpritsupport cups
 dev-qt/qttools opengl
 dev-qt/qtwebchannel qml
 dev-qt/qtwebengine widgets
@@ -58,6 +59,7 @@ gui-apps/swaybg gdk-pixbuf
 gui-apps/waybar evdev network tray
 gui-wm/sway wallpapers tray
 gui-wm/wayfire -X
+kde-frameworks/kconfig qml
 media-fonts/* -X
 media-fonts/noto cjk -X
 media-fonts/noto-emoji icons -X
