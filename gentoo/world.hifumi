@@ -1,6 +1,6 @@
 acct-group/input
 acct-group/plugdev
-app-admin/awscli
+app-admin/awscli-bin
 app-admin/doas
 app-admin/mcelog
 app-admin/rasdaemon
@@ -47,6 +47,7 @@ dev-util/android-studio
 dev-vcs/git
 dev-vcs/git-lfs
 gnome-base/gdm
+gnome-extra/libgda
 gui-apps/foot
 gui-apps/grim
 gui-apps/mako
@@ -92,6 +93,7 @@ net-im/zoom
 net-misc/ntp
 net-misc/remmina
 net-vpn/tailscale
+sys-apps/amdgpu_top
 sys-apps/eza
 sys-apps/memtest86+
 sys-apps/nvme-cli
