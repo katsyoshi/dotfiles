@@ -33,6 +33,7 @@ app-text/dictd
 app-text/evince
 app-text/poppler
 dev-cpp/gtest
+dev-db/mysql-connector-c
 dev-debug/gdb
 dev-java/gradle-bin
 dev-java/openjdk-bin:11
@@ -43,6 +44,7 @@ dev-libs/bemenu
 dev-libs/libgudev
 dev-libs/libyaml
 dev-python/pip
+dev-util/FlameGraph
 dev-util/android-studio
 dev-vcs/git
 dev-vcs/git-lfs
@@ -56,10 +58,12 @@ gui-apps/waybar
 gui-apps/wf-recorder
 gui-apps/wl-clipboard
 gui-apps/wofi
-gui-libs/xdg-desktop-portal-lxqt
 gui-libs/xdg-desktop-portal-wlr
 gui-wm/hyprland
 gui-wm/sway
+kde-frameworks/kconfigwidgets:6
+kde-frameworks/kiconthemes:6
+kde-plasma/polkit-kde-agent:6
 media-fonts/fontawesome
 media-fonts/hack
 media-fonts/ja-ipafonts
@@ -71,7 +75,6 @@ media-fonts/source-sans
 media-fonts/source-serif
 media-gfx/darktable
 media-gfx/fbida
-media-gfx/flameshot
 media-gfx/geeqie
 media-gfx/gimp
 media-gfx/gphoto2
