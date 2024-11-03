@@ -1,5 +1,5 @@
 set $mod Mod4
-set $terminal wezterm
+set $terminal alacritty
 
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
@@ -13,9 +13,9 @@ bindsym $mod+Return exec $terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+Ctrl+d exec wofi --show run
-bindsym $mod+Ctrl+g exec wofi --show window
-bindsym $mod+Ctrl+m exec wofi --modi combi -show
+bindsym $mod+Shift+d exec wofi --show run
+bindsym $mod+Shift+g exec wofi --show window
+bindsym $mod+Shift+m exec wofi --modi combi -show
 
 # change focus
 bindsym $mod+j focus left
@@ -96,6 +96,7 @@ assign [app_id="org.https://nomacs.nomacs"] $ws4
 assign [app_id="gthumb"] $ws4
 assign [app_id="deadbeef"] $ws5
 assign [app_id="org.remmina.Remmina"] $ws5
+assign [app_id="com.obsproject.Studio"] $ws5
 assign [instance="jetbrains-studio"] $ws8
 
 # switch to workspace
