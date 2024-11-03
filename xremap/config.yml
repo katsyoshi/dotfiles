@@ -71,9 +71,9 @@ keymap:
           C-c: C-q
           u: [C-z, { set_mark: false }]
 
-  - name: slack only
+  - name: chat tool only
     application:
-      only: ["Slack"]
+      only: ["Slack", "discord"]
     remap:
       C-b: { with_mark: left }
       C-f: { with_mark: right }
