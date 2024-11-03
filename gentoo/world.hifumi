@@ -8,6 +8,7 @@ app-arch/rpm2targz
 app-containers/docker
 app-containers/docker-buildx
 app-containers/docker-compose:2
+app-crypt/ccid
 app-dicts/dictd-vera
 app-dicts/dictd-wn
 app-dicts/gnome-dictionary
@@ -15,8 +16,10 @@ app-editors/emacs
 app-editors/nano
 app-editors/vim
 app-emacs/emacs-daemon
+app-eselect/eselect-python
 app-eselect/eselect-repository
 app-i18n/fcitx
+app-i18n/fcitx-anthy
 app-i18n/fcitx-configtool
 app-i18n/fcitx-gtk
 app-i18n/ibus
@@ -43,6 +46,7 @@ dev-lang/ghc
 dev-libs/bemenu
 dev-libs/libgudev
 dev-libs/libyaml
+dev-libs/opensc
 dev-python/pip
 dev-util/FlameGraph
 dev-util/android-studio
@@ -78,6 +82,7 @@ media-gfx/fbida
 media-gfx/geeqie
 media-gfx/gimp
 media-gfx/gphoto2
+media-gfx/graphviz
 media-gfx/imagemagick
 media-gfx/imv
 media-gfx/inkscape
@@ -95,6 +100,7 @@ net-im/slack
 net-im/zoom
 net-misc/ntp
 net-misc/remmina
+net-misc/whois
 net-vpn/tailscale
 sys-apps/amdgpu_top
 sys-apps/eza
@@ -107,6 +113,7 @@ sys-apps/xdg-desktop-portal-xapp
 sys-auth/rtkit
 sys-devel/clang-runtime:17
 sys-devel/clang:17
+sys-devel/gcc:13
 sys-devel/mold
 sys-fs/fuse-exfat
 sys-kernel/gentoo-sources
@@ -115,6 +122,7 @@ sys-kernel/linux-firmware
 sys-process/bottom
 sys-process/lsof
 sys-process/procs
+www-apps/zola
 www-client/firefox-bin
 www-client/google-chrome
 x11-misc/sddm

@@ -11,6 +11,7 @@ app-crypt/envchain ~amd64
 app-editors/emacs ~amd64
 app-editors/vim ~amd64
 app-editors/vim-core ~amd64
+app-editors/zed ~amd64
 app-eselect/eselect-gradle ~amd64
 app-eselect/eselect-ruby ~amd64
 app-i18n/fcitx ~amd64
@@ -38,6 +39,7 @@ dev-libs/mimalloc ~amd64
 dev-libs/nspr ~amd64
 dev-libs/nss ~amd64
 dev-libs/oniguruma ~amd64
+dev-libs/protobuf ~amd64
 dev-libs/ptexenc ~amd64
 # dev-python/* ~amd64
 dev-ruby/* ~amd64
@@ -122,6 +124,7 @@ sys-process/tini ~amd64
 virtual/rubygems ~amd64
 virtual/ruby-ssl ~amd64
 virtual/opencl ~amd64
+www-apps/zola ~amd64
 x11-drivers/nvidia-drivers ~amd64
 x11-libs/xcb-imdkit ~amd64
 x11-terms/alacritty ~amd64

@@ -13,11 +13,12 @@ app-crypt/pinentry gnome-keyring
 app-crypt/qca qt6
 app-editors/emacs cairo dbus dynamic-loading gif gpm gui gtk gtk3 gzip-el jit jpeg json libxml2 png svg ssl sound sqlite tiff tree-sitter webp xft xwidgets zlib -X
 app-emacs/emacs-common gui
-app-i18n/fcitx gtk4 -X
-app-i18n/fcitx-configtool -config-qt
+app-i18n/fcitx-configtool config-qt qt6
+app-i18n/fcitx-qt qt6
 app-i18n/fcitx-gtk -X
+app-i18n/fcitx gtk4 -X
 app-i18n/ibus gtk4 libnotify -X
-app-i18n/mozc fcitx5 ibus gui -X
+app-i18n/mozc fcitx5 gui -X
 app-text/ghostscript-gpl cups
 app-text/poppler cairo tiff
 app-text/texlive cjk context detex dvi2tty epspdf extra games graphics humanities jadetex luatex metapost music pdfannotextractor png pstricks publishers science tex4ht texi2html truetype xetex xindy xml
@@ -125,7 +126,7 @@ sci-visualization/gnuplot bitmap cairo compat ggi libcaca libcerf readline svga
 sys-apps/dbus user-session
 sys-apps/flatpak -X
 sys-apps/memtest86+ efi64
-sys-apps/systemd pam policykit cgroup-hybrid boot
+sys-apps/systemd pam policykit bootj
 sys-apps/xdg-desktop-portal-gtk -X
 sys-apps/xdg-desktop-portal flatpak
 sys-auth/consolekit policykit
