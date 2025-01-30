@@ -31,8 +31,11 @@ dev-cpp/tbb ~amd64
 dev-java/javatoolkit ~amd64
 dev-java/oracle-javamail ~amd64
 dev-java/gradle-bin ~amd64d
+dev-lang/ghc ~amd64
 dev-lang/ruby ~amd64
 dev-libs/blake3 ~amd64
+dev-libs/hyprgraphics ~amd64
+dev-libs/hyprland-protocols ~amd64
 dev-libs/kpathsea ~amd64
 dev-libs/libuv ~amd64
 dev-libs/mimalloc ~amd64
@@ -59,6 +62,7 @@ gui-libs/egl-gbm ~amd64
 gui-libs/egl-wayland ~amd64
 gui-libs/hyprcursor ~amd64
 gui-libs/hyprutils ~amd64
+gui-libs/hyprland-qtutils ~amd64
 gui-libs/wayland-protocols ~amd64
 gui-wm/hyprland ~amd64
 llvm-core/clang ~amd64

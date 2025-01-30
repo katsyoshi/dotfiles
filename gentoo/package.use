@@ -2,10 +2,11 @@
 */* LUA_SINGLE_TARGET: -* lua5-4
 */* PYTHON_TARGETS: -* python3_11 python3_12 python3_13
 */* PYTHON_SINGLE_TARGET: -* python3_11
-*/* RUBY_TARGETS: -* ruby31 ruby32 ruby33
+*/* RUBY_TARGETS: -* ruby32 ruby33 ruby34
 */* RUBY_SINGLE_TARGET: -* ruby33
 app-admin/doas persist
 app-admin/rsyslog openssl
+app-benchmarks/wrk lua_single_target_luajit
 app-containers/containerd btrfs
 app-containers/docker btrfs
 app-crypt/gcr gtk
@@ -36,17 +37,21 @@ dev-libs/boost python
 dev-libs/efl egl gles2-only -lua_single_target_luajit lua_single_target_lua5-1
 dev-libs/folks eds
 dev-libs/glib dbus
+dev-libs/gmp static-libs
 dev-libs/libgdata gnome-online-accounts vala
 dev-libs/libdbusmenu gtk3
+dev-libs/libffi static-libs
 dev-libs/libgudev introspection
 dev-libs/libical vala
 dev-libs/libnl utils
 dev-libs/libpcre2 pcre16
+dev-libs/libyaml static-libs
 dev-libs/libxml2 python icu
+dev-libs/openssl static-libs
 dev-libs/xmlsec nss
 dev-python/pillow webp tiff
 dev-qt/* opengl icu
-dev-qt/qtbase libproxy
+dev-qt/qtbase cups libproxy
 dev-qt/qt5compat qml
 dev-qt/qtgui dbus egl jpeg
 dev-qt/qtpritsupport cups
@@ -63,6 +68,8 @@ gui-apps/waybar evdev network tray
 gui-wm/sway wallpapers tray
 gui-wm/wayfire -X
 kde-frameworks/kconfig qml
+kde-frameworks/sonnet qml
+llvm-core/llvm clang
 media-fonts/* -X
 media-fonts/noto cjk -X
 media-fonts/noto-emoji icons -X
@@ -126,7 +133,7 @@ sci-visualization/gnuplot bitmap cairo compat ggi libcaca libcerf readline svga
 sys-apps/dbus user-session
 sys-apps/flatpak -X
 sys-apps/memtest86+ efi64
-sys-apps/systemd pam policykit bootj
+sys-apps/systemd pam policykit boot
 sys-apps/xdg-desktop-portal-gtk -X
 sys-apps/xdg-desktop-portal flatpak
 sys-auth/consolekit policykit
@@ -134,7 +141,6 @@ sys-auth/polkit-qt qt6
 sys-block/fio aio
 sys-devel/binutils gold
 sys-devel/gcc jit graphite
-sys-devel/llvm clang
 sys-kernel/installkernel systemd systemd-boot
 sys-libs/glibc -clone3
 sys-libs/libxcrypt static-libs
@@ -152,6 +158,7 @@ x11-libs/gdk-pixbuf jpeg tiff
 x11-libs/libdrm video_cards_radeon
 x11-libs/libxcb xkb
 x11-libs/motif xft
+x11-libs/wxGTK libnotify tiff gstreamer opengl sdl
 x11-misc/gpaste -gnome -introspection
 x11-misc/rofi windowmode
 x11-wm/mutter screencast
