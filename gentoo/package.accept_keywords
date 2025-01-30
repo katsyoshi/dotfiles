@@ -74,8 +74,11 @@ llvm-runtimes/compiler-rt ~amd64
 llvm-runtimes/compiler-rt-sanitizers ~amd64
 llvm-runtimes/openmp ~amd64
 media-fonts/fontawesome ~amd64
+media-fonts/hackgen ~amd64
 media-fonts/mix-mplus-ipa ~amd64
+media-fonts/plemoljp ~amd64
 media-fonts/ricty ~amd64
+media-fonts/udev-gothic ~amd64
 media-gfx/blender ~amd64
 media-libs/babl ~amd64
 media-libs/gegl ~amd64
