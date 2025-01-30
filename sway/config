@@ -94,6 +94,7 @@ assign [class="org.inkscape.Inkscape"] $ws4
 assign [class="Gimp"] $ws4
 assign [app_id="org.https://nomacs.nomacs"] $ws4
 assign [app_id="gthumb"] $ws4
+assign [class="KiCad"] $ws4
 assign [app_id="deadbeef"] $ws5
 assign [app_id="org.remmina.Remmina"] $ws5
 assign [app_id="com.obsproject.Studio"] $ws5
