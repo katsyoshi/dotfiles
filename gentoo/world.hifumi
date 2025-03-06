@@ -18,6 +18,7 @@ app-dicts/gnome-dictionary
 app-editors/emacs
 app-editors/nano
 app-editors/vim
+app-editors/vscode
 app-emacs/emacs-daemon
 app-eselect/eselect-python
 app-eselect/eselect-repository
@@ -56,6 +57,7 @@ dev-libs/opensc
 dev-python/pip
 dev-util/FlameGraph
 dev-util/android-studio
+dev-util/idea-community
 dev-vcs/git
 dev-vcs/git-lfs
 gnome-base/gdm

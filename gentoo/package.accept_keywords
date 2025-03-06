@@ -48,6 +48,7 @@ dev-libs/ptexenc ~amd64
 dev-ruby/* ~amd64
 dev-util/android-studio ~amd64
 dev-util/ccls ~amd64
+dev-util/idea-community ~amd64
 dev-util/hyprwayland-scanner ~amd64
 dev-util/nvidia-cuda-toolkit ~amd64
 dev-vcs/git ~amd64
