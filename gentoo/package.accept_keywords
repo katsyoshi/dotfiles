@@ -12,6 +12,8 @@ app-editors/emacs ~amd64
 app-editors/vim ~amd64
 app-editors/vim-core ~amd64
 app-editors/zed ~amd64
+app-emacs/emacs-common ~amd64
+app-emacs/emacs-daemon ~amd64
 app-eselect/eselect-gradle ~amd64
 app-eselect/eselect-ruby ~amd64
 app-i18n/fcitx ~amd64

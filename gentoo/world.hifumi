@@ -57,6 +57,7 @@ dev-libs/opensc
 dev-python/pip
 dev-util/FlameGraph
 dev-util/android-studio
+dev-util/cloc
 dev-util/idea-community
 dev-vcs/git
 dev-vcs/git-lfs

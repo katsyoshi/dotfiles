@@ -59,6 +59,7 @@ dev-qt/qtwebchannel qml
 dev-qt/qtwebengine widgets
 dev-util/nvidia-cuda-toolkit profiler
 games-emulation/snes9x gtk joystick
+gnome-base/* -ibus
 gnome-base/gvfs udisks cdda
 gnome-base/gnome-control-center networkmanager
 gnome-extra/evolution-data-server vala
@@ -105,12 +106,11 @@ media-libs/mesa gles2
 media-libs/musicbrainz examples test
 media-libs/opencv gtk3 jpeg jpeg2k png tiff webp
 media-libs/tiff webp jpeg
-media-libs/vulkan-loader -X
 media-plugins/alsa-plugins pulseaudio
 media-plugins/grilo-plugins tracker
 media-sound/pulseaudio gtk dbus
-media-video/ffmpeg openh264 aac alsa cuda faac hardcoded-tables gif v4l libv4l webp jpeg2k x265 theora mp3 x264 nvenc vorbis xvid vpx opus
-media-video/obs-studio lua nvenc pipewire python truetype v4l vlc lua_single_target_luajit
+media-video/ffmpeg openh264 aac alsa faac hardcoded-tables gif v4l libv4l webp jpeg2k x265 theora mp3 x264 vorbis xvid vpx opus vaapi
+media-video/obs-studio lua pipewire python truetype v4l lua_single_target_luajit
 media-video/pipewire bluetooth extra ffmpeg v4l sound-server -X
 media-video/wireplumber -lua_single_target_luajit -lua_single_target_lua5-1 lua_single_target_lua5-4
 media-video/webcamoid ffmpeg jack v4l v4lutils videoeffects
