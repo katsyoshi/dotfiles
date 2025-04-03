@@ -26,7 +26,6 @@ app-i18n/fcitx
 app-i18n/fcitx-anthy
 app-i18n/fcitx-configtool
 app-i18n/fcitx-gtk
-app-i18n/ibus
 app-i18n/mozc
 app-misc/evtest
 app-misc/jq
@@ -118,11 +117,14 @@ net-misc/whois
 net-vpn/tailscale
 sci-electronics/kicad
 sys-apps/amdgpu_top
+sys-apps/bat
 sys-apps/eza
 sys-apps/memtest86+
 sys-apps/nvme-cli
 sys-apps/ripgrep
 sys-apps/usbutils
+sys-apps/uutils-coreutils
+sys-apps/uutils-findutils
 sys-apps/xdg-desktop-portal-gtk
 sys-apps/xdg-desktop-portal-xapp
 sys-auth/rtkit

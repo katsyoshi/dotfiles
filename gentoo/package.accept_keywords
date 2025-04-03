@@ -29,6 +29,7 @@ cross-avr/gcc ~amd64
 dev-build/bazel ~amd64
 dev-build/cmake ~amd64
 dev-cpp/abseil-cpp ~amd64
+dev-cpp/glaze ~amd64
 dev-cpp/tbb ~amd64
 dev-java/javatoolkit ~amd64
 dev-java/oracle-javamail ~amd64
@@ -38,6 +39,7 @@ dev-lang/ruby ~amd64
 dev-libs/blake3 ~amd64
 dev-libs/hyprgraphics ~amd64
 dev-libs/hyprland-protocols ~amd64
+dev-libs/hyprlang ~amd64
 dev-libs/kpathsea ~amd64
 dev-libs/libuv ~amd64
 dev-libs/mimalloc ~amd64
@@ -119,6 +121,7 @@ sys-apps/kmscon ~amd64
 sys-apps/locale-gen ~amd64
 sys-apps/uutils-coreutils ~amd64
 sys-apps/uutils-findutils ~amd64
+sys-apps/xdg-desktop-portal ~amd64
 sys-cluster/openmpi ~amd64
 sys-devel/crossdev ~amd64
 sys-devel/gcc ~amd64
