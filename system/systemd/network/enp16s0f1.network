@@ -2,6 +2,7 @@
 Name=enp16s0f1
 
 [Network]
+DHCP=no
 Address=192.168.100.3/24
-DNS=1.1.1.1
 Gateway=192.168.100.1
+DNS=1.1.1.1
