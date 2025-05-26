@@ -48,6 +48,7 @@ dev-libs/nss ~amd64
 dev-libs/oniguruma ~amd64
 dev-libs/protobuf ~amd64
 dev-libs/ptexenc ~amd64
+dev-libs/wayland-protocols ~amd64
 # dev-python/* ~amd64
 dev-ruby/* ~amd64
 dev-util/android-studio ~amd64
@@ -66,9 +67,9 @@ gui-libs/aquamarine ~amd64
 gui-libs/egl-gbm ~amd64
 gui-libs/egl-wayland ~amd64
 gui-libs/hyprcursor ~amd64
-gui-libs/hyprutils ~amd64
+gui-libs/hyprland-qt-support ~amd64
 gui-libs/hyprland-qtutils ~amd64
-gui-libs/wayland-protocols ~amd64
+gui-libs/hyprutils ~amd64
 gui-wm/hyprland ~amd64
 llvm-core/clang ~amd64
 llvm-core/clang-common ~amd64
