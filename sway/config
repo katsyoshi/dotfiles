@@ -176,5 +176,6 @@ exec remmina
 exec flameshot
 exec xremap /home/katsyoshi/.config/xremap/config.yml --device "PRK Firmware developers Default VID/PID Keyboard" >> /home/katsyoshi/.config/xremap/stdout.log 2>> /home/katsyoshi/.config/xremap/error.log
 exec wl-paste --watch cliphist store
-bindsym $mod+Ctrl+h exec cliphist list | wofi --dmenu --pre-display-cmd "echo '%s' | cut -f 2" | cliphist decode | wl-copy
-bindsym $mod+Ctrl+k exec wofi-window-switcher
+bindsym $mod+Shift+y exec cliphist list | wofi --dmenu --pre-display-cmd "echo '%s' | cut -f 2" | cliphist decode | wl-copy
+bindsym $mod+Shift+t exec LANG=ja_JP.utf8 wofi-window-switcher
+bindsym $mod+Shift+e exec /home/katsyoshi/bin/wl-screen-shot

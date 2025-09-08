@@ -18,13 +18,13 @@ render_timer = false
 size = 12
 # use_thin_strokes = true
 [font.bold]
-family = "Cica"
+family = "MoralerspaceRadonJPDOC"
 style = "Bold"
 [font.glyph_offset]
 x = 0
 y = 0
 [font.normal]
-family = "Cica"
+family = "MoralerspaceNeonJPDOC"
 style = "Regular"
 [font.offset]
 x = 0
@@ -32,7 +32,7 @@ y = 0
 [mouse]
 hide_when_typing = false
 [scrolling]
-history = 10000
+history = 100000
 multiplier = 3
 [selection]
 save_to_clipboard = false
