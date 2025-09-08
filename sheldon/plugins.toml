@@ -43,3 +43,6 @@ github = "MenkeTechnologies/zsh-cargo-completion"
 # Starship
 [plugins.starship]
 inline = 'eval "$(starship init zsh)"'
+
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
