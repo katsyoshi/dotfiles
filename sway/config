@@ -89,6 +89,7 @@ assign [class="Google-chrome"] $ws2
 assign [class="Slack"] $ws3
 assign [app_id="discord"] $ws3
 assign [app_id="evince"] $ws4
+assign [class="Geeqie"] $ws4
 assign [class="Darktable"] $ws4
 assign [class="org.inkscape.Inkscape"] $ws4
 assign [class="Gimp"] $ws4
