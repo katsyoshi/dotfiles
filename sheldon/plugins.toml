@@ -40,14 +40,6 @@ github = "pkulev/zsh-rustup-completion"
 [plugins.zsh-cargo-completion]
 github = "MenkeTechnologies/zsh-cargo-completion"
 
-# History search
-[plugins.history-search-multi-word]
-github = "zdharma/history-search-multi-word"
-
-# Rust PATH support
-[plugins.rust-path]
-inline = 'export PATH="$HOME/.cargo/bin:$PATH"'
-
 # Starship
 [plugins.starship]
 inline = 'eval "$(starship init zsh)"'
