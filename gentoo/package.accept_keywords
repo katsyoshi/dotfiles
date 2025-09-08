@@ -1,3 +1,4 @@
+acct-user/ollama ~amd64
 app-admin/awscli-bin ~amd64
 app-admin/supervisor ~amd64
 app-containers/containerd ~amd64
@@ -24,11 +25,13 @@ app-i18n/libime ~amd64
 app-i18n/mozc ~amd64
 app-misc/zellij ~amd64
 app-text/texlive-core ~amd64
+app-shells/sheldon ~amd64
 cross-armv7a-hardfloat-linux-gnueabi/gcc ~amd64
 cross-avr/gcc ~amd64
 dev-build/bazel ~amd64
 dev-build/cmake ~amd64
-dev-cpp/abseil-cpp ~amd64
+dev-build/ninja ~amd64
+# dev-cpp/abseil-cpp ~amd64
 dev-cpp/glaze ~amd64
 dev-cpp/tbb ~amd64
 dev-java/javatoolkit ~amd64
@@ -49,10 +52,12 @@ dev-libs/oniguruma ~amd64
 dev-libs/protobuf ~amd64
 dev-libs/ptexenc ~amd64
 dev-libs/wayland-protocols ~amd64
+dev-lua/* ~amd64
 # dev-python/* ~amd64
 dev-ruby/* ~amd64
 dev-util/android-studio ~amd64
 dev-util/ccls ~amd64
+dev-util/github-cli
 dev-util/idea-community ~amd64
 dev-util/hyprwayland-scanner ~amd64
 dev-util/nvidia-cuda-toolkit ~amd64
@@ -73,19 +78,24 @@ gui-libs/hyprutils ~amd64
 gui-wm/hyprland ~amd64
 llvm-core/clang ~amd64
 llvm-core/clang-common ~amd64
-llvm-core/clang-runtime ~amd64
+llvm-core/clang-linker-config ~amd64
 llvm-core/clang-toolchain-symlinks ~amd64
 llvm-core/lld ~amd64
 llvm-core/llvm ~amd64
 llvm-core/llvm-common ~amd64
 llvm-core/llvm-toolchain-symlinks ~amd64
 llvm-core/llvmgold ~amd64
+llvm-runtimes/clang-rtlib-config ~amd64
+llvm-runtimes/clang-runtime ~amd64
+llvm-runtimes/clang-stdlib-config ~amd64
+llvm-runtimes/clang-unwindlib-config ~amd64
 llvm-runtimes/compiler-rt ~amd64
 llvm-runtimes/compiler-rt-sanitizers ~amd64
 llvm-runtimes/openmp ~amd64
 media-fonts/fontawesome ~amd64
 media-fonts/hackgen ~amd64
 media-fonts/mix-mplus-ipa ~amd64
+media-fonts/moralerspace ~amd64
 media-fonts/plemoljp ~amd64
 media-fonts/ricty ~amd64
 media-fonts/udev-gothic ~amd64
@@ -95,6 +105,7 @@ media-libs/gegl ~amd64
 media-libs/libraw ~amd64
 media-libs/libuvc ~amd64
 media-libs/nv-codec-headers ~amd64
+media-sound/pipewire-module-xrdp ~amd64
 media-video/ffmpeg ~amd64
 media-video/obs-studio ~amd64
 media-video/obs-v4l2sink ~amd64
@@ -106,20 +117,24 @@ net-dns/libidn2 ~amd64
 net-im/discord ~amd64
 net-im/slack ~amd64
 net-im/zoom ~amd64
+net-libs/mbedtls ~amd64
 net-misc/freerdp ~amd64
 net-misc/gnome-remote-desktop ~amd64
 net-misc/openssh ~amd64
+net-misc/xrdp ~amd64
 net-vpn/networkmanager-wireguard ~amd64
 net-vpn/tailscale ~amd64
 net-vpn/wireguard-tools ~amd64
 sci-libs/fftw ~amd64
 sci-libs/openblas ~amd64
+sci-ml/ollama ~amd64
 sys-apps/amdgpu_top ~amd64
 sys-apps/bubblewrap ~amd64
 sys-apps/config-site ~amd64
 sys-apps/hwloc ~amd64
 sys-apps/kmscon ~amd64
 sys-apps/locale-gen ~amd64
+sys-apps/rootlesskit ~amd64
 sys-apps/uutils-coreutils ~amd64
 sys-apps/uutils-findutils ~amd64
 sys-apps/xdg-desktop-portal ~amd64

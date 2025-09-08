@@ -1,8 +1,8 @@
 */* LUA_TARGETS: -* lua5-4
 */* LUA_SINGLE_TARGET: -* lua5-4
-*/* PYTHON_TARGETS: -* python3_11 python3_12 python3_13
-*/* PYTHON_SINGLE_TARGET: -* python3_11
-*/* RUBY_TARGETS: -* ruby32 ruby33 ruby34
+*/* PYTHON_TARGETS: -* python3_12 python3_13
+*/* PYTHON_SINGLE_TARGET: -* python3_12
+*/* RUBY_TARGETS: -* ruby33 ruby34
 */* RUBY_SINGLE_TARGET: -* ruby33
 app-admin/doas persist
 app-admin/rsyslog openssl
@@ -45,6 +45,7 @@ dev-libs/libgudev introspection
 dev-libs/libical vala
 dev-libs/libnl utils
 dev-libs/libpcre2 pcre16
+dev-libs/libportal gtk
 dev-libs/libyaml static-libs
 dev-libs/libxml2 python icu
 dev-libs/openssl static-libs
