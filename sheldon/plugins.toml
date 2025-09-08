@@ -1,0 +1,53 @@
+# Sheldon configuration file
+# Based on your existing zinit plugins
+
+shell = "zsh"
+
+[plugins]
+
+# Syntax highlighting
+[plugins.fast-syntax-highlighting]
+github = "zdharma/fast-syntax-highlighting"
+
+# Autosuggestions
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+
+# Theme
+[plugins.dracula]
+github = "dracula/zsh"
+
+# Environment managers
+[plugins.zsh-nodenv]
+github = "C-uo/zsh-nodenv"
+
+[plugins.zsh-pyenv]
+github = "mattberther/zsh-pyenv"
+
+[plugins.rbenv-plugin]
+github = "jsahlen/rbenv.plugin.zsh"
+
+# Completions
+[plugins.docker-zsh-completion]
+github = "greymd/docker-zsh-completion"
+
+[plugins.gentoo-zsh-completions]
+github = "gentoo/gentoo-zsh-completions"
+
+[plugins.zsh-rustup-completion]
+github = "pkulev/zsh-rustup-completion"
+
+[plugins.zsh-cargo-completion]
+github = "MenkeTechnologies/zsh-cargo-completion"
+
+# History search
+[plugins.history-search-multi-word]
+github = "zdharma/history-search-multi-word"
+
+# Rust PATH support
+[plugins.rust-path]
+inline = 'export PATH="$HOME/.cargo/bin:$PATH"'
+
+# Starship
+[plugins.starship]
+inline = 'eval "$(starship init zsh)"'
