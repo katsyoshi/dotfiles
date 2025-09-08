@@ -31,6 +31,7 @@ app-misc/evtest
 app-misc/jq
 app-misc/resolve-march-native
 app-misc/screen
+app-misc/skim
 app-misc/wayland-utils
 app-misc/zellij
 app-portage/eix
