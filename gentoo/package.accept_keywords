@@ -38,6 +38,7 @@ dev-java/javatoolkit ~amd64
 dev-java/oracle-javamail ~amd64
 dev-java/gradle-bin ~amd64d
 dev-lang/ghc ~amd64
+dev-lang/go ~amd64
 dev-lang/ruby ~amd64
 dev-libs/blake3 ~amd64
 dev-libs/hyprgraphics ~amd64
