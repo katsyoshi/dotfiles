@@ -9,8 +9,8 @@ symbol = "[  ](fg:#FF9900)"
 symbol = "[󰠅 ](fg:#008AD7]"
 
 [character]
-error_symbol = "[ ](bold red)"
-success_symbol = "[ ](bold green)"
+error_symbol = "[💼  ](bold red)"
+success_symbol = "[💼  ](bold green)"
 
 [directory]
 truncation_length = 100
@@ -22,7 +22,7 @@ symbol = "[ 🇬 ](fg:#4285F4)"
 
 [hostname]
 ssh_only = false
-format = "[ 💼 ](bold)[$hostname ]($style)"
+format = "[@](bold)[$hostname ]($style)"
 
 [username]
 format = "[$user]($style)"
