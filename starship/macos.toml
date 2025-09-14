@@ -9,8 +9,13 @@ symbol = "[  ](fg:#FF9900)"
 symbol = "[󰠅 ](fg:#008AD7]"
 
 [character]
-error_symbol = "[💼  ](bold red)"
-success_symbol = "[💼  ](bold green)"
+error_symbol = "[💼](bold red)"
+success_symbol = "[💼](bold green)"
+
+[cmd_duration]
+min_time = 1_000
+show_milliseconds = true
+format = "🗑 [$duration](bold #a2cc89)"
 
 [directory]
 truncation_length = 100
@@ -22,12 +27,10 @@ symbol = "[ 🇬 ](fg:#4285F4)"
 
 [hostname]
 ssh_only = false
-format = "[@](bold)[$hostname ]($style)"
+format = "[ \udb82\udd91 ](bold #a2cc89)[$hostname ]($style)"
 
-[username]
-format = "[$user]($style)"
-disabled = false
-show_always = true
+[ruby]
+symbol = "[ ](fg:#FF0000)"
 
 [time]
 disabled = false
@@ -35,5 +38,7 @@ format = '[$time]($style)'
 time_format = '%Y-%m-%d %H:%M'
 utc_time_offset = '+9'
 
-[ruby]
-symbol = "[ ](fg:#FF0000)"
+[username]
+format = "[$user]($style)"
+disabled = false
+show_always = true
