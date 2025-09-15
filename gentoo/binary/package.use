@@ -12,7 +12,7 @@ app-containers/docker btrfs
 app-crypt/gcr gtk
 app-crypt/pinentry gnome-keyring
 app-crypt/qca qt6
-app-editors/emacs cairo dbus dynamic-loading gif gpm gui gtk gtk3 gzip-el jit jpeg json libxml2 png svg ssl sound sqlite tiff tree-sitter webp xft xwidgets zlib -X
+app-editors/emacs -X -wayland
 app-emacs/emacs-common gui
 app-i18n/fcitx-configtool config-qt qt6
 app-i18n/fcitx-qt qt6
@@ -35,6 +35,7 @@ dev-lang/rust-bin rust-src rustfmt
 dev-libs/appstream qt6
 dev-libs/boost python
 dev-libs/efl egl gles2-only -lua_single_target_luajit lua_single_target_lua5-1
+dev-libs/elfutils -zstd
 dev-libs/folks eds
 dev-libs/glib dbus
 dev-libs/gmp static-libs
@@ -89,7 +90,7 @@ media-gfx/photoqt exif freeimage graphicsmagick imagemagick mpv pdf raw
 media-libs/clutter egl X
 media-libs/cogl gles2
 media-libs/freeimage jpeg jpeg2k openexr png raw tiff webp
-media-libs/freetype png harfbuzz
+media-libs/freetype -X
 media-libs/gd jpeg fontconfig truetype png
 media-libs/gegl cairo raw svg tiff webp
 media-libs/gst-plugins-base opengl theora
@@ -116,24 +117,22 @@ media-video/pipewire bluetooth extra ffmpeg v4l sound-server -X
 media-video/wireplumber -lua_single_target_luajit -lua_single_target_lua5-1 lua_single_target_lua5-4
 media-video/webcamoid ffmpeg jack v4l v4lutils videoeffects
 net-dns/bind-tools readline ssl
-net-fs/samba client
-net-im/slack gnome-keyring ayatana
-net-libs/webkit-gtk avif pdf keyring spell -X
-net-misc/curl http2 ssl ipv6 ssh
+net-fs/samba cups client
+net-misc/curl -ssh -zstd
 net-misc/freerdp server
 net-misc/networkmanager bluetooth teamd
 net-misc/nm-applet teamd gtk
 net-misc/remmina gnome-keyring vnc rdp
-net-print/cups dbus
+net-misc/rsync -zstd
+net-print/cups dbus X usb
 net-wireless/wpa_supplicant dbus
 net-wireless/bluez user-session
 sci-libs/fftw float fortran neon openmp threads
 sci-libs/gd jpeg fontconfig truetype png
 sci-libs/gts jpeg fontconfig truetype png
 sci-visualization/gnuplot bitmap cairo compat ggi libcaca libcerf readline svga
-sys-apps/dbus user-session
+sys-apps/dbus user-session X
 sys-apps/flatpak -X
-sys-apps/hwloc -X -udev -videocard-nvidia
 sys-apps/memtest86+ efi64
 sys-apps/systemd pam policykit boot
 sys-apps/xdg-desktop-portal-gtk -X
@@ -142,16 +141,17 @@ sys-auth/consolekit policykit
 sys-auth/polkit-qt qt6
 sys-block/fio aio
 sys-devel/binutils gold
-sys-devel/gcc jit graphite
+sys-devel/gcc jit
+sys-fs/btrfs-progs -udev
 sys-kernel/installkernel systemd systemd-boot
 sys-libs/glibc -clone3
 sys-libs/libxcrypt static-libs
-sys-libs/ncurses -static-realign
+sys-libs/ncurses -stack-realign
 sys-libs/zlib minizip abi_x86_32 static-libs
 virtual/imagemagick-tools perl
 x11-base/xwayland libei
 x11-drivers/nvidia-drivers acpi driver gtk3 uvm static-libs
-x11-libs/gtk+ cups
+x11-libs/gtk+ X -cups
 x11-libs/gdk-pixbuf jpeg tiff
 x11-libs/libdrm video_cards_radeon
 x11-libs/libxcb xkb
