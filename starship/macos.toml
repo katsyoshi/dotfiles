@@ -9,8 +9,8 @@ symbol = "[  ](fg:#FF9900)"
 symbol = "[󰠅 ](fg:#008AD7]"
 
 [character]
-error_symbol = "[💼](bold red)"
-success_symbol = "[💼](bold green)"
+error_symbol = "[💼](bold bright-red)[](bold red)"
+success_symbol = "[💼](bold bright-green)[](bold green)"
 
 [cmd_duration]
 min_time = 1_000
@@ -27,7 +27,7 @@ symbol = "[ 🇬 ](fg:#4285F4)"
 
 [hostname]
 ssh_only = false
-format = "[ \udb82\udd91 ](bold #a2cc89)[$hostname ]($style)"
+format = "[ \ue711 ](bold #a2cc89)[$hostname ]($style)"
 
 [ruby]
 symbol = "[ ](fg:#FF0000)"
