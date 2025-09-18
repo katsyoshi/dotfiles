@@ -27,7 +27,7 @@ symbol = "[ 🇬 ](fg:#4285F4)"
 
 [hostname]
 ssh_only = false
-format = "[ \uf31a ](bold #8f5f8f)[$hostname ]($style)"
+format = "[ \uf233 ](bold #8f5f8f)[$hostname ]($style)"
 
 [username]
 format = "[$user]($style)"
@@ -41,4 +41,4 @@ time_format = '%Y-%m-%d %H:%M'
 utc_time_offset = '+9'
 
 [ruby]
-symbol = "[ ](fg:#FF0000)"
+symbol = "[ ](fg:#d12e59)"

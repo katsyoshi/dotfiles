@@ -3,18 +3,18 @@ format = "$all"
 right_format = "$directory $time"
 
 [aws]
-symbol = "[ ](fg:#FF9900)"
+symbol = "[\ue7ad ](fg:#FF9900)"
 
 [aws.region_aliases]
-ap-northeast-1 = 'tokyo'
-us-east-1 = 'va'
+ap-northeast-1 = '東京'
+us-east-1 = 'バージニア'
 
 [azure]
 symbol = "[󰠅 ](fg:#008AD7)"
 
 [character]
-error_symbol = "[🏠](bold red)"
-success_symbol = "[🏠](bold green)"
+error_symbol = "[🏠](bold bright-red)[](bold red)"
+success_symbol = "[🏠](bold #7faba9)[](bold #7faba9)"
 
 [cmd_duration]
 min_time = 500
@@ -27,14 +27,14 @@ truncate_to_repo = false
 truncation_symbol = "-"
 
 [gcloud]
-symbol = "[ 🇬 ](fg:#4285F4)"
+symbol = "[ \uf11f6 ](fg:#4285F4)"
 
 [hostname]
 ssh_only = false
-format = "[ \uf31a ](bold #a0d8ef)[$hostname ]($style)"
+format = "[ \ue7e6 ](bold #a0d8ef)[$hostname ]($style)"
 
 [ruby]
-symbol = "[ ](fg:#C73C2E)"
+symbol = "[ ](fg:#d12e59)"
 
 [time]
 disabled = false
