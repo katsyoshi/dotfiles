@@ -87,6 +87,7 @@ assign [app_id="org.wezfurlong.wezterm"] $ws1
 assign [app_id="firefox"] $ws2
 assign [class="Google-chrome"] $ws2
 assign [class="Slack"] $ws3
+assign [app_id="Slack"] $ws3
 assign [app_id="discord"] $ws3
 assign [app_id="evince"] $ws4
 assign [class="Geeqie"] $ws4
