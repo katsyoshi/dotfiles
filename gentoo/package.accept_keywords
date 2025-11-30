@@ -69,6 +69,7 @@ games-fps/nexuiz ~amd64
 gui-apps/waybar ~amd64
 gui-apps/wf-recorder ~amd64
 gui-apps/wofi ~amd64
+gui-apps/xwaylandvideobridge ~amd64
 gui-libs/aquamarine ~amd64
 gui-libs/egl-gbm ~amd64
 gui-libs/egl-wayland ~amd64
@@ -107,6 +108,7 @@ media-libs/libraw ~amd64
 media-libs/libuvc ~amd64
 media-libs/nv-codec-headers ~amd64
 media-sound/pipewire-module-xrdp ~amd64
+media-sound/qpwgraph ~amd64
 media-video/ffmpeg ~amd64
 media-video/obs-studio ~amd64
 media-video/obs-v4l2sink ~amd64

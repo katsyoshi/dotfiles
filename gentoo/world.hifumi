@@ -87,7 +87,6 @@ gui-apps/waybar
 gui-apps/wf-recorder
 gui-apps/wl-clipboard
 gui-apps/wofi
-gui-apps/xwaylandvideobridge
 gui-libs/xdg-desktop-portal-wlr
 gui-wm/hyprland
 gui-wm/sway
@@ -140,9 +139,12 @@ media-gfx/imv
 media-gfx/inkscape
 media-gfx/nomacs
 media-libs/exiftool
+media-libs/libnsgif
 media-libs/libsixel
 media-sound/deadbeef
+media-sound/pavucontrol
 media-sound/pipewire-module-xrdp
+media-sound/qpwgraph
 media-video/obs-studio
 media-video/pipewire
 media-video/v4l2loopback
@@ -167,7 +169,6 @@ sys-apps/memtest86+
 sys-apps/nvme-cli
 sys-apps/ripgrep
 sys-apps/usbutils
-sys-apps/uutils-coreutils
 sys-apps/uutils-findutils
 sys-apps/xdg-desktop-portal-gtk
 sys-apps/xdg-desktop-portal-xapp
@@ -183,9 +184,12 @@ sys-process/btop
 sys-process/lsof
 sys-process/nvtop
 sys-process/procs
+www-apps/hugo
 www-apps/zola
 www-client/firefox-bin
+www-client/firefox-bin:rapid
 www-client/google-chrome
+x11-apps/xlsclients
 x11-misc/sddm
 x11-misc/slim
 x11-terms/alacritty

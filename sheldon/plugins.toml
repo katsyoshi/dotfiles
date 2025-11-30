@@ -18,14 +18,6 @@ github = "zsh-users/zsh-autosuggestions"
 github = "dracula/zsh"
 
 # Environment managers
-[plugins.zsh-nodenv]
-github = "C-uo/zsh-nodenv"
-
-[plugins.zsh-pyenv]
-github = "mattberther/zsh-pyenv"
-
-[plugins.rbenv-plugin]
-github = "jsahlen/rbenv.plugin.zsh"
 
 # Completions
 [plugins.docker-zsh-completion]
