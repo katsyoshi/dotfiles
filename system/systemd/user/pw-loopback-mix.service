@@ -1,0 +1,11 @@
+[Unit]
+Description=PipeWire Loopback MixBus
+After=pipewire.service pipewire-pulse.service wireplumber.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/pw-loopback --capture-props='media.class=Audio/Source node.description=MixBus' --playback-props='node.name=MixBus node.description=MixBus'
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
