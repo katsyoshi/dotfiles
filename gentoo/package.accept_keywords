@@ -59,7 +59,7 @@ dev-ruby/* ~amd64
 dev-util/android-studio ~amd64
 dev-util/ccls ~amd64
 dev-util/github-cli
-dev-util/idea-community ~amd64
+dev-util/intellij-idea ~amd64
 dev-util/hyprwayland-scanner ~amd64
 dev-util/nvidia-cuda-toolkit ~amd64
 dev-vcs/git ~amd64
@@ -96,6 +96,7 @@ llvm-runtimes/compiler-rt-sanitizers ~amd64
 llvm-runtimes/openmp ~amd64
 media-fonts/fontawesome ~amd64
 media-fonts/hackgen ~amd64
+media-fonts/inter ~amd64
 media-fonts/mix-mplus-ipa ~amd64
 media-fonts/moralerspace ~amd64
 media-fonts/plemoljp ~amd64

@@ -29,11 +29,13 @@ app-i18n/fcitx-gtk
 app-i18n/mozc
 app-misc/evtest
 app-misc/jq
+app-misc/radeontop
 app-misc/resolve-march-native
 app-misc/screen
 app-misc/skim
 app-misc/wayland-utils
 app-misc/zellij
+app-portage/cpuid2cpuflags
 app-portage/eix
 app-portage/gentoolkit
 app-shells/sheldon
@@ -57,6 +59,7 @@ dev-lang/crystal
 dev-lang/ruby:3.3
 dev-lang/ruby:3.4
 dev-libs/bemenu
+dev-libs/cpuinfo
 dev-libs/hyprgraphics
 dev-libs/hyprlang
 dev-libs/libgudev
@@ -73,8 +76,9 @@ dev-util/FlameGraph
 dev-util/android-studio
 dev-util/cloc
 dev-util/github-cli
-dev-util/idea-community
+dev-util/intellij-idea
 dev-util/perf
+dev-util/vulkan-tools
 dev-vcs/git
 dev-vcs/git-lfs
 gnome-base/gdm
@@ -116,6 +120,7 @@ llvm-core/clang
 media-fonts/fontawesome
 media-fonts/hack
 media-fonts/hackgen
+media-fonts/inter
 media-fonts/ja-ipafonts
 media-fonts/moralerspace
 media-fonts/noto
@@ -189,6 +194,7 @@ www-apps/zola
 www-client/firefox-bin
 www-client/firefox-bin:rapid
 www-client/google-chrome
+www-servers/h2o
 x11-apps/xlsclients
 x11-misc/sddm
 x11-misc/slim

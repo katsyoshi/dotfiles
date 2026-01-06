@@ -86,12 +86,13 @@ media-gfx/imagemagick fftw fontconfig jpeg jpeg2k perl png postscript raw svg ti
 media-gfx/imv gif heif icu jpeg jpegxl png svg tiff -X
 media-gfx/nomacs exif freeimage graphicsmagick imagemagick mpv pdf raw
 media-gfx/photoqt exif freeimage graphicsmagick imagemagick mpv pdf raw
+media-libs/babl introspection lcms
 media-libs/clutter egl X
 media-libs/cogl gles2
 media-libs/freeimage jpeg jpeg2k openexr png raw tiff webp
 media-libs/freetype png harfbuzz
 media-libs/gd jpeg fontconfig truetype png
-media-libs/gegl cairo raw svg tiff webp
+media-libs/gegl cairo introspection lcms raw svg tiff webp
 media-libs/gst-plugins-base opengl theora
 media-libs/harfbuzz icu
 media-libs/imlib2 jpeg png

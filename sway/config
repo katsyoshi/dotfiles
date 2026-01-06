@@ -4,7 +4,7 @@ set $terminal alacritty
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
-output "*" background /home/katsyoshi/Pictures/Wallpaper/bridge32k.jpg fill
+output "*" bg #5e7e7e solid_color
 
 # start a terminal
 bindsym $mod+Return exec $terminal

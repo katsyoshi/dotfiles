@@ -1,7 +1,7 @@
 app-admin/terraform BUSL-1.1
 app-editors/vscode Microsoft-vscode
 dev-util/android-studio android
-dev-util/idea-community codehaus-classworlds
+dev-util/intellij-idea codehaus-classworlds
 dev-util/nvidia-cuda-toolkit NVIDIA-CUDA
 media-fonts/ipamonafont grass-ipafonts
 net-im/discord all-rights-reserved
