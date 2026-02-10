@@ -1,8 +1,10 @@
 set $mod Mod4
 set $terminal alacritty
+output HDMI-A-1 enable
+output Virtual-1 disable
 
-exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK
-exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK PATH
+exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK PATH
 
 output "*" bg #5e7e7e solid_color
 
@@ -16,6 +18,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Shift+d exec wofi --show run
 bindsym $mod+Shift+g exec wofi --show window
 bindsym $mod+Shift+m exec wofi --modi combi -show
+bindsym $mod+Shift+f exec wofi --show drun
 
 # change focus
 bindsym $mod+j focus left
