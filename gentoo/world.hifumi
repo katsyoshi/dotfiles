@@ -38,6 +38,7 @@ app-misc/zellij
 app-portage/cpuid2cpuflags
 app-portage/eix
 app-portage/gentoolkit
+app-shells/direnv
 app-shells/sheldon
 app-shells/starship
 app-shells/zsh
@@ -72,6 +73,7 @@ dev-lua/luasec
 dev-lua/luasocket
 dev-python/absl-py
 dev-python/pip
+dev-python/sphinx
 dev-util/FlameGraph
 dev-util/android-studio
 dev-util/cloc
@@ -159,6 +161,7 @@ net-im/discord
 net-im/slack
 net-im/zoom
 net-libs/libnma
+net-libs/webkit-gtk:4.1
 net-misc/iperf
 net-misc/ntp
 net-misc/remmina
@@ -189,7 +192,6 @@ sys-process/btop
 sys-process/lsof
 sys-process/nvtop
 sys-process/procs
-www-apps/hugo
 www-apps/zola
 www-client/firefox-bin
 www-client/firefox-bin:rapid

@@ -25,6 +25,7 @@ app-i18n/libime ~amd64
 app-i18n/mozc ~amd64
 app-misc/zellij ~amd64
 app-text/texlive-core ~amd64
+app-shells/direnv ~amd64
 app-shells/sheldon ~amd64
 cross-armv7a-hardfloat-linux-gnueabi/gcc ~amd64
 cross-avr/gcc ~amd64
