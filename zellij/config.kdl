@@ -20,6 +20,7 @@ keybinds clear-defaults=true {
     bind "h" { NewPane "Right"; SwitchToMode "Normal"; }
     bind "f" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
     bind "c" { NewTab { layout "/home/katsyoshi/.config/zellij/layouts/newtab.kdl"; }; SwitchToMode "Normal"; }
+    bind "Ctrl c" { NewTab { layout "/home/katsyoshi/.config/zellij/layouts/ai.kdl"; }; SwitchToMode "Normal"; }
     bind "," { SwitchToMode "RenameTab"; }
     bind "p" { GoToPreviousTab; SwitchToMode "Normal"; }
     bind "n" { GoToNextTab; SwitchToMode "Normal"; }
