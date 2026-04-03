@@ -1,7 +1,7 @@
 */* LUA_TARGETS: -* lua5-4
 */* LUA_SINGLE_TARGET: -* lua5-4
-*/* PYTHON_TARGETS: -* python3_12 python3_13
-*/* PYTHON_SINGLE_TARGET: -* python3_12
+*/* PYTHON_TARGETS: -* python3_13 python3_14
+*/* PYTHON_SINGLE_TARGET: -* python3_13
 */* RUBY_TARGETS: -* ruby33 ruby34 ruby40
 */* RUBY_SINGLE_TARGET: -* ruby40
 app-admin/doas persist
@@ -9,6 +9,7 @@ app-admin/rsyslog openssl
 app-benchmarks/wrk lua_single_target_luajit
 app-containers/containerd btrfs
 app-containers/docker btrfs
+app-containers/docker-credential-helpers keyring
 app-crypt/gcr gtk
 app-crypt/pinentry gnome-keyring
 app-crypt/qca qt6

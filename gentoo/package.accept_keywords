@@ -75,9 +75,12 @@ gui-libs/aquamarine ~amd64
 gui-libs/egl-gbm ~amd64
 gui-libs/egl-wayland ~amd64
 gui-libs/hyprcursor ~amd64
+gui-libs/hyprland-guiutils ~amd64
 gui-libs/hyprland-qt-support ~amd64
 gui-libs/hyprland-qtutils ~amd64
+gui-libs/hyprtoolkit ~amd64
 gui-libs/hyprutils ~amd64
+gui-libs/hyprwire ~amd64
 gui-wm/hyprland ~amd64
 llvm-core/clang ~amd64
 llvm-core/clang-common ~amd64
@@ -104,6 +107,7 @@ media-fonts/plemoljp ~amd64
 media-fonts/ricty ~amd64
 media-fonts/udev-gothic ~amd64
 media-gfx/blender ~amd64
+media-gfx/imagemagick ~amd64
 media-libs/babl ~amd64
 media-libs/gegl ~amd64
 media-libs/libraw ~amd64
