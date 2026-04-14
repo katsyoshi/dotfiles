@@ -27,6 +27,7 @@ app-misc/zellij ~amd64
 app-text/texlive-core ~amd64
 app-shells/direnv ~amd64
 app-shells/sheldon ~amd64
+app-shells/zsh-autosuggestions ~amd64
 cross-armv7a-hardfloat-linux-gnueabi/gcc ~amd64
 cross-avr/gcc ~amd64
 dev-build/bazel ~amd64
@@ -70,6 +71,7 @@ games-fps/nexuiz ~amd64
 gui-apps/waybar ~amd64
 gui-apps/wf-recorder ~amd64
 gui-apps/wofi ~amd64
+gui-apps/xremap ~amd64
 gui-apps/xwaylandvideobridge ~amd64
 gui-libs/aquamarine ~amd64
 gui-libs/egl-gbm ~amd64

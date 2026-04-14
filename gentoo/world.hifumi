@@ -39,9 +39,13 @@ app-portage/cpuid2cpuflags
 app-portage/eix
 app-portage/gentoolkit
 app-shells/direnv
+app-shells/gentoo-zsh-completions
 app-shells/sheldon
 app-shells/starship
 app-shells/zsh
+app-shells/zsh-autosuggestions
+app-shells/zsh-completions
+app-shells/zsh-syntax-highlighting
 app-text/cmigemo
 app-text/dictd
 app-text/evince
@@ -93,6 +97,7 @@ gui-apps/waybar
 gui-apps/wf-recorder
 gui-apps/wl-clipboard
 gui-apps/wofi
+gui-apps/xremap
 gui-libs/xdg-desktop-portal-wlr
 gui-wm/hyprland
 gui-wm/sway
@@ -172,6 +177,7 @@ net-vpn/tailscale
 sci-ml/ollama
 sys-apps/bat
 sys-apps/eza
+sys-apps/fd
 sys-apps/lshw
 sys-apps/memtest86+
 sys-apps/nvme-cli

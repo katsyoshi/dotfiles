@@ -13,6 +13,7 @@ keybinds clear-defaults=true {
     bind "Ctrl n" { ScrollDown; }
   }
   tmux {
+    bind "s" { DumpLayout "/home/katsyoshi/.config/zellij/dump-layout/dump.txt"; SwitchToMode "Normal"; }
     bind "e" { EditScrollback; SwitchToMode "Normal"; }
     bind "[" { SwitchToMode "Scroll"; }
     bind "Ctrl b" { Write 8; }

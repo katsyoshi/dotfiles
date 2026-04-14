@@ -121,6 +121,7 @@ net-dns/bind-tools readline ssl
 net-fs/samba client
 net-im/slack gnome-keyring ayatana
 net-libs/webkit-gtk avif pdf keyring spell -X
+net-libs/ngtcp2 gnutls
 net-misc/curl http2 ssl ipv6 ssh
 net-misc/freerdp server
 net-misc/networkmanager bluetooth teamd

@@ -39,7 +39,7 @@ keymap:
           u: [C-z, { set_mark: false }]
   - name: chrome
     application:
-      only: ["Google-chrome"]
+      only: ["google-chrome"]
     remap:
       C-b: { with_mark: left }
       C-f: { with_mark: right }
@@ -73,7 +73,7 @@ keymap:
 
   - name: chat tool only
     application:
-      only: ["Slack", "discord"]
+      only: ["Slack", "discord", "slack"]
     remap:
       C-b: { with_mark: left }
       C-f: { with_mark: right }
