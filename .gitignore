@@ -2,3 +2,4 @@
 /**/*.lock
 /wezterm/user/
 /zellij/dump-layout/
+/zellij/layouts/work.kdl
