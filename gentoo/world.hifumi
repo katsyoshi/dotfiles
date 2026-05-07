@@ -131,6 +131,7 @@ media-fonts/inter
 media-fonts/ja-ipafonts
 media-fonts/moralerspace
 media-fonts/noto
+media-fonts/noto-cjk
 media-fonts/plemoljp
 media-fonts/powerline-symbols
 media-fonts/source-code-pro
@@ -154,6 +155,8 @@ media-libs/exiftool
 media-libs/libnsgif
 media-libs/libsixel
 media-sound/deadbeef
+media-sound/gnome-music
+media-sound/lollypop
 media-sound/pavucontrol
 media-sound/pipewire-module-xrdp
 media-sound/qpwgraph

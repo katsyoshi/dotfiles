@@ -1,7 +1,7 @@
 */* LUA_TARGETS: -* lua5-4
 */* LUA_SINGLE_TARGET: -* lua5-4
 */* PYTHON_TARGETS: -* python3_13 python3_14
-*/* PYTHON_SINGLE_TARGET: -* python3_13
+*/* PYTHON_SINGLE_TARGET: -* python3_14
 */* RUBY_TARGETS: -* ruby33 ruby34 ruby40
 */* RUBY_SINGLE_TARGET: -* ruby40
 app-admin/doas persist
@@ -68,6 +68,7 @@ gnome-extra/evolution-data-server vala
 gnome-extra/nm-applet gtk
 gui-apps/swaybg gdk-pixbuf
 gui-apps/waybar evdev network tray
+gui-apps/xremap wlroots
 gui-wm/sway wallpapers tray
 gui-wm/wayfire -X
 kde-frameworks/kconfig qml
@@ -99,6 +100,7 @@ media-libs/harfbuzz icu
 media-libs/imlib2 jpeg png
 media-libs/libcanberra pulseaudio
 media-libs/libgphoto2 exif
+media-libs/libmediaart gtk
 media-libs/libpng apng
 media-libs/libraw jpeg
 media-libs/libsdl2 gles2
@@ -112,6 +114,7 @@ media-libs/tiff webp jpeg
 media-plugins/alsa-plugins pulseaudio
 media-plugins/grilo-plugins tracker
 media-sound/pulseaudio gtk dbus
+media-sound/deadbeef aac ffmpeg pipewire sndfile wavpack
 media-video/ffmpeg openh264 aac alsa faac hardcoded-tables gif v4l libv4l webp jpeg2k x265 theora mp3 x264 vorbis xvid vpx opus vaapi
 media-video/obs-studio lua pipewire python truetype v4l lua_single_target_luajit
 media-video/pipewire bluetooth extra ffmpeg v4l sound-server -X
