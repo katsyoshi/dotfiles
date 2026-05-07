@@ -1,0 +1,39 @@
+#!/bin/sh
+set -u
+
+config_dir="${XDG_CONFIG_HOME:-$HOME/.config}/xremap"
+config="$config_dir/config.yml"
+env_file="$config_dir/env"
+log="$config_dir/xremap.log"
+error_log="$config_dir/error.log"
+lock="$config_dir/run.lock"
+
+exec 9>"$lock"
+if ! flock -n 9; then
+  printf '%s xremap wrapper is already running\n' "$(date '+%Y-%m-%d %H:%M:%S')" >> "$log"
+  exit 0
+fi
+
+if [ -r "$env_file" ]; then
+  . "$env_file"
+fi
+
+: "${KEYBOARD_TYPE:?KEYBOARD_TYPE is not set in $env_file}"
+
+device_ready() {
+  grep -F "Name=\"$KEYBOARD_TYPE\"" /proc/bus/input/devices >/dev/null 2>&1
+}
+
+while :; do
+  until device_ready; do
+    printf '%s waiting for input device: %s\n' "$(date '+%Y-%m-%d %H:%M:%S')" "$KEYBOARD_TYPE" >> "$log"
+    sleep 1
+  done
+
+  printf '%s starting xremap for device: %s\n' "$(date '+%Y-%m-%d %H:%M:%S')" "$KEYBOARD_TYPE" >> "$log"
+  /usr/bin/xremap "$config" --device "$KEYBOARD_TYPE" >> "$log" 2>> "$error_log"
+  status=$?
+
+  printf '%s xremap exited with status %s\n' "$(date '+%Y-%m-%d %H:%M:%S')" "$status" >> "$error_log"
+  sleep 2
+done
