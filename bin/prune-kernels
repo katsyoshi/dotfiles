@@ -1,0 +1,286 @@
+#!/usr/bin/env bash
+set -eu
+
+execute=0
+prune_boot=1
+prune_src=1
+prune_modules=1
+sudo_cmd=${SUDO:-doas}
+current=$(uname -r)
+selected_src=
+declare -a extra_keep_versions=()
+
+usage() {
+  cat <<'USAGE'
+Usage: prune-kernels [options]
+
+Prune old Gentoo kernel artifacts while keeping:
+  - the newest version for each major.minor series
+  - the currently running kernel
+  - /usr/src/linux's symlink target, for /usr/src cleanup
+  - versions passed with --keep VERSION
+
+By default this is a dry-run. Pass --execute to delete.
+
+Options:
+  -x, --execute       Actually remove files
+  -n, --dry-run       Print what would be removed (default)
+      --no-boot       Skip /boot/efi/gentoo and loader entries
+      --no-src        Skip /usr/src/linux-* trees
+      --no-modules    Skip /lib/modules/*
+      --keep VERSION  Always keep VERSION
+      --sudo CMD      Command used for deletion (default: doas)
+  -h, --help          Show this help
+USAGE
+}
+
+while [ "$#" -gt 0 ]; do
+  case "$1" in
+    -x|--execute)
+      execute=1
+      ;;
+    -n|--dry-run)
+      execute=0
+      ;;
+    --no-boot)
+      prune_boot=0
+      ;;
+    --no-src)
+      prune_src=0
+      ;;
+    --no-modules)
+      prune_modules=0
+      ;;
+    --keep)
+      shift
+      if [ "$#" -eq 0 ]; then
+        echo "prune-kernels: --keep requires a version" >&2
+        exit 2
+      fi
+      extra_keep_versions+=("$1")
+      ;;
+    --sudo)
+      shift
+      if [ "$#" -eq 0 ]; then
+        echo "prune-kernels: --sudo requires a command" >&2
+        exit 2
+      fi
+      sudo_cmd=$1
+      ;;
+    -h|--help)
+      usage
+      exit 0
+      ;;
+    *)
+      echo "prune-kernels: unknown option: $1" >&2
+      usage >&2
+      exit 2
+      ;;
+  esac
+  shift
+done
+
+if [ -L /usr/src/linux ]; then
+  selected_path=$(readlink -f /usr/src/linux || true)
+  case "$selected_path" in
+    /usr/src/linux-*)
+      selected_src=${selected_path##*/linux-}
+      ;;
+  esac
+fi
+
+minor_key() {
+  local version=$1
+  local major rest minor
+
+  major=${version%%.*}
+  if [ "$major" = "$version" ]; then
+    printf '%s\n' "$version"
+    return
+  fi
+
+  rest=${version#*.}
+  minor=${rest%%.*}
+  printf '%s.%s\n' "$major" "$minor"
+}
+
+contains_version() {
+  local needle=$1
+  shift
+
+  local version
+  for version in "$@"; do
+    [ "$version" = "$needle" ] && return 0
+  done
+  return 1
+}
+
+version_from_path() {
+  local target=$1
+  local path=$2
+  local base
+
+  base=${path##*/}
+  case "$target" in
+    src)
+      printf '%s\n' "${base#linux-}"
+      ;;
+    modules|boot-payload)
+      printf '%s\n' "$base"
+      ;;
+    boot-entry)
+      base=${base#gentoo-}
+      printf '%s\n' "${base%.conf}"
+      ;;
+  esac
+}
+
+print_rm() {
+  local rm_flag=$1
+  shift
+
+  if [ "$execute" -eq 1 ]; then
+    "$sudo_cmd" rm "$rm_flag" -- "$@"
+  else
+    printf '%q ' "$sudo_cmd" rm "$rm_flag" --
+    printf '%q ' "$@"
+    printf '\n'
+  fi
+}
+
+plan_series_prune() {
+  local target=$1
+  local title=$2
+  shift 2
+  local -a paths=("$@")
+
+  [ "${#paths[@]}" -gt 0 ] || return 0
+
+  local path version key reason
+  declare -A latest_by_key=()
+  declare -A keep_versions=()
+
+  for path in "${paths[@]}"; do
+    version=$(version_from_path "$target" "$path")
+    key=$(minor_key "$version")
+    latest_by_key[$key]=$version
+  done
+
+  printf '\n== %s ==\n' "$title"
+  for path in "${paths[@]}"; do
+    version=$(version_from_path "$target" "$path")
+    key=$(minor_key "$version")
+    reason=
+
+    if [ "$version" = "$current" ]; then
+      reason=current
+    elif [ "$target" = src ] && [ -n "$selected_src" ] && [ "$version" = "$selected_src" ]; then
+      reason=selected
+    elif contains_version "$version" "${extra_keep_versions[@]}"; then
+      reason=explicit
+    elif [ "${latest_by_key[$key]}" = "$version" ]; then
+      reason="latest-${key}"
+    fi
+
+    if [ -n "$reason" ]; then
+      keep_versions[$version]=1
+      printf 'keep  %-18s %s\n' "$version" "$reason"
+    fi
+  done
+
+  for path in "${paths[@]}"; do
+    version=$(version_from_path "$target" "$path")
+    [ -z "${keep_versions[$version]+x}" ] || continue
+    case "$target" in
+      boot-entry)
+        print_rm -f "$path"
+        ;;
+      *)
+        print_rm -rf "$path"
+        ;;
+    esac
+  done
+}
+
+plan_boot_prune() {
+  local -a payloads=()
+  local -a entries=()
+  local path version key reason
+  declare -A latest_by_key=()
+  declare -A keep_payload_versions=()
+
+  [ -d /boot/efi/gentoo ] || return 0
+
+  mapfile -t payloads < <(find /boot/efi/gentoo -mindepth 1 -maxdepth 1 -type d | sort -V)
+  mapfile -t entries < <(find /boot/efi/loader/entries -maxdepth 1 -type f -name 'gentoo-*.conf' 2>/dev/null | sort -V)
+
+  [ "${#payloads[@]}" -gt 0 ] || return 0
+
+  for path in "${payloads[@]}"; do
+    version=$(version_from_path boot-payload "$path")
+    key=$(minor_key "$version")
+    latest_by_key[$key]=$version
+  done
+
+  printf '\n== /boot/efi payloads ==\n'
+  for path in "${payloads[@]}"; do
+    version=$(version_from_path boot-payload "$path")
+    key=$(minor_key "$version")
+    reason=
+
+    if [ "$version" = "$current" ]; then
+      reason=current
+    elif contains_version "$version" "${extra_keep_versions[@]}"; then
+      reason=explicit
+    elif [ "${latest_by_key[$key]}" = "$version" ]; then
+      reason="latest-${key}"
+    fi
+
+    if [ -n "$reason" ]; then
+      keep_payload_versions[$version]=1
+      printf 'keep  %-18s %s\n' "$version" "$reason"
+    fi
+  done
+
+  for path in "${payloads[@]}"; do
+    version=$(version_from_path boot-payload "$path")
+    [ -z "${keep_payload_versions[$version]+x}" ] || continue
+    print_rm -rf "$path"
+  done
+
+  [ "${#entries[@]}" -gt 0 ] || return 0
+
+  printf '\n== /boot/efi loader entries ==\n'
+  for path in "${entries[@]}"; do
+    version=$(version_from_path boot-entry "$path")
+    if [ -n "${keep_payload_versions[$version]+x}" ]; then
+      printf 'keep  %-18s matching-payload\n' "$version"
+    elif [ "$version" = "$current" ] || contains_version "$version" "${extra_keep_versions[@]}"; then
+      printf 'keep  %-18s protected-missing-payload\n' "$version"
+    else
+      print_rm -f "$path"
+    fi
+  done
+}
+
+printf 'mode: %s\n' "$([ "$execute" -eq 1 ] && printf execute || printf dry-run)"
+printf 'current: %s\n' "$current"
+[ -n "$selected_src" ] && printf 'selected source: %s\n' "$selected_src"
+
+if [ "$prune_boot" -eq 1 ]; then
+  plan_boot_prune
+fi
+
+if [ "$prune_src" -eq 1 ] && [ -d /usr/src ]; then
+  mapfile -t src_paths < <(find /usr/src -maxdepth 1 -type d -name 'linux-[0-9]*' | sort -V)
+  plan_series_prune src "/usr/src sources" "${src_paths[@]}"
+fi
+
+if [ "$prune_modules" -eq 1 ] && [ -d /lib/modules ]; then
+  mapfile -t module_paths < <(find /lib/modules -mindepth 1 -maxdepth 1 -type d | sort -V)
+  plan_series_prune modules "/lib/modules" "${module_paths[@]}"
+fi
+
+if [ "$execute" -eq 0 ]; then
+  printf '\nDry-run only. Re-run with --execute to remove the listed paths.\n'
+fi
