@@ -5,6 +5,7 @@ output Virtual-1 disable
 
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK PATH
 exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK PATH
+exec systemctl --user start graphical-session.target
 
 output "*" bg #5e7e7e solid_color
 
