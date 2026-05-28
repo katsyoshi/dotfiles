@@ -176,6 +176,7 @@ net-misc/remmina
 net-misc/telnet-bsd
 net-misc/whois
 net-misc/xrdp
+net-misc/yt-dlp
 net-vpn/tailscale
 sci-ml/ollama
 sys-apps/bat
