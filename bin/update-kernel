@@ -1,32 +1,64 @@
-#!/bin/bash -xe
+#!/bin/bash
+set -euo pipefail
 
-function update-kernel() {
-  eselect kernel set 2
-  old_version=$(eselect kernel list|rg -e '\[\d+\]'|awk '{print $2}'|head -1|sed -e 's/linux-//'|sed -e 's/-gentoo$//')
-  emerge -C =gentoo-sources-${old_version}
-  cd /usr/src/linux
-  oldconfig
-  time make -j$(nproc)
-  make modules_install
-  emerge v4l2loopback
-  make install
+usage() {
+  cat <<'USAGE'
+usage: update-kernel [kernel-selector] [-r|--reboot]
+
+Update sys-kernel/gentoo-sources, then build and install a kernel.
+
+kernel-selector:
+  omitted       build the newest installed kernel after package update
+  latest        same as omitted
+  2             run `eselect kernel set 2`
+
+Use build-kernel when you only want to build an already installed source tree.
+USAGE
 }
 
-function oldconfig () {
-  if [ -e "/proc/config.gz" ]; then
-    echo 'copy from proc'
-    zcat /proc/config.gz > /usr/src/linux/.config
-  else
-    echo 'copy from old kernel dir'
-    oldver_config=/usr/src/$(ls /usr/src/ | tail -2 | head -1)/.config
-    echo 'cp ${oldver_config} /usr/src/linux/.config'
-    cp ${oldver_config} /usr/src/linux/.config
+main() {
+  local script_dir
+  local selector_seen=false
+  local -a build_args=()
+
+  script_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+
+  while [ "$#" -gt 0 ]; do
+    case "$1" in
+      -h|--help)
+        usage
+        exit 0
+        ;;
+      -r|--reboot)
+        build_args+=("$1")
+        ;;
+      *)
+        if [ "$selector_seen" = true ]; then
+          echo 'update-kernel: multiple kernel selectors specified' >&2
+          usage >&2
+          exit 1
+        fi
+
+        if [ "$1" != latest ] && ! [[ $1 =~ ^[0-9]+$ ]]; then
+          echo "update-kernel: selector must be an eselect kernel index or latest: $1" >&2
+          usage >&2
+          exit 1
+        fi
+
+        selector_seen=true
+        build_args+=("$1")
+        ;;
+    esac
+    shift
+  done
+
+  emerge --update sys-kernel/gentoo-sources
+
+  if [ "$selector_seen" = false ]; then
+    build_args=(latest "${build_args[@]}")
   fi
+
+  exec "$script_dir/build-kernel" "${build_args[@]}"
 }
 
-
-update-kernel
-
-if [[ $1 =~ "-r" ]]; then
-  shutdown -r now
-fi
+main "$@"

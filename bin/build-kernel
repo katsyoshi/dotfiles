@@ -1,0 +1,147 @@
+#!/bin/bash
+set -euo pipefail
+
+usage() {
+  cat <<'USAGE'
+usage: build-kernel [kernel-selector] [-r|--reboot]
+
+kernel-selector:
+  omitted       build currently selected /usr/src/linux
+  latest        select the newest installed kernel
+  2             run `eselect kernel set 2`
+
+Package-managed external modules are rebuilt with @module-rebuild.
+USAGE
+}
+
+selected_kernel() {
+  eselect kernel list | awk '/\*/ { print $2; exit }'
+}
+
+kernel_index_exists() {
+  local selector=$1
+
+  eselect kernel list |
+    awk -v selector="$selector" '
+      match($0, /\[[0-9]+\]/) {
+        index = substr($0, RSTART + 1, RLENGTH - 2)
+        if (index == selector) {
+          found = 1
+        }
+      }
+      END {
+        exit found ? 0 : 1
+      }
+    '
+}
+
+resolve_kernel_index() {
+  local selector=$1
+
+  if [ "$selector" = latest ]; then
+    eselect kernel list |
+      awk '
+        match($0, /\[[0-9]+\]/) {
+          index = substr($0, RSTART + 1, RLENGTH - 2)
+          version = $2
+          sub(/^linux-/, "", version)
+          print version "\t" index
+        }
+      ' |
+      sort -V |
+      tail -n 1 |
+      awk '{ print $2 }'
+    return
+  fi
+
+  if [[ $selector =~ ^[0-9]+$ ]]; then
+    if kernel_index_exists "$selector"; then
+      printf '%s\n' "$selector"
+      return
+    fi
+
+    echo "build-kernel: no installed kernel index: $selector" >&2
+    eselect kernel list >&2
+    exit 1
+  fi
+
+  echo "build-kernel: selector must be an eselect kernel index or latest: $selector" >&2
+  eselect kernel list >&2
+  exit 1
+}
+
+copy_config() {
+  local current=$1
+  local old_config
+
+  if [ -e /proc/config.gz ]; then
+    echo 'copy from /proc/config.gz'
+    zcat /proc/config.gz > /usr/src/linux/.config
+    return
+  fi
+
+  old_config=$(
+    find /usr/src -maxdepth 2 -path '/usr/src/linux-*/.config' -type f |
+      awk -v current="/usr/src/${current}/.config" '$0 != current' |
+      sort -V |
+      tail -n 1
+  )
+
+  if [ -z "$old_config" ]; then
+    echo 'build-kernel: no previous kernel config found' >&2
+    exit 1
+  fi
+
+  echo "copy from $old_config"
+  cp "$old_config" /usr/src/linux/.config
+}
+
+main() {
+  local selector=
+  local reboot=false
+  local index
+  local current
+
+  while [ "$#" -gt 0 ]; do
+    case "$1" in
+      -h|--help)
+        usage
+        exit 0
+        ;;
+      -r|--reboot)
+        reboot=true
+        ;;
+      *)
+        if [ -n "$selector" ]; then
+          echo 'build-kernel: multiple kernel selectors specified' >&2
+          usage >&2
+          exit 1
+        fi
+        selector=$1
+        ;;
+    esac
+    shift
+  done
+
+  if [ -n "$selector" ]; then
+    index=$(resolve_kernel_index "$selector")
+    eselect kernel set "$index"
+  fi
+
+  current=$(selected_kernel)
+  echo "build $current"
+
+  cd /usr/src/linux
+  copy_config "$current"
+  make oldconfig
+  time make -j"$(nproc)"
+  make modules_install
+  emerge @module-rebuild
+  make install
+
+  if [ "$reboot" = true ]; then
+    shutdown -r now
+  fi
+}
+
+main "$@"
