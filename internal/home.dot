@@ -1,0 +1,168 @@
+digraph home_network {
+  graph [
+    rankdir=LR,
+    compound=true,
+    bgcolor="transparent",
+    fontname="sans-serif",
+    label="Home network",
+    labelloc=t
+  ];
+
+  node [
+    shape=box,
+    style="rounded,filled",
+    fillcolor="#f8f8f8",
+    color="#555555",
+    fontname="sans-serif"
+  ];
+
+  edge [
+    color="#555555",
+    fontname="sans-serif"
+  ];
+
+  internet [
+    label="Internet",
+    shape=oval,
+    fillcolor="#ffffff"
+  ];
+
+  vpc [
+    shape=plain,
+    label=<
+      <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="8" COLOR="#999999" BGCOLOR="#fff8e8">
+        <TR>
+          <TD><B>VPC</B></TD>
+        </TR>
+        <TR>
+          <TD>
+            <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="6" COLOR="#555555" BGCOLOR="#f8f8f8">
+              <TR><TD><B>web</B></TD></TR>
+              <TR><TD>http: tcp/80</TD></TR>
+              <TR><TD>https: tcp/443</TD></TR>
+            </TABLE>
+          </TD>
+        </TR>
+        <TR>
+          <TD>
+            <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="6" COLOR="#555555" BGCOLOR="#f8f8f8">
+              <TR><TD><B>ssh</B></TD></TR>
+              <TR><TD>tcp/2222</TD></TR>
+            </TABLE>
+          </TD>
+        </TR>
+        <TR>
+          <TD>
+            <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="6" COLOR="#555555" BGCOLOR="#f8f8f8">
+              <TR><TD PORT="nftables"><B>nftables</B></TD></TR>
+              <TR><TD>public ssh blocked</TD></TR>
+            </TABLE>
+          </TD>
+        </TR>
+      </TABLE>
+    >
+  ];
+
+  subgraph cluster_home {
+    label="Home";
+    style="rounded,filled";
+    color="#999999";
+    fillcolor="#ffffff";
+
+    main [
+      label="main",
+      shape=box,
+      style="filled",
+      fillcolor="#fff8e8"
+    ];
+
+    home_server [
+      shape=plain,
+      label=<
+        <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="8" COLOR="#999999" BGCOLOR="#fff8e8">
+          <TR>
+            <TD><B>home-server</B></TD>
+          </TR>
+          <TR>
+            <TD>
+              <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="6" COLOR="#555555" BGCOLOR="#f8f8f8">
+                <TR><TD><B>NAS / photos</B></TD></TR>
+              </TABLE>
+            </TD>
+          </TR>
+        </TABLE>
+      >
+    ];
+
+    home_lan [
+      label="Home LAN",
+      shape=ellipse,
+      fillcolor="#ffffff"
+    ];
+
+    ap [
+      label="AP\nWi-Fi",
+      shape=box,
+      style="rounded,filled",
+      fillcolor="#ffffff"
+    ];
+
+    home_server -> home_lan [
+      dir=none,
+      label="normal LAN"
+    ];
+
+    main -> home_lan [
+      dir=none,
+      label="normal LAN"
+    ];
+
+    ap -> home_lan [
+      dir=none,
+      label="wireless"
+    ];
+
+    main -> home_server [
+      label="10G dedicated",
+      dir=both,
+      penwidth=3,
+      color="#111111"
+    ];
+  }
+
+  internet -> vpc [
+    label="HTTP/HTTPS",
+    color="#555555"
+  ];
+
+  internet -> vpc:nftables [
+    label="public SSH blocked",
+    style=dashed,
+    color="#cc3333",
+    fontcolor="#cc3333"
+  ];
+
+  main -> vpc [
+    label="Tailscale",
+    dir=both,
+    style=dashed,
+    color="#3366cc",
+    fontcolor="#3366cc"
+  ];
+
+  home_server -> vpc [
+    label="Tailscale",
+    dir=both,
+    style=dashed,
+    color="#3366cc",
+    fontcolor="#3366cc"
+  ];
+
+  home_server -> vpc [
+    label="WireGuard fallback\nudp/39814",
+    dir=both,
+    style=dashed,
+    color="#228833",
+    fontcolor="#228833"
+  ];
+}
