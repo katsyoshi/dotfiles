@@ -1,0 +1,13 @@
+[Default Applications]
+image/avif=imv-dir.desktop
+image/bmp=imv-dir.desktop
+image/gif=imv-dir.desktop
+image/heic=imv-dir.desktop
+image/heif=imv-dir.desktop
+image/jpeg=imv-dir.desktop
+image/jxl=imv-dir.desktop
+image/png=imv-dir.desktop
+image/svg+xml=imv-dir.desktop
+image/tiff=imv-dir.desktop
+image/webp=imv-dir.desktop
+image/x-icon=imv-dir.desktop
