@@ -3,3 +3,8 @@
 /wezterm/user/
 /zellij/dump-layout/
 /zellij/layouts/work.kdl
+/**/*.png
+/**/*.svg
+/**/*.webp
+/**/*.jpg
+/**/*.jpeg
