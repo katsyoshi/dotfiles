@@ -20,8 +20,7 @@ keybinds clear-defaults=true {
     bind "v" { NewPane "Down"; SwitchToMode "Normal"; }
     bind "h" { NewPane "Right"; SwitchToMode "Normal"; }
     bind "f" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
-    bind "c" { NewTab { name "SHELL"; cwd "."; layout "newtab"; }; SwitchToMode "Normal"; }
-    bind "Ctrl c" { NewTab { name "CODEX"; cwd "."; layout "ai"; }; SwitchToMode "Normal"; }
+    bind "c" { NewTab { name "CODEX"; cwd "."; layout "ai"; }; SwitchToMode "Normal"; }
     bind "," { SwitchToMode "RenameTab"; }
     bind "p" { GoToPreviousTab; SwitchToMode "Normal"; }
     bind "n" { GoToNextTab; SwitchToMode "Normal"; }
@@ -57,3 +56,4 @@ mouse_mode true
 scrollback_editor "/usr/bin/emacsclient -nw -s katsyoshi"
 pane_frames false
 theme "nord"
+default_layout "ai"

@@ -1,2 +1,18 @@
 layout {
+  tab cwd="~/Program/Work/" name="WORK" {
+    pane split_direction="vertical" {
+      pane split_direction="horizontal" {
+        pane cwd="~/Program/Work/repro-local-compose"
+        pane
+      }
+      pane {
+        command "emacsclient"
+        args "-nw" "-s" "work" "-e" "(magit-status \"repro.rails\")"
+        cwd "~/Program/Work"
+      }
+    }
+    pane size=1 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+  }
 }

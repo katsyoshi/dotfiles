@@ -1,0 +1,78 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "optparse"
+
+options = {
+  cwd: ENV.fetch("ZELLIJ_NEWTAB_CWD", Dir.pwd),
+  layout: ENV.fetch("ZELLIJ_NEWTAB_LAYOUT", "newtab"),
+  name: nil,
+}
+default_name = ENV["ZELLIJ_NEWTAB_NAME"]
+name_set = false
+
+args = ARGV.dup
+command_index = args.index("--")
+command = command_index ? args[(command_index + 1)..] : []
+tab_args = command_index ? args[...command_index] : args
+
+parser = OptionParser.new do |opts|
+  opts.banner = "Usage: zellij-newtab [OPTIONS] [NAME] [-- INITIAL_COMMAND...]"
+  opts.separator ""
+  opts.separator "Create a new Zellij tab with the newtab layout."
+  opts.separator "If NAME is omitted, the target directory name is used."
+  opts.separator ""
+  opts.separator "Options:"
+
+  opts.on("-n", "--name NAME", "Set the tab name") do |name|
+    options[:name] = name
+    name_set = true
+  end
+
+  opts.on("-C", "--cwd DIR", "Set the tab working directory") do |cwd|
+    options[:cwd] = cwd.sub(/\A=/, "")
+  end
+
+  opts.on("-l", "--layout LAYOUT", "Set the tab layout") do |layout|
+    options[:layout] = layout.sub(/\A=/, "")
+  end
+
+  opts.on("-h", "--help", "Show this help") do
+    puts opts
+    exit
+  end
+end
+
+begin
+  parser.parse!(tab_args)
+rescue OptionParser::ParseError => e
+  warn "zellij-newtab: #{e.message}"
+  exit 2
+end
+
+if name_set && !tab_args.empty?
+  warn "zellij-newtab: unexpected argument: #{tab_args.first}"
+  exit 2
+end
+
+if tab_args.length > 1
+  warn "zellij-newtab: unexpected argument: #{tab_args[1]}"
+  exit 2
+end
+
+cwd = File.expand_path(options[:cwd])
+name = options[:name] || tab_args.first || default_name || File.basename(cwd)
+zellij_args = [
+  "zellij",
+  "action",
+  "new-tab",
+  "--cwd",
+  cwd,
+  "--name",
+  name,
+  "--layout",
+  options[:layout],
+]
+zellij_args.concat(["--", *command]) unless command.empty?
+
+exec(*zellij_args)

@@ -1,0 +1,8 @@
+#!/bin/sh
+set -eu
+
+config_home=${XDG_CONFIG_HOME:-$HOME/.config}
+export ZELLIJ_NEWTAB_LAYOUT=${ZELLIJ_NEWTAB_LAYOUT:-ai}
+export ZELLIJ_NEWTAB_NAME=${ZELLIJ_NEWTAB_NAME:-CODEX}
+
+exec zellij --config "${ZELLIJ_AI_CONFIG:-$config_home/zellij/ai.kdl}" "$@"

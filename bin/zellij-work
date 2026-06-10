@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+
+config_home=${XDG_CONFIG_HOME:-$HOME/.config}
+
+exec zellij --config "${ZELLIJ_WORK_CONFIG:-$config_home/zellij/work.kdl}" "$@"
