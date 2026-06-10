@@ -24,8 +24,8 @@ kernel_index_exists() {
   eselect kernel list |
     awk -v selector="$selector" '
       match($0, /\[[0-9]+\]/) {
-        index = substr($0, RSTART + 1, RLENGTH - 2)
-        if (index == selector) {
+        kernel_index = substr($0, RSTART + 1, RLENGTH - 2)
+        if (kernel_index == selector) {
           found = 1
         }
       }
@@ -42,10 +42,10 @@ resolve_kernel_index() {
     eselect kernel list |
       awk '
         match($0, /\[[0-9]+\]/) {
-          index = substr($0, RSTART + 1, RLENGTH - 2)
+          kernel_index = substr($0, RSTART + 1, RLENGTH - 2)
           version = $2
           sub(/^linux-/, "", version)
-          print version "\t" index
+          print version "\t" kernel_index
         }
       ' |
       sort -V |
@@ -99,7 +99,7 @@ copy_config() {
 main() {
   local selector=
   local reboot=false
-  local index
+  local kernel_index
   local current
 
   while [ "$#" -gt 0 ]; do
@@ -124,8 +124,8 @@ main() {
   done
 
   if [ -n "$selector" ]; then
-    index=$(resolve_kernel_index "$selector")
-    eselect kernel set "$index"
+    kernel_index=$(resolve_kernel_index "$selector")
+    eselect kernel set "$kernel_index"
   fi
 
   current=$(selected_kernel)
