@@ -100,6 +100,9 @@ assign [app_id="org.remmina.Remmina"] $ws5
 assign [app_id="com.obsproject.Studio"] $ws5
 assign [instance="jetbrains-studio"] $ws8
 
+# floating applications
+for_window [app_id="imv"] floating enable, move position center
+
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
