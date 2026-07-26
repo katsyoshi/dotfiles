@@ -1,9 +1,6 @@
 layout {
-  tab cwd="~" {
-    pane split_direction="vertical" {
-      pane
-      pane command="btm" close_on_exit=true
-    }
+  tab name="SHELL:zsh" cwd="~" {
+    pane
     pane size=1 borderless=true {
       plugin location="zellij:tab-bar"
     }

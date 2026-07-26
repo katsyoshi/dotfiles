@@ -22,6 +22,8 @@ keybinds clear-defaults=true {
     bind "f" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
     bind "c" { NewTab { name "SHELL"; cwd "."; layout "newtab"; }; SwitchToMode "Normal"; }
     bind "Ctrl c" { NewTab { name "CODEX"; cwd "."; layout "ai"; }; SwitchToMode "Normal"; }
+    bind "Ctrl s" { NewTab { name "SSH:RIN"; layout "newtab"; }; Run "ssh" "rin" { in_place true; close_replaced_pane true; close_on_exit true; }; SwitchToMode "Normal"; }
+    bind "Ctrl S" { NewTab { name "SSH:SAKURA"; layout "newtab"; }; Run "ssh" "sakra" { in_place true; close_replaced_pane true; close_on_exit true; }; SwitchToMode "Normal"; }
     bind "," { SwitchToMode "RenameTab"; }
     bind "p" { GoToPreviousTab; SwitchToMode "Normal"; }
     bind "n" { GoToNextTab; SwitchToMode "Normal"; }
