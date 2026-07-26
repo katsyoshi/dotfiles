@@ -9,6 +9,7 @@ sudo_cmd=${SUDO:-doas}
 current=$(uname -r)
 selected_src=
 declare -a extra_keep_versions=()
+declare -a keep_files=()
 
 usage() {
   cat <<'USAGE'
@@ -18,20 +19,38 @@ Prune old Gentoo kernel artifacts while keeping:
   - the newest version for each major.minor series
   - the currently running kernel
   - /usr/src/linux's symlink target, for /usr/src cleanup
-  - versions passed with --keep VERSION
+  - versions passed with --keep VERSION or --keep-file FILE
 
 By default this is a dry-run. Pass --execute to delete.
 
 Options:
-  -x, --execute       Actually remove files
-  -n, --dry-run       Print what would be removed (default)
-      --no-boot       Skip /boot/efi/gentoo and loader entries
-      --no-src        Skip /usr/src/linux-* trees
-      --no-modules    Skip /lib/modules/*
-      --keep VERSION  Always keep VERSION
-      --sudo CMD      Command used for deletion (default: doas)
-  -h, --help          Show this help
+  -x, --execute         Actually remove files
+  -n, --dry-run         Print what would be removed (default)
+      --no-boot         Skip /boot/efi/gentoo and loader entries
+      --no-src          Skip /usr/src/linux-* trees
+      --no-modules      Skip /lib/modules/*
+      --keep VERSION    Always keep VERSION; may be repeated
+      --keep-file FILE  Read versions to keep, one per line; may be repeated
+      --sudo CMD        Command used for deletion (default: doas)
+  -h, --help            Show this help
 USAGE
+}
+
+load_keep_file() {
+  local path=$1
+  local line
+
+  if [ ! -r "$path" ]; then
+    echo "prune-kernels: cannot read keep file: $path" >&2
+    exit 2
+  fi
+
+  while IFS= read -r line || [ -n "$line" ]; do
+    line=${line%%#*}
+    line=${line#"${line%%[![:space:]]*}"}
+    line=${line%"${line##*[![:space:]]}"}
+    [ -n "$line" ] && extra_keep_versions+=("$line")
+  done < "$path"
 }
 
 while [ "$#" -gt 0 ]; do
@@ -59,6 +78,14 @@ while [ "$#" -gt 0 ]; do
       fi
       extra_keep_versions+=("$1")
       ;;
+    --keep-file)
+      shift
+      if [ "$#" -eq 0 ]; then
+        echo "prune-kernels: --keep-file requires a file" >&2
+        exit 2
+      fi
+      keep_files+=("$1")
+      ;;
     --sudo)
       shift
       if [ "$#" -eq 0 ]; then
@@ -78,6 +105,10 @@ while [ "$#" -gt 0 ]; do
       ;;
   esac
   shift
+done
+
+for keep_file in "${keep_files[@]}"; do
+  load_keep_file "$keep_file"
 done
 
 if [ -L /usr/src/linux ]; then
