@@ -138,6 +138,7 @@ net-vpn/tailscale ~amd64
 net-vpn/wireguard-tools ~amd64
 sci-libs/fftw ~amd64
 sci-libs/openblas ~amd64
+sci-ml/ggml ~amd64
 sci-ml/ollama ~amd64
 sys-apps/amdgpu_top ~amd64
 sys-apps/bubblewrap ~amd64
@@ -154,6 +155,7 @@ sys-devel/crossdev ~amd64
 sys-devel/gcc ~amd64
 sys-devel/gcc-config ~amd64
 sys-devel/mold ~amd64
+sys-fs/dua-cli ~amd64
 sys-fs/jmtpfs ~amd64
 sys-kernel/gentoo-sources ~amd64
 sys-libs/glibc ~amd64

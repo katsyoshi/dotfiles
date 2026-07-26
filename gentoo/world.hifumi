@@ -7,6 +7,7 @@ app-admin/mcelog
 app-admin/rasdaemon
 app-admin/terraform
 app-arch/rpm2targz
+app-benchmarks/hyperfine
 app-benchmarks/wrk
 app-containers/docker
 app-containers/docker-buildx
@@ -180,6 +181,7 @@ net-misc/yt-dlp
 net-vpn/tailscale
 sci-ml/ollama
 sys-apps/bat
+sys-apps/dmidecode
 sys-apps/eza
 sys-apps/fd
 sys-apps/lshw
@@ -187,12 +189,15 @@ sys-apps/memtest86+
 sys-apps/nvme-cli
 sys-apps/ripgrep
 sys-apps/usbutils
+sys-apps/uutils-coreutils
 sys-apps/uutils-findutils
 sys-apps/xdg-desktop-portal-gtk
 sys-apps/xdg-desktop-portal-xapp
 sys-auth/rtkit
+sys-block/dust
 sys-devel/gcc:13
 sys-devel/mold
+sys-fs/dua-cli
 sys-fs/fuse-exfat
 sys-kernel/gentoo-sources
 sys-kernel/installkernel
@@ -200,6 +205,7 @@ sys-kernel/linux-firmware
 sys-process/bottom
 sys-process/btop
 sys-process/lsof
+sys-process/numactl
 sys-process/nvtop
 sys-process/procs
 www-apps/zola
