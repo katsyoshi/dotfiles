@@ -1,0 +1,92 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "Noto Sans Mono", "Symbols Nerd Font";
+  font-size: 13px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: transparent;
+  color: #d8dee9;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  margin: 6px 8px;
+  padding: 0 6px;
+  background: rgba(20, 24, 32, 0.94);
+  border: 1px solid rgba(51, 204, 255, 0.72);
+  border-radius: 10px;
+}
+
+#workspaces button {
+  padding: 0 8px;
+  color: #7f8c98;
+  background: transparent;
+  border-radius: 8px;
+}
+
+#workspaces button:hover {
+  color: #33ccff;
+  background: rgba(51, 204, 255, 0.12);
+}
+
+#workspaces button.active {
+  color: #101820;
+  background: #00ff99;
+}
+
+#workspaces button.urgent {
+  color: #ffffff;
+  background: #ff5370;
+}
+
+#submap {
+  padding: 0 10px;
+  color: #00ff99;
+}
+
+#window {
+  padding: 0 12px;
+  color: #d8dee9;
+}
+
+#tray,
+#disk,
+#cpu,
+#memory,
+#clock {
+  padding: 0 9px;
+}
+
+#disk,
+#cpu,
+#memory {
+  color: #a9b7c6;
+}
+
+#clock {
+  color: #33ccff;
+  font-weight: bold;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background: #ff5370;
+}
+
+tooltip {
+  background: rgba(20, 24, 32, 0.98);
+  border: 1px solid #33ccff;
+  border-radius: 8px;
+}
+
+tooltip label {
+  color: #d8dee9;
+}

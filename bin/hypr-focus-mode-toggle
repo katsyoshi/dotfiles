@@ -1,0 +1,8 @@
+#!/bin/sh
+set -eu
+
+if hyprctl activewindow -j | jq -e '.floating' >/dev/null; then
+  exec hyprctl dispatch cyclenext tiled
+else
+  exec hyprctl dispatch cyclenext floating
+fi

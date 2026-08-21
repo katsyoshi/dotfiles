@@ -1,67 +1,92 @@
 #!/usr/bin/env ruby
 
-require 'bundler/inline'
-
-gemfile do
-  source "https://rubygems.org"
-  gem "i3ipc"
-end
-
-require "i3ipc"
+require "json"
 require "open3"
+require "set"
 
-class SwayWindowSwithcer
-  def self.switch = new.switch
+class HyprlandWindows
   def initialize
-    @conn = I3Ipc::Connection.new
-    @workspaces = @conn.workspaces
-    @windows = Set.new
-    set_windows
+    output, status = Open3.capture2("hyprctl", "clients", "-j")
+    raise "hyprctl clients failed" unless status.success?
+
+    @windows = JSON.parse(output).select { |window| window["mapped"] }
   end
 
-  def switch
-    return if (index = target).nil?
+  def labels
+    @windows.map do |window|
+      workspace = window.dig("workspace", "name")
+      "#{workspace} [#{window["class"]}] #{window["title"]}"
+    end
+  end
 
-    con_id = @windows.to_a[index].to_h[:id]
-    @conn.command("[con_id=#{con_id}] focus")
+  def focus(index)
+    address = @windows.fetch(index).fetch("address")
+    return if system("hyprctl", "dispatch", "focuswindow", "address:#{address}")
+
+    raise "failed to focus Hyprland window #{address}"
+  end
+end
+
+class SwayWindows
+  def initialize
+    require "i3ipc"
+
+    @connection = I3Ipc::Connection.new
+    @windows = Set.new
+    displays.each { |display| @windows += list_windows(display.nodes) }
+    @windows = @windows.to_a
+  end
+
+  def labels
+    @windows.map(&:name)
+  end
+
+  def focus(index)
+    id = @windows.fetch(index).to_h.fetch(:id)
+    @connection.command("[con_id=#{id}] focus")
   end
 
   private
 
-  def list_window = @windows.map(&:name)
-  def displays = @conn.tree.nodes.reject { |display| display.name == "__i3" }
-
-  def target
-    content = nil
-    Open3.popen3(['wofi', '-i', '-k', '/dev/null', '-d'].join " ") do |i, o, e, _w|
-      i.puts list_window.join("\n")
-      i.close
-      content = o.read.strip
-      list_window.index(content)
-    end
-  rescue => e
-    @conn.command("exec notify-send '#{e.message}'")
-    raise e
+  def displays
+    @connection.tree.nodes.reject { |display| display.name == "__i3" }
   end
 
-  def set_windows
-    displays.map do |display|
-      @windows += listup_windows(display.nodes)
-    end
-  end
-
-  def listup_windows(ary)
-    res = []
-
-    ary.each do |node|
+  def list_windows(nodes)
+    nodes.each_with_object([]) do |node, windows|
       if node.nodes.empty?
-        res << node if node.type == "con"
+        windows << node if node.type == "con"
       else
-        res += listup_windows(node.nodes)
+        windows.concat(list_windows(node.nodes))
       end
     end
-    res
   end
 end
 
-SwayWindowSwithcer.switch
+def choose(labels)
+  selected = nil
+
+  Open3.popen3("wofi", "-i", "-k", "/dev/null", "-d") do |stdin, stdout, _stderr, wait|
+    stdin.puts(labels)
+    stdin.close
+    selected = stdout.read.strip
+    return nil unless wait.value.success?
+  end
+
+  labels.index(selected)
+end
+
+begin
+  backend = if ENV.key?("HYPRLAND_INSTANCE_SIGNATURE") || ENV.fetch("XDG_CURRENT_DESKTOP", "").include?("Hyprland")
+              HyprlandWindows.new
+            else
+              SwayWindows.new
+            end
+
+  index = choose(backend.labels)
+  backend.focus(index) if index
+rescue StandardError => error
+  system("notify-send", "Window switcher", error.message)
+  warn error.full_message
+  exit 1
+end
