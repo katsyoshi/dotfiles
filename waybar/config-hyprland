@@ -1,0 +1,7 @@
+{
+  "include": "~/.config/waybar/config-common",
+  "layer": "top",
+  "height": 42,
+  "modules-left": ["hyprland/workspaces", "hyprland/submap"],
+  "modules-center": ["hyprland/window"]
+}

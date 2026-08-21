@@ -1,0 +1,7 @@
+{
+  "include": "~/.config/waybar/config-common",
+  "layer": "bottom",
+  "height": 30,
+  "modules-left": ["sway/workspaces", "sway/mode"],
+  "modules-center": ["sway/window"]
+}

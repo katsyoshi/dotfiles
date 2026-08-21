@@ -169,7 +169,7 @@ client.unfocused           #000000 #073642 #839496
 client.urgent              #dc322f #dc322f #dc322f
 
 bar {
-  status_command waybar
+  status_command waybar -c ~/.config/waybar/config-sway -s ~/.config/waybar/style.css
   mode invisible
 }
 

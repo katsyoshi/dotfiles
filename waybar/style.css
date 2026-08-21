@@ -33,7 +33,8 @@ window#waybar {
   background: rgba(51, 204, 255, 0.12);
 }
 
-#workspaces button.active {
+#workspaces button.active,
+#workspaces button.focused {
   color: #101820;
   background: #00ff99;
 }
@@ -43,7 +44,8 @@ window#waybar {
   background: #ff5370;
 }
 
-#submap {
+#submap,
+#mode {
   padding: 0 10px;
   color: #00ff99;
 }

@@ -1,14 +1,10 @@
 {
-  "layer": "top",
   "position": "top",
-  "height": 42,
   "spacing": 5,
-  "modules-left": ["hyprland/workspaces", "hyprland/submap"],
-  "modules-center": ["hyprland/window"],
   "modules-right": ["tray", "disk", "cpu", "memory", "clock"],
   "clock": {
     "interval": 1,
-    "format":  "{:%Y/%m/%d %a %H:%M:%S}"
+    "format": "{:%Y/%m/%d %a %H:%M:%S}"
   },
   "cpu": {
     "interval": 1,
