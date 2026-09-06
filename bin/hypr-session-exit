@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+
+choice=$(printf '%s\n' Cancel Exit | wofi --dmenu --prompt 'Exit Hyprland?')
+[ "$choice" = Exit ] || exit 0
+
+hyprctl dispatch 'hl.dsp.exit()'

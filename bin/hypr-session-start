@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+
+systemctl --user import-environment HYPRLAND_INSTANCE_SIGNATURE WAYLAND_DISPLAY XDG_CURRENT_DESKTOP PATH
+dbus-update-activation-environment --systemd DISPLAY HYPRLAND_INSTANCE_SIGNATURE WAYLAND_DISPLAY XDG_CURRENT_DESKTOP PATH
+systemctl --user start hyprland-session.target
+systemctl --user start foot-server.service
