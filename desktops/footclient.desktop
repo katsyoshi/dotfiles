@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Foot
+GenericName=Terminal Emulator
+Comment=Wayland terminal emulator
+Exec=footclient
+Icon=foot
+Terminal=false
+Type=Application
+Categories=System;TerminalEmulator;
+Keywords=terminal;shell;command;prompt;
+StartupNotify=true
+StartupWMClass=footclient
