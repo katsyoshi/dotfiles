@@ -1,0 +1,16 @@
+show=drun
+width=680
+height=480
+location=center
+anchor=center
+orientation=vertical
+columns=1
+always_parse_args=true
+show_all=true
+insensitive=true
+allow_images=true
+image_size=32
+normal_window=true
+allow_markup=true
+matching=fuzzy
+prompt=Applications
