@@ -1,5 +1,5 @@
 layout {
-  tab {
+  tab name="AI" {
     pane size=1 borderless=true {
       plugin location="zellij:tab-bar"
     }

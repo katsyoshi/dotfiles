@@ -1,1 +1,1 @@
-KEYBOARD_TYPE="PRK Firmware developers Default VID/PID Keyboard"
+KEYBOARD_TYPE="/dev/input/by-id/usb-PicoRuby_R2P2_E46450D21B3C4C25-if06-event-kbd"

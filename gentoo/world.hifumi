@@ -92,9 +92,11 @@ gnome-base/gdm
 gnome-extra/libgda
 gui-apps/foot
 gui-apps/grim
+gui-apps/hyprpaper
 gui-apps/mako
 gui-apps/slurp
 gui-apps/waybar
+gui-apps/wev
 gui-apps/wf-recorder
 gui-apps/wl-clipboard
 gui-apps/wofi
@@ -200,6 +202,16 @@ sys-devel/mold
 sys-fs/dua-cli
 sys-fs/fuse-exfat
 sys-kernel/gentoo-sources
+sys-kernel/gentoo-sources:7.2.11
+sys-kernel/gentoo-sources:7.2.2
+sys-kernel/gentoo-sources:7.2.3
+sys-kernel/gentoo-sources:7.2.4
+sys-kernel/gentoo-sources:7.2.5
+sys-kernel/gentoo-sources:7.2.6
+sys-kernel/gentoo-sources:7.2.7
+sys-kernel/gentoo-sources:7.2.8
+sys-kernel/gentoo-sources:7.2.9
+sys-kernel/gentoo-sources:7.3.0
 sys-kernel/installkernel
 sys-kernel/linux-firmware
 sys-process/bottom
@@ -214,7 +226,6 @@ www-client/firefox-bin:rapid
 www-client/google-chrome
 www-servers/h2o
 x11-apps/xlsclients
-x11-misc/sddm
 x11-misc/slim
 x11-terms/alacritty
 x11-terms/wezterm

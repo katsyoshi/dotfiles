@@ -21,7 +21,10 @@ fi
 : "${KEYBOARD_TYPE:?KEYBOARD_TYPE is not set in $env_file}"
 
 device_ready() {
-  grep -F "Name=\"$KEYBOARD_TYPE\"" /proc/bus/input/devices >/dev/null 2>&1
+  case "$KEYBOARD_TYPE" in
+    /dev/*) [ -e "$KEYBOARD_TYPE" ] ;;
+    *) grep -F "Name=\"$KEYBOARD_TYPE\"" /proc/bus/input/devices >/dev/null 2>&1 ;;
+  esac
 }
 
 while :; do
@@ -31,7 +34,7 @@ while :; do
   done
 
   printf '%s starting xremap for device: %s\n' "$(date '+%Y-%m-%d %H:%M:%S')" "$KEYBOARD_TYPE" >> "$log"
-  /usr/bin/xremap "$config" --device "$KEYBOARD_TYPE" >> "$log" 2>> "$error_log"
+  /usr/bin/xremap "$config" --device "$KEYBOARD_TYPE" --watch=device >> "$log" 2>> "$error_log"
   status=$?
 
   printf '%s xremap exited with status %s\n' "$(date '+%Y-%m-%d %H:%M:%S')" "$status" >> "$error_log"

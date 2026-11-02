@@ -32,7 +32,11 @@ hl.config({
   dwindle = { preserve_split = true },
   master = { new_status = "master" },
   group = { groupbar = { enabled = false } },
-  misc = { force_default_wallpaper = -1 },
+  misc = {
+    -- Wallpaper is managed by hyprpaper.
+    disable_hyprland_logo = true,
+    disable_splash_rendering = true,
+  },
 })
 
 hl.curve("myBezier", {

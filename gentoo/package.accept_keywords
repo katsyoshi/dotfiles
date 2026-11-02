@@ -1,3 +1,4 @@
+*/hypr*::hyproverlay ~amd64
 acct-user/ollama ~amd64
 app-admin/awscli-bin ~amd64
 app-admin/supervisor ~amd64
@@ -69,7 +70,9 @@ dev-vcs/git ~amd64
 dev-qt/* ~amd64
 dev-texlive/* ~amd64
 games-fps/nexuiz ~amd64
+gui-apps/hypr* ~amd64
 gui-apps/waybar ~amd64
+gui-apps/wev ~amd64
 gui-apps/wf-recorder ~amd64
 gui-apps/wofi ~amd64
 gui-apps/xremap ~amd64
