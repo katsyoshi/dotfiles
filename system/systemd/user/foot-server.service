@@ -1,10 +1,14 @@
 [Unit]
 Description=Foot terminal server
+Documentation=man:foot(1)
+Requires=foot-server.socket
+PartOf=graphical-session.target
 
 [Service]
-Type=simple
-ExecStart=/usr/bin/foot --server
+ExecStart=/usr/bin/foot --server=3
+UnsetEnvironment=LISTEN_PID LISTEN_FDS LISTEN_FDNAMES
+NonBlocking=true
 Restart=on-failure
 
 [Install]
-WantedBy=default.target
+WantedBy=graphical-session.target

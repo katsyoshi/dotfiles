@@ -1,0 +1,19 @@
+#!/bin/sh
+set -eu
+
+if ! pgrep -x fcitx5 >/dev/null 2>&1; then
+  fcitx5 -d
+fi
+
+# Wait until the daemon accepts commands, then select Mozc and start in
+# Direct mode. Henkan enables Mozc; Muhenkan disables it again.
+for _ in $(seq 1 20); do
+  if fcitx5-remote >/dev/null 2>&1; then
+    fcitx5-remote -s mozc
+    fcitx5-remote -c
+    exit 0
+  fi
+  sleep 0.1
+done
+
+exit 1

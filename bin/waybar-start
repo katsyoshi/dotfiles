@@ -1,0 +1,46 @@
+#!/bin/sh
+
+set -u
+
+log_file="${WAYBAR_START_LOG:-${XDG_STATE_HOME:-$HOME/.local/state}/waybar-start.log}"
+mkdir -p "$(dirname "$log_file")"
+
+log() {
+  printf '%s [waybar-start] %s\n' "$(date '+%Y-%m-%dT%H:%M:%S%z')" "$*" >>"$log_file"
+}
+
+log "start pid=$$ uid=$(id -u) WAYLAND_DISPLAY=${WAYLAND_DISPLAY:-unset} DISPLAY=${DISPLAY:-unset} HYPRLAND_INSTANCE_SIGNATURE=${HYPRLAND_INSTANCE_SIGNATURE:-unset}"
+trap 'status=$?; log "exit status=$status"' EXIT
+
+# The repository supports both the regular Hyprland config and the Lua config;
+# both can run this helper during a transition. Keep only one Waybar.
+if pgrep -x waybar >/dev/null 2>&1; then
+  log "waybar is already running; skip"
+  exit 0
+fi
+
+# Hyprland may invoke exec-once before the Wayland socket is ready. Retry a
+# short while because Waybar exits immediately when it cannot connect.
+for _ in $(seq 1 20); do
+  log "starting waybar attempt=$_"
+  # Hyprland sessions can inherit DISPLAY=:0 from the login environment.
+  # Force GTK/Waybar to use the compositor's Wayland socket instead.
+  # A stale DISPLAY inherited from the login session makes GTK select the
+  # unavailable X11 display before Wayland, even inside Hyprland.
+  if env -u DISPLAY GDK_BACKEND=wayland waybar \
+    -c "$HOME/.config/waybar/config-hyprland" \
+    -s "$HOME/.config/waybar/style.css"; then
+    log "waybar exited successfully"
+    exit 0
+  fi
+  status=$?
+  log "waybar exited status=$status; retrying"
+  sleep 1
+  if pgrep -x waybar >/dev/null 2>&1; then
+    log "waybar is running after failed/retried launch"
+    exit 0
+  fi
+done
+
+log "waybar failed after 20 attempts"
+exit 1

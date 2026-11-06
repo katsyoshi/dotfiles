@@ -3,5 +3,6 @@ Description=Hyprland compositor session
 Documentation=man:systemd.special(7)
 BindsTo=graphical-session.target
 Wants=graphical-session-pre.target
+Wants=foot-server.socket
 After=graphical-session-pre.target
 Before=graphical-session.target

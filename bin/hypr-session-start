@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 
-systemctl --user import-environment HYPRLAND_INSTANCE_SIGNATURE WAYLAND_DISPLAY XDG_CURRENT_DESKTOP PATH
-dbus-update-activation-environment --systemd DISPLAY HYPRLAND_INSTANCE_SIGNATURE WAYLAND_DISPLAY XDG_CURRENT_DESKTOP PATH
+systemctl --user import-environment DISPLAY HYPRLAND_INSTANCE_SIGNATURE WAYLAND_DISPLAY XDG_CURRENT_DESKTOP PATH XMODIFIERS GTK_IM_MODULE QT_IM_MODULE SDL_IM_MODULE
+dbus-update-activation-environment --systemd DISPLAY HYPRLAND_INSTANCE_SIGNATURE WAYLAND_DISPLAY XDG_CURRENT_DESKTOP PATH XMODIFIERS GTK_IM_MODULE QT_IM_MODULE SDL_IM_MODULE
 systemctl --user start hyprland-session.target
-systemctl --user start foot-server.service
+systemctl --user start foot-server.socket

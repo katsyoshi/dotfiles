@@ -1,7 +1,7 @@
 [Hotkey/TriggerKeys]
 
 [Hotkey/ActivateKeys]
-0=Henkan
+0=Hangul_Hanja
 
 [Hotkey/DeactivateKeys]
-0=Muhenkan
+0=Hangul

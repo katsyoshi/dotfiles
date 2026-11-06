@@ -46,6 +46,7 @@ end
 hl.bind(main_mod .. " + Tab", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(main_mod .. " + SHIFT + Tab", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(main_mod .. " + SHIFT + C", hl.dsp.exec_cmd("hyprctl reload"))
+hl.bind(main_mod .. " + Escape", hl.dsp.exec_cmd("makoctl dismiss --all"))
 hl.bind(main_mod .. " + SHIFT + Y", hl.dsp.exec_cmd([[cliphist list | wofi --dmenu --pre-display-cmd "echo '%s' | cut -f 2" | cliphist decode | wl-copy]]))
 hl.bind(main_mod .. " + T", hl.dsp.exec_cmd("LANG=ja_JP.utf8 wofi-window-switcher"))
 hl.bind(main_mod .. " + E", hl.dsp.exec_cmd("~/bin/wl-screen-shot"))

@@ -1,0 +1,9 @@
+[Unit]
+Description=Foot terminal server socket
+PartOf=graphical-session.target
+
+[Socket]
+ListenStream=%t/foot.sock
+
+[Install]
+WantedBy=graphical-session.target
