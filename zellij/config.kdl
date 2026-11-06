@@ -56,6 +56,6 @@ plugins {
 }
 
 mouse_mode true
-scrollback_editor "/usr/bin/emacsclient -nw -s katsyoshi"
+    scrollback_editor "/usr/bin/emacsclient -nw -s default"
 pane_frames false
 theme "nord"
