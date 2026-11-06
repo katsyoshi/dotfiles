@@ -116,6 +116,7 @@ media-plugins/grilo-plugins tracker
 media-sound/pulseaudio gtk dbus
 media-sound/deadbeef aac ffmpeg pipewire sndfile wavpack
 media-video/ffmpeg openh264 aac alsa faac hardcoded-tables gif v4l libv4l webp jpeg2k x265 theora mp3 x264 vorbis xvid vpx opus vaapi
+media-video/ffmpeg-compat x264
 media-video/obs-studio lua pipewire python truetype v4l lua_single_target_luajit
 media-video/pipewire bluetooth extra ffmpeg v4l sound-server -X
 media-video/wireplumber -lua_single_target_luajit -lua_single_target_lua5-1 lua_single_target_lua5-4

@@ -1,11 +1,9 @@
 acct-group/input
 acct-group/plugdev
 app-admin/apache-tools
-app-admin/awscli-bin
 app-admin/doas
 app-admin/mcelog
 app-admin/rasdaemon
-app-admin/terraform
 app-arch/rpm2targz
 app-benchmarks/hyperfine
 app-benchmarks/wrk
@@ -174,7 +172,6 @@ net-im/zoom
 net-libs/libnma
 net-libs/webkit-gtk:4.1
 net-misc/iperf
-net-misc/ntp
 net-misc/remmina
 net-misc/telnet-bsd
 net-misc/whois
@@ -202,16 +199,6 @@ sys-devel/mold
 sys-fs/dua-cli
 sys-fs/fuse-exfat
 sys-kernel/gentoo-sources
-sys-kernel/gentoo-sources:7.2.11
-sys-kernel/gentoo-sources:7.2.2
-sys-kernel/gentoo-sources:7.2.3
-sys-kernel/gentoo-sources:7.2.4
-sys-kernel/gentoo-sources:7.2.5
-sys-kernel/gentoo-sources:7.2.6
-sys-kernel/gentoo-sources:7.2.7
-sys-kernel/gentoo-sources:7.2.8
-sys-kernel/gentoo-sources:7.2.9
-sys-kernel/gentoo-sources:7.3.0
 sys-kernel/installkernel
 sys-kernel/linux-firmware
 sys-process/bottom
